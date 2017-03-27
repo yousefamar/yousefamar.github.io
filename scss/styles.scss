@@ -33,19 +33,19 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+$base-color: #3E3E53;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
-$background: #fff;
-$background-alt: #f2f2f5;
+$bgDark:  #030C22;
+$bgLight: #20293F;
 
-// Define border colors
-$border: #dcd9d9;
+// Define accent colors
+$accent:  #E0D498;
 
-// Define text colors
-$heading: #374054;
-$text: #74808a;
+// Define foreground colors
+$fgLight: #E5E7E8;
+$fgDark:  #A9B0B3;
 
 /*
     ---------------------
@@ -86,6 +86,7 @@ $text: #74808a;
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
+    background-color: $bgDark;
 
     &.active {
         overflow: hidden;
@@ -97,15 +98,15 @@ body {
 .no-js {
     #experience-timeline {
         > div {
-            background: $background;
+            background: $bgDark;
             padding: 10px;
             margin-bottom: 10px;
-            border: 1px solid $border;
+            border: 1px solid $accent;
 
             h3 {
                 font-size: 1.5em;
                 font-weight: 300;
-                color: $heading;
+                color: $fgLight;
                 display: inline-block;
                 margin: 0;
             }
@@ -118,7 +119,7 @@ body {
             }
 
             p {
-                color: $text;
+                color: $fgDark;
                 font-size: 0.9em;
                 margin: 0;
             }
@@ -153,7 +154,7 @@ header {
 
     ul {
         display: inline-block;
-        background: $background;
+        background: $bgDark;
         text-align: center;
         padding: 10px;
         margin: 0;
@@ -167,7 +168,7 @@ header {
 
     a {
         display: block;
-        color: $base-color;
+        color: $accent;
         padding: 10px;
 
         &:hover {
@@ -178,7 +179,7 @@ header {
         }
 
         &:focus {
-            color: $base-color;
+            color: $fgDark;
             text-decoration: none;
         }
     }
@@ -210,14 +211,14 @@ header {
     z-index: 20;
     padding: 0 7px;
     border-radius: 4px;
-    background: $background;
+    background: $bgDark;
 }
 
 #mobile-menu-close {
     display: none;
     text-align: right;
     width: 100%;
-    background: $background;
+    background: $bgDark;
     font-size: 1.5em;
     padding-right: 15px;
     padding-top: 10px;
@@ -243,7 +244,7 @@ footer {
 
     p {
         margin: 0;
-        color: $text;
+        color: $fgDark;
     }
 }
 
@@ -257,12 +258,12 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($text, 25%);
+        border: 3px solid lighten($fgDark, 25%);
         text-align:center;
     }
 
     i {
-        color: $text;
+        color: $fgDark;
     }
 }
 
@@ -282,7 +283,7 @@ footer {
 
     a {
         display: block;
-        color: $text;
+        color: $fgDark;
         padding: 10px;
 
         &:hover {
@@ -293,15 +294,15 @@ footer {
 
 .btn-rounded-white {
     display: inline-block;
-    color: #fff;
+    color: $fgLight;
     padding: 15px 25px;
-    border: 3px solid #fff;
+    border: 3px solid $fgLight;
     border-radius: 30px;
     @include transition();
 
     &:hover {
         color: $base-color;
-        background: #fff;
+        background: $fgLight;
         text-decoration: none;
     }
 }
@@ -321,6 +322,7 @@ footer {
     font-weight: 300;
     margin: 0 0 30px 0;
 
+/*
     &:after {
         position: absolute;
         content: '';
@@ -330,12 +332,13 @@ footer {
         left: 0;
         right: 0;
         margin: 0 auto;
-        background: $base-color;
+        background: $accent;
     }
+*/
 }
 
 .background-alt {
-    background: $background-alt;
+    background: $bgLight;
 }
 
 /*
@@ -368,7 +371,7 @@ footer {
     }
 
     h1 {
-        color: #fff;
+        color: $fgLight;
         font-weight: 900;
         font-size: 5em;
         text-transform: uppercase;
@@ -404,7 +407,7 @@ footer {
     text-align: center;
     z-index: 10;
     bottom: 15px;
-    color: #fff;
+    color: $fgLight;
 
     span {
         cursor: pointer;
@@ -446,14 +449,15 @@ footer {
 
 #about {
     padding: 75px 15px;
-    border-bottom: 1px solid $border;
+    border-top: 1px solid $accent;
+    border-bottom: 1px solid $accent;
 
     h2 {
-        color: $heading;
+        color: $fgLight;
     }
 
     p {
-        color: $text;
+        color: $fgDark;
         margin: 0;
     }
 }
@@ -467,10 +471,10 @@ footer {
 #experience {
     padding: 50px 15px;
     text-align: center;
-    border-bottom: 1px solid $border;
+    border-bottom: 1px solid $accent;
 
     h2 {
-        color: $heading;
+        color: $fgLight;
     }
 }
 
@@ -506,8 +510,8 @@ footer {
 
 .vtimeline-content {
     margin-left: 350px;
-    background: #fff;
-    border: 1px solid #e6e6e6;
+    background: $bgDark;
+    border: 1px solid $fgDark;
     padding: 15px;
     border-radius: 3px;
     text-align: left;
@@ -515,7 +519,7 @@ footer {
     h3 {
         font-size: 1.5em;
         font-weight: 300;
-        color: $heading;
+        color: $fgLight;
         display: inline-block;
         margin: 0;
     }
@@ -528,7 +532,7 @@ footer {
     }
 
     p {
-        color: $text;
+        color: $fgDark;
         font-size: 0.9em;
         margin: 0;
     }
@@ -543,7 +547,7 @@ footer {
 
 .vtimeline-icon {
     position: relative;
-    color: #fff;
+    color: $fgLight;
     width: 50px;
     height: 50px;
     background: $base-color;
@@ -566,7 +570,7 @@ footer {
     left: 0;
     top: 10px;
     font-weight: 300;
-    color: #374054;
+    color: $fgDark;
 }
 
 /*
@@ -577,11 +581,11 @@ footer {
 
 #education {
     padding: 50px 15px 20px 15px;
-    border-bottom: 1px solid $border;
+    border-bottom: 1px solid $accent;
     text-align: center;
 
     h2 {
-        color: $heading;
+        color: $fgLight;
         margin-bottom: 50px;
     }
 }
@@ -590,23 +594,24 @@ footer {
     max-width: 700px;
     margin: 0 auto 30px auto;
     padding: 15px;
-    border: 1px solid $border;
+    background: $bgLight;
+    border: 1px solid $fgDark;
     text-align: left;
 
     h3 {
         font-weight: 500;
         float: left;
         margin: 0;
-        color: $heading;
+        color: $fgLight;
     }
 
     span {
-        color: $text;
+        color: $fgDark;
         float: right;
     }
 
     h4 {
-        color: $text;
+        color: $fgDark;
         clear: both;
         font-weight: 500;
         margin: 0 0 15px 0;
@@ -614,7 +619,7 @@ footer {
 
     p, ul {
         margin: 0;
-        color: $text;
+        color: $fgDark;
         font-size: 0.9em;
     }
 
@@ -631,11 +636,11 @@ footer {
 
 #projects {
     padding: 50px 15px;
-    border-bottom: 1px solid $border;
+    border-bottom: 1px solid $accent;
     text-align: center;
 
     h2 {
-        color: $heading;
+        color: $fgLight;
         margin-bottom: 50px;
     }
 }
@@ -645,7 +650,7 @@ footer {
     max-width: 900px;
     margin: 0 auto 30px auto;
     overflow: hidden;
-    background: #fff;
+    background: $bgDark;
     border-radius: 4px;
 }
 
@@ -663,12 +668,12 @@ footer {
     h3 {
         font-size: 1.5em;
         font-weight: 300;
-        color: $heading;
+        color: $fgLight;
         margin: 0 0 15px 0;
     }
 
     p {
-        color: $text;
+        color: $fgDark;
         margin: 0 0 15px 0;
         font-size: 0.9em;
     }
@@ -683,9 +688,10 @@ footer {
 #skills {
     padding: 50px 15px;
     text-align: center;
+    border-bottom: 1px solid $accent;
 
     h2 {
-        color: $heading;
+        color: $fgLight;
         margin-bottom: 50px;
     }
 
@@ -700,76 +706,11 @@ footer {
         display: inline-block;
         margin: 7px;
         padding: 5px 10px;
-        color: $heading;
-        background: darken($background-alt, 5%);
+        color: $fgLight;
+        background: lighten($bgLight, 5%);
         list-style: none;
         cursor: default;
         font-size: 1.2em;
-    }
-}
-
-/*
-    -------------------------------
-    ----- 10. Contact Styles -----
-    -------------------------------
-*/
-
-#contact {
-    padding: 50px 15px;
-    background: $base-color;
-    text-align: center;
-
-    h2 {
-        margin: 0 0 15px 0;
-        color: #fff;
-        font-weight: 500;
-    }
-}
-
-#contact-form {
-    max-width: 500px;
-    margin: 0 auto;
-
-    input, textarea {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        border-radius: 4px;
-        border: none;
-        margin-bottom: 10px;
-        background: darken($base-color, 15%);
-        color: #fff;
-        @include transition();
-        @include placeholder {
-            color: #fff;
-        }
-
-        &:focus {
-            outline: none;
-            background: darken($base-color, 25%);
-        }
-    }
-
-    textarea {
-        height: 150px;
-        resize: none;
-    }
-
-    button {
-        display: block;
-        width: 100%;
-        background: #fff;
-        border-radius: 4px;
-        padding: 5px 10px;
-        border: none;
-        color: $base-color;
-        font-weight: 700;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        @include transition();
-
-        &:hover {
-            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-        }
     }
 }
 
