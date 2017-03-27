@@ -26,6 +26,12 @@ html.no-js(lang='en')
 				li
 					a(href='#about') About
 				li
+					a.no-scroll(href='blog', target='_blank') Blog
+				li
+					a(href='#publications') Publications
+				li
+					a(href='#awards') Awards
+				li
 					a(href='#experience') Experience
 				li
 					a(href='#education') Education
@@ -34,14 +40,14 @@ html.no-js(lang='en')
 				li
 					a(href='#skills') Skills
 				li
-					a(href='#contact') Contact
+					a.no-scroll(href='mailto:yousef@amar.io?Subject=Hello%2C%20Yousef!') Contact
 
 		#lead
 
 			#lead-content
-				h1 Ryan Fitzgerald
-				h2 Software Engineer
-				a.btn-rounded-white(href='#') Download Resume
+				h1 Yousef Amar
+				h2 PhD Student
+				a.btn-rounded-white(href='res/cv.pdf', target='_blank') Download CV
 
 			#lead-overlay
 
@@ -53,51 +59,177 @@ html.no-js(lang='en')
 			.container
 				.row
 					.col-md-4
-						h2.heading About Me
+						h2.heading About
 					.col-md-8
+						p Software, hardware, and everything in between!
+						br
 						p
-							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec
-							| eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus
-							| ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
+							| Currently a PhD student with a focus on Systems, Networks, Security, and Personal Data under 
+							a(href='http://www.eecs.qmul.ac.uk/~hamed/') Dr Hamed Haddadi
+							|  at the Department of Electronic Engineering and Computer Science of Queen Mary University of London.
+						br
+						p
+							| This page is under construction. I do a lot of volunteering and STEM outreach that I need to fit in here somehow.
+							| My project list is also at about 1%. Until I sort that out, for a better picture of the personal and open-source projects I work on, please see my 
+							a(href='https://github.com/yousefamar') GitHub profile
+							| . Eventually all my projects should make their way online.
+
+		#publications.background-alt
+			h2.heading Publications
+			.publications-block
+				h3 Personal Data Management with the Databox: What's Inside the Box?
+				h4 CAN 2016
+				p A more detailed look at the Databox as it stood; a collection of physical and cloudhosted software components that provide for an individual data subject to manage, log and audit access to their data by other parties.
+				a(href='res/papers/p49-mortier.pdf') PDF
+			.publications-block
+				h3 Privacy-Aware Infrastructure for Managing Personal Data
+				h4 SIGCOMM 2016
+				p A poster abstract giving an overview of Databox systems as they stood with a stronger focus on arbiter interactions.
+				a(href='res/papers/p571-amar.pdf') PDF
+			.publications-block
+				h3 Incremental Dense Multi-modal 3D Scene Reconstruction
+				h4 IROS 2016
+				p In this paper, we propose a probabilistic model that efficiently exploits complementarity between different depth-sensing modalities for incremental dense scene reconstruction.
+				a(href='res/papers/ondra2015iros.pdf') PDF
+
+		#awards
+			h2.heading Awards
+			.awards-block
+				a.thumb(href='res/images/awards/apjarvis-small.png', target='_blank')
+					img(src='res/images/awards/apjarvis-thumb.png', alt='AP Jarvis Award Certificate')
+				.info
+					h3 AP Jarvis Prize
+					p
+						| An annual award, valued at &pound;50, for an outstanding performance in the project undertaken by students in the final year in Electronic and Electrical Engineering. In addition, the project poster was voted student favourite!
+			.awards-block
+				a.thumb(href='res/images/awards/PSA-small.png', target='_blank')
+					img(src='res/images/awards/PSA-thumb.png', alt='PSA Advanced Award Certificate')
+				.info
+					h3 Personal Skills Award (Advanced)
+					p
+						| The advanced level of the university&apos;s optional employability award, achieved by demonstrating an exceptional commitment to developing employability through attending workshops, networking events, and volunteering.
+						| Additionally, PSA (Advanced) students demonstrate professional skills to an employer led interview panel and foster professional practice. 
+						a(href='http://intranet.birmingham.ac.uk/as/employability/psa/index.aspx', target='_blank') More info...
+			.awards-block
+				a.thumb(href='res/images/awards/PASS-small.png', target='_blank')
+					img(src='res/images/awards/PASS-thumb.png', alt='PASS Leader of the Year Certificate')
+				.info
+					h3 PASS Leader of the Year 2013-2014
+					p
+						| The 
+						a(href='http://intranet.birmingham.ac.uk/as/libraryservices/pass/whatispass.aspx', target='_blank') Peer-assisted Study Sessions (PASS)
+						|  scheme is part of an internationally recognised network where higher year students lead study sessions for lower year students. 
+						a(href='http://web.archive.org/web/20150816043636/https://intranet.birmingham.ac.uk/as/libraryservices/pass/awards.aspx') Yousef
+						|  was named 
+						a(href='http://intranet.birmingham.ac.uk/as/libraryservices/pass/awards.aspx', target='_blank') PASS Leader of the Year
+						|  after successfully setting up the scheme in the department of EECE after lobbying the administration for over a year as Chair of Student Representatives. 
+						a(href='http://www.birmingham.ac.uk/schools/eece/news/pass-awards.aspx', target='_blank') Full news article...
+			.awards-block
+				a.thumb(href='res/images/awards/SMAC-small.png', target='_blank')
+					img(src='res/images/awards/SMAC-thumb.png', alt='SMAC Certificate')
+				.info
+					h3 Student Mobile App Competition (SMAC) Winner
+					p
+						| A competition, led by the university&apos;s IT Innovation Centre, thats goal is to prototype the best mobile app that will most benefit the university and students as a whole.
+						| The competition was won by writing a marketplace app for students to buy and sell secondhand textbooks with built in messaging.
+						| Prizes included an Amazon Kindle Fire HD tablet and a 14 week paid industrial placement offer (which was respectfully declined). 
+						a(href='http://intranet.birmingham.ac.uk/it/innovation/Student-Mobile-App-Competition/Student-Mobile-App-Competition-2014.aspx', target='_blank') More info...
+			.awards-block
+				.thumb
+					img(src='res/images/awards/IBM.png', alt='IBM Mainframe Challenge 2012 Prize')
+				.info
+					h3 IBM Mainframe Challenge 2012 Winner
+					p
+						| Achieved by swiftly completing a series of mainframe and systems programming tasks on IBM&apos;s own servers. 
+						a(href='http://www-05.ibm.com/employment/uk/graduate-programmes/mainframe/index.shtml', target='_blank') More info...
+			.awards-block
+				a.thumb(href='res/images/awards/scholarship-small.png', target='_blank')
+					img(src='res/images/awards/scholarship-thumb.png', alt='First Class Excellence Scholarship Letter')
+				.info
+					h3 First Class Excellence Scholarship x4
+					p
+						| Awarded for excellent baccalaureate results and maintained for four consecutive years (the entire degree) by consistently achieving first class honours.
 
 		#experience.background-alt
 			h2.heading Experience
 			#experience-timeline
+				div(data-date='January 2016 – Present')
+					h3 Queen Mary University of London
+					h4 Teaching Assistant
+					p Teaching, supervision, and examination of undergraduates and postgraduates in a variety of EECS modules.
+					ul.small
+						li Digital Systems Design (hardware design and VHDL)
+						li Software and Network Services Design / IT Programming (basically a Java module)
+						li 2x Digital Media and Social Networks (graphs, network analysis, web APIs)
 				div(data-date='September 2015 – September 2016')
-					h3 Employer Name
-					h4 Job Title
+					h3 University of Oxford
+					h4 Research Intern
 					p
-						| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-				div(data-date='September 2015 – September 2016')
-					h3 Employer Name
-					h4 Job Title
-					p
-						| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-				div(data-date='September 2015 – September 2016')
-					h3 Employer Name
-					h4 Job Title
-					p
-						| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+						| Research in robotics, computer vision, machine learning, and A.I. &ndash; among other areas with 
+						a(href='http://www.robots.ox.ac.uk/~tvg/') Torr Vision Group
+						|  under 
+						a(href='http://www.robots.ox.ac.uk/~phst/') Professor Philip Torr
+						|  at the Department of Engineering Science.
+						h5 Publications
+						ul.small
+							li
+								a(href='data/papers/ondra2015iros.pdf') Incremental Dense Multi-modal 3D Scene Reconstruction
+				div(data-date='September 2010 – June 2014')
+					h3 Self-employed
+					h4 Programming Tutor
+					p Personal tutor to 16 students
+				div(data-date='November 2011 – November 2011')
+					h3 University of Birmingham
+					h4 Teaching Assistant
+					p Teaching and supervision of a group of sixth form students considering higher education.
+				div(data-date='May 2008 – September 2008')
+					h3 Aquila Aviation by Excellence AG
+					h4 Shop Floor Worker
+					p Construction and assembly of fiber composite plane parts. Extensive experience in sweeping the factory after hours and dealing with occupational injuries.
 
 		#education
 			h2.heading Education
 			.education-block
-				h3 University of Ottawa
-				span.education-date Sept 2016 - Sept 2017
-				h4 Bachelor of Science in Computer Science
+				h3 Queen Mary University of London
+				span.education-date Jan 2016 - Present
+				h4 PhD in Electronic Engineering and Computer Science
 				p
-					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+					| PhD research with a focus on Systems, Networks, Security, and Personal Data under 
+					a(href='http://www.eecs.qmul.ac.uk/~hamed/') Dr Hamed Haddadi
+					|  at the Department of Electronic Engineering and Computer Science of Queen Mary University of London.
 			.education-block
-				h3 University of Ottawa
+				h3 The University of Birmingham
 				span.education-date Sept 2016 - Sept 2017
-				h4 Bachelor of Science in Computer Science
+				h4 Master of Engineering in Computer Systems Engineering with Business Management
+				h4 First class Honours
+				p Decided to transfer course from Electronic Engineering with Business Management on completion of my first year. Awarded the First Class Excellence Scholarship for four consecutive years as a result of an impeccable record.
+				h5 Societies
 				ul
-					li
-						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					li
-						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					li
-						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li Electronic, Electrical & Computer Engineering Society
+					li Birmingham Enterprise and Entrepreneur’s Society (BEES)
+					li Games Development Society
+					li Investment Society
+				h5 Modules Pertinent to Current Interests
+				ul
+					li Data Mining
+					li Computer Vision
+					li Computer Networking
+					li Computer Hardware and Digital Design
+					li Digital Systems and Embedded Computing
+					li Digital Logic and Microprocessor Systems
+					li Object Oriented Software Design
+					li Computer Systems, Algorithms and Data Structures
+					li C Programming and Algorithmic Problem Solving
+					li Project Management and Professional Practice
+					li Advanced Interactive 3D Design for Virtual Environments and Serious Games
+			.education-block
+				h3 European School Frankfurt am Main
+				span.education-date Sept 2002 - Sept 2010
+				h4 European Baccalaureate
+				ul
+					li Twice presenter at the annual European School Science Symposium
+					li Student council president candidate
+					li Lead role in 3 Shakespearean plays
 
 		#projects.background-alt
 			h2.heading Projects
@@ -105,85 +237,103 @@ html.no-js(lang='en')
 				.row
 					.project.shadow-large
 						.project-image
-							img(src='images/project.jpg')
+							img(src='res/images/projects/fourth-year.png')
 						.project-info
-							h3 Project Name Here
-							p
-								| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-							a(href='#') View Project
+							h3
+								| 4
+								sup th
+								|  Year MEng Final Year Project
+							p Design and implementation of a low-cost UAV sensor system for constructing object and topographical 3D models in real-time.
+							a(href='#') Report
 					.project.shadow-large
 						.project-image
-							img(src='images/project.jpg')
+							img(src='res/images/projects/third-year.png')
 						.project-info
-							h3 Project Name Here
-							p
-								| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-							a(href='#') View Project
+							h3
+								| 3
+								sup rd
+								|  Year MEng Group Project
+							p Building a quadcopter that can autonomously transport a payload from the roof of the EECE building to an arbitrary target.
+							a(href='#') Report
 
 		#skills
 			h2.heading Skills
+			p
+				| This jumble of buzzwords, languages, and frameworks is soon to be replaced by my 
+				a(href='graph.html') Project Graph (WIP)
+				| .
 			ul
+				li English (fluent)
+				li German (fluent)
+				li Arabic (fluent)
+				li Italian (4 years)
+				li Mandarin (1 year)
+				li HTML5
+				li CSS3
 				li JavaScript
-				li Python
-				li Ruby
-				li Go
+				li LiveScript
+				li PHP
+				li SQL
 				li Node.js
-				li AngularJs
+				li AngularJS
 				li React
-				li Elixir
+				li Vue.js
+				li MongoDB
 				li Java
-				li C
-				li C#
-				li C++
-				li Ruby on Rails
-				li JavaScript
 				li Python
-				li Ruby
-				li Go
-				li Node.js
-				li AngularJs
-				li React
-				li Elixir
-				li Java
 				li C
-				li C#
 				li C++
-				li Ruby on Rails
-
-		#contact
-			h2 Get in Touch
-			#contact-form
-				form(method='POST', action='https://formspree.io/email@email.com')
-					input(type='hidden', name='_subject', value='Contact request from personal website')
-					input(type='email', name='_replyto', placeholder='Your email', required='')
-					textarea(name='message', placeholder='Your message', required='')
-					button(type='submit') Send
+				li C#
+				li Unity3D
+				li Blender
+				li VHDL
+				li OpenGL
+				li GLSL
+				li WebGL
+				li WebSocket
+				li CUDA
+				li OpenCL
+				li SSE Programming
+				li R
+				li MATLAB
+				li Bash
+				li CUPL
+				li MP Assembly
+				li LaTeX
+				li Cordova
+				li Git/Hg/SVN
+				li IBM z/OS mainframe (CICS, WebSphere MQ, JCL)
 
 		footer
 			.container
 				.row
 					.col-sm-5.copyright
 						p
-							| Copyright &copy; 2017 YOUR NAME
+							| Copyright &copy; 2017 Yousef Amar
 					.col-sm-2.top
 						span#to-top
 							i.fa.fa-chevron-up(aria-hidden='true')
 					.col-sm-5.social
 						ul
 							li
-								a(href='https://github.com/', target='_blank')
+								a(href='https://linkedin.com/in/yousefamar', target='_blank')
+									i.fa.fa-linkedin(aria-hidden='true')
+							li
+								a(href='https://github.com/yousefamar', target='_blank')
 									i.fa.fa-github(aria-hidden='true')
+							// a href="/blog" target="_blank"><img src="res/images/socialmedia/svg/wordpress.svg" alt="Blog"></a
 							li
-								a(href='https://stackoverflow.com/', target='_blank')
-									i.fa.fa-stack-overflow(aria-hidden='true')
+								a(href='https://stackexchange.com/users/508897/paraknight', target='_blank')
+									i.fa.fa-stack-exchange(aria-hidden='true')
 							li
-								a(href='https://www.facebook.com/', target='_blank')
+								a(href='https://www.facebook.com/yousefamar', target='_blank')
 									i.fa.fa-facebook(aria-hidden='true')
 							li
-								a(href='https://twitter.com/', target='_blank')
+								a(href='https://twitter.com/yousefamar', target='_blank')
 									i.fa.fa-twitter(aria-hidden='true')
 							li
-								a(href='https://plus.google.com/', target='_blank')
+								a(href='https://google.com/+YousefAmar', target='_blank')
 									i.fa.fa-google-plus(aria-hidden='true')
+							// a href="//youtube.com/yousefamar" target="_blank"><img src="res/images/socialmedia/svg/youtube.svg" alt="Youtube"></a
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
 		script(src='js/scripts.min.js')

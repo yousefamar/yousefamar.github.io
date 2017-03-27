@@ -1,0 +1,112 @@
+$col0: #030C22;
+$col2: #20293F;
+$col4: #3E3E53;
+$col3: #404749;
+$col5: #A9B0B3;
+$col1: #E5E7E8;
+$link: #E0D498;
+
+* {
+	margin: 0;
+	padding: 0;
+	//vertical-align: middle;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	&:focus {
+		outline: none;
+	}
+}
+a {
+	text-decoration:none;
+	&:link {color: $link;}
+	&:visited {color: desaturate($link, 20%);}
+	&:hover {color: complement($link);}
+	&:active {color: lighten($link, 50%);}
+}
+body, canvas, #overlay {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: $col0;
+}
+canvas {
+	vertical-align: middle;
+}
+#overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	text-align: center;
+	padding: 5%;
+
+	&.visible {
+		opacity: 1;
+		pointer-events: auto;
+	}
+	&.invisible {
+		opacity: 0;
+		pointer-events: none;
+	}
+	&.visible, &.invisible {
+		transition: opacity 1s;
+		-moz-transition: opacity 1s;
+		-webkit-transition: opacity 1s;
+		-o-transition: opacity 1s;
+	}
+}
+#infoArea {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 40%;
+	//min-height: 20%;
+	opacity: 0.75;
+	-webkit-border-top-right-radius: 1em;
+	-moz-border-radius-topright: 1em;
+	border-top-right-radius: 1em;
+
+	background-color: $col2;
+	-webkit-box-shadow: 0 0 1em $col4;
+	-moz-box-shadow: 0 0 1em $col4;
+	box-shadow: 0 0 1em $col4;
+}
+#infoTitle {
+	width: 100%;
+	font-size: 2em;
+	padding-left: 4px;
+	-webkit-border-top-right-radius: 0.5em;
+	-moz-border-radius-topright: 0.5em;
+	border-top-right-radius: 0.5em;
+
+	color: $col1;
+	background-color: $col4;
+	border-bottom: 2px groove $col2;
+}
+#infoBody {
+	width: 100%;
+	padding: 6px;
+	color: $col5;
+}
+.node {
+	color: $col1;
+	background-color: $col3;
+	&.leaf {
+		background-color: $col2;
+	}
+	&:hover {
+		background-color: $col5;
+	}
+	&:focus {
+		border-color: $col1;
+	}
+}
+.line {
+	color: $col4;
+}

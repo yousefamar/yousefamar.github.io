@@ -1,0 +1,406 @@
+{
+	"label": "Yousef Amar",
+	"desc": "Above is a tree of projects I have worked on over the years; a portfolio if you will.<br>For more information on any project, click its (draggable) node. You can also drag the background to pan and scroll to zoom.<br><br><a href=\"data/cv.pdf\" target=\"_blank\">Click here</a> for a PDF file of my CV.",
+	"children": [
+		{
+			"label": "Online",
+			"children": [
+				{
+					"label": "Social",
+					"children": [
+						{
+							"label": "Linkedin",
+							"image": "res/images/socialmedia/border/linkedin.png",
+							"link": "//linkedin.com/in/yousefamar",
+							"children": [
+							]
+						},
+						{
+							"label": "GitHub",
+							"image": "res/images/socialmedia/border/github.png",
+							"link": "//github.com/paraknight",
+							"children": [
+							]
+						},
+						{
+							"label": "Blog",
+							"image": "res/images/socialmedia/border/wordpress.png",
+							"link": "/blog",
+							"children": [
+							]
+						},
+						{
+							"label": "Facebook",
+							"image": "res/images/socialmedia/border/facebook.png",
+							"link": "//facebook.com/yousefamar",
+							"children": [
+							]
+						},
+						{
+							"label": "Twitter",
+							"image": "res/images/socialmedia/border/twitter.png",
+							"link": "//twitter.com/yousefamar",
+							"children": [
+							]
+						},
+						{
+							"label": "Google+",
+							"image": "res/images/socialmedia/border/googleplus-revised.png",
+							"link": "//google.com/+YousefAmar",
+							"children": [
+							]
+						},
+						{
+							"label": "Youtube",
+							"image": "res/images/socialmedia/border/youtube.png",
+							"link": "//youtube.com/yousefamar",
+							"children": [
+							]
+						}
+					]
+				},
+				{
+					"label": "Websites",
+					"children": [
+						{
+							"label": "FileWi.re",
+							"link": "//filewi.re"
+						}
+					]
+				}
+			]
+		},
+		{
+			"label": "Coursework (WIP)",
+			"children": [
+				{
+					"label": "Year 1",
+					"children": [
+						{
+							"label": "Digital Logic and Microprocessor Systems (EE1A)",
+							"children": [
+								{
+									"label": "Pelican Crossing Controller",
+									"desc": "A fully functional traffic light controller, written entirely in Assembly.<br><br><a href=\"data/coursework/year1/ee1e2/report.pdf\" target=\"_blank\">Final Report</a><br><a href=\"data/coursework/year1/ee1e2/pelican.asm\" target=\"_blank\">Source Code</a>"
+								}
+							]
+						},
+						{
+							"label": "Circuits, Devices and Fields (EE1B)"
+						},
+						{
+							"label": "Techniques of Analysis and Modelling (EE1D)"
+						},
+						{
+							"label": "C Programming and Algorithmic Problem Solving (EE1E)"
+						},
+						{
+							"label": "International Economy (0702694)"
+						},
+						{
+							"label": "Introduction to Economics (0702720)"
+						},
+						{
+							"label": "Introduction to Financial Analysis (0714505)"
+						},
+						{
+							"label": "Business Organisation and Management (0714507)",
+							"children": [
+								{
+									"label": "Teamwork",
+									"desc": "On problems that can be associated with working in teams, practical recommendations to overcome them, and whether team working is appropriate in organisations today.<br><br><a href=\"data/coursework/year1/busorgman/report.pdf\" target=\"_blank\">Final Report</a>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"label": "Year 2",
+					"children": [
+						{
+							"label": "Digital Systems and Embedded Computing (EE2A)"
+						},
+						{
+							"label": "Object Oriented Software Design (EE2E)"
+						},
+						{
+							"label": "Project Management and Professional Practice (EE2G)"
+						},
+						{
+							"label": "Intermediate Maths for Applied Computing (EE2J2)"
+						},
+						{
+							"label": "Computer Systems, Algorithms and Data Structures (EE2K1)",
+							"children": [
+								{
+									"label": "Coursework",
+									"desc": "Hard disk drives, process scheduling algorithms, and complexity and big O notation.<br><br><a href=\"data/coursework/year2/ee2k1/coursework.pdf\" target=\"_blank\">Coursework</a>"
+								},
+								{
+									"label": "Lab Report",
+									"desc": "Process scheduling algorithms in MatLab with task set plots, binary tree traversal implementation in C with complexity plots, and sorting algorithm implementations in C with complexity plots.<br><br><a href=\"data/coursework/year2/ee2k1/report.pdf\" target=\"_blank\">Lab Report</a>"
+								}
+							]
+						},
+						{
+							"label": "Introduction to Marketing (0702662)",
+							"children": [
+								{
+									"label": "Facebook",
+									"desc": "Facebook: Possibilities and recommendations to future marketing options.<br><br><a href=\"data/coursework/year2/im/coursework.pdf\" target=\"_blank\">Coursework</a>"
+								}
+							]
+						},
+						{
+							"label": "Human Resource Management (0703059)"
+						},
+						{
+							"label": "Financial Decision Making (0714508)"
+						},
+						{
+							"label": "Global Marketing (0720327)",
+							"children": [
+								{
+									"label": "Sony",
+									"desc": "Sony: Possibilities and recommendations for future global marketing options.<br><br><a href=\"data/coursework/year2/gm/coursework.pdf\" target=\"_blank\">Coursework</a>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"label": "Year 3",
+					"children": [
+						{
+							"label": "Computer Hardware and Digital Design (EE3A1)",
+							"children": [
+								{
+									"label": "Microprocessor",
+									"desc": "A simple, fully functional microprocessor design for synthesis on ASICs simulated with Aldec Active-HDL.<br><br><a href=\"data/coursework/year3/ee3a1/assignment.pdf\" target=\"_blank\">Report (incl. source code listings)</a>"
+								}
+							]
+						},
+						{
+							"label": "Data Mining (EE3J2)"
+						},
+						{
+							"label": "Group Design Project (EE3GP)"
+						},
+						{
+							"label": "Supply Chain Management (0714511)",
+							"children": [
+								{
+									"label": "Innovation",
+									"desc": "On the main challenges in managing innovation across supply chains<br><br><a href=\"data/coursework/year3/scm/essay.pdf\" target=\"_blank\">Essay</a>"
+								}
+							]
+						},
+						{
+							"label": "Corporate Finance (0714512)"
+						},
+						{
+							"label": "Strategic Management A and B (0714730 & 0714731)",
+							"children": [
+								{
+									"label": "Strategic Analysis",
+									"desc": "A strategic analysis of Eni S.p.A. and strategic recommendations for the future<br><br><a href=\"data/coursework/year3/stm/presentation.pdf\" target=\"_blank\">Presentation</a><br><a href=\"data/coursework/year3/stm/report.pdf\" target=\"_blank\">Report</a>"
+								}
+							]
+						},
+						{
+							"label": "Computer Networking (EE3A2)"
+						},
+						{
+							"label": "Multimodal Interaction (EE3F1)",
+							"children": [
+								{
+									"label": "Turn-taking Behaviour",
+									"desc": "Observational analysis of multimodal behaviour and classifier design.<br><br><a href=\"data/coursework/year3/ee3f1/assignment.pdf\" target=\"_blank\">Assignment</a>"
+								}
+							]
+						},
+						{
+							"label": "Interactive 3D Design for Virtual Environments and Serious Games (EE3K1)",
+							"children": [
+								{
+									"label": "Oil Spill Simulation",
+									"desc": "One day you wake up to find that an oil tanker has caught fire and its hull has ruptured right in front of your house!<br>Although you're a humble lighthouse keeper, you make it your duty to save as many animals as possible.<br>Hurry! You're their only hope!<br><br><a href=\"data/coursework/year3/ee3k1/workplan.pdf\" target=\"_blank\">Workplan</a><br><a href=\"data/coursework/year3/ee3k1/report.pdf\" target=\"_blank\">Report</a><br><a href=\"data/coursework/year3/ee3k1/source.zip\" target=\"_blank\">Source Code</a><br><a href=\"//www.youtube.com/watch?v=fXsoS3gNLLk\" target=\"_blank\">Watch Video</a><br><a href=\"data/coursework/year3/ee3k1/game/obd.html\" target=\"_blank\">Play Game</a>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"label": "Year 4",
+					"children": [
+						{
+							"label": "Digital Design (EE4G)",
+							"children": [
+								{
+									"label": "Digital Audio Processor",
+									"desc": "A digital stereo audio processing unit that receives and transmits data in the AES3 domestic format (aka S/PDIF).<br>Designed for the Nexys&trade;3 Spartan-6 FPGA Board using Xilinx ISE for simulation and synthesis.<br><br><a href=\"data/coursework/year4/ee4g/report.pdf\" target=\"_blank\">Report (incl. source code listings)</a>"
+								}
+							]
+						},
+						{
+							"label": "Individual Project for Business Management Students (EE4P(B))",
+							"children": [
+								{
+									"label": "UAV Sensor Sytems",
+									"desc": "As my final year project, this node has a lot of children!<br><br>Coming soon!"
+								}
+							]
+						},
+						{
+							"label": "International and Industrial Economics (0706130)"
+						},
+						{
+							"label": "Small Business and Entrepreneurship (0725280)",
+							"children": [
+								{
+									"label": "Entrepreneurial Traits",
+									"desc": "Do entrepreneurs have traits or cognitive biases that make them different from other individuals?<br><br><a href=\"data/coursework/year4/sbe/assignment.pdf\" target=\"_blank\">Assignment</a>"
+								}
+							]
+						},
+						{
+							"label": "Advanced Interactive 3D Design for Virtual Environments and Serious Games (EE4A)",
+							"children": [
+								{
+									"label": "Maze Game",
+									"desc": "A simple maze game that runs in the Blender Game Engine (version 2.68+).<br><br><a href=\"data/coursework/year4/ee4a/maze.blend\" target=\"_blank\">Maze.blend</a>"
+								},
+								{
+									"label": "Human Factors",
+									"desc": "Analysis of human interaction with head mounted displays with a focus on the Oculus Rift and Razer Hydra.<br><br><i>Findings:</i><br><a href=\"data/coursework/year4/ee4a/dataset.xls\" target=\"_blank\">Dataset</a><br><a href=\"data/coursework/year4/ee4a/summary.pdf\" target=\"_blank\">Summary</a><br><a href=\"data/coursework/year4/ee4a/presentation.pptx\" target=\"_blank\">Presentation</a><br><br><i>Bonus:</i><br>A maze-game which enhances feelings of presence<br><a href=\"data/coursework/year4/ee4a/report.pdf\" target=\"_blank\">Report</a>"
+								},
+								{
+									"label": "Phasors",
+									"desc": "An interactive 3D learning environment on the behaviours of resistive and reactive circuits under steady-state sinusoidal conditions.<br><br>Coming soon!"
+								}
+							]
+						},
+						{
+							"label": "Computer Vision (EE4H)"
+						}
+					]
+				}
+			]
+		},
+		{
+			"label": "Projects",
+			"children": [
+				{
+					"label": "Java",
+					"children": [
+						{
+							"label": "OpenGL",
+							"children": []
+						},
+						{
+							"label": "Non-OpenGL",
+							"children": []
+						}
+					]
+				},
+				{
+					"label": "Python",
+					"children": []
+				},
+				{
+					"label": "Web",
+					"desc": "This category contains web apps and anything web app related.",
+					"children": [
+						{
+							"label": "Front End",
+							"desc": "Everything predominantly front end that can be seen on a webpage, including anything HTML5, CSS3, and JavaScript related can be found here.",
+							"children": [
+								{
+									"label": "2D Canvas",
+									"children": []
+								},
+								{
+									"label": "WebGL",
+									"children": []
+								},
+								{
+									"label": "WebSockets",
+									"children": []
+								},
+								{
+									"label": "Assorted JavaScript",
+									"children": []
+								}
+							]
+						},
+						{
+							"label": "Back End",
+							"desc": "Everything predominantly back end that runs out of sight on a server, including anything PHP and SQL related can be found here.",
+							"children": [
+								{
+									"label": "PHP/SQL",
+									"children": []
+								},
+								{
+									"label": "JavaScript",
+									"children": [
+										{
+											"label": "Node.js",
+											"children": []
+										},
+										{
+											"label": "Miscellaneous",
+											"children": []
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"label": "C++",
+					"children": [
+						{
+							"label": "OpenGL",
+							"children": []
+						},
+						{
+							"label": "Non-OpenGL",
+							"children": []
+						}
+					]
+				},
+				{
+					"label": "C",
+					"children": [
+						{
+							"label": "PC",
+							"children": []
+						},
+						{
+							"label": "Embedded Systems",
+							"children": []
+						}
+					]
+				},
+				{
+					"label": "VHDL",
+					"children": []
+				},
+				{
+					"label": "Assembly",
+					"children": []
+				},
+				{
+					"label": "MatLab",
+					"children": []
+				},
+				{
+					"label": "Arduino",
+					"children": []
+				}
+			]
+		}
+	]
+}
