@@ -4,6 +4,13 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
+var pug = require('gulp-pug');
+
+gulp.task('views', function() {
+    return gulp.src('*.pug')
+        .pipe(pug())
+        .pipe(gulp.dest('.'));
+});
 
 gulp.task('scripts', function() {
     return gulp.src('js/scripts.js')
@@ -33,7 +40,8 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('watch', ['scripts', 'styles'], function() {
+gulp.task('watch', ['views', 'scripts', 'styles'], function() {
+    gulp.watch('*.pug', ['views']);
     gulp.watch('js/*.js', ['scripts']);
     gulp.watch('scss/*.scss', ['styles']);
 });
