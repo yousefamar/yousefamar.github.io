@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lab Book of Life</title>
+    <description>Ruminations of Yousef Amar
+</description>
+    <link>http://localhost:4000/blog/</link>
+    <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 18 Nov 2016 17:05:43 +0000</pubDate>
+    <lastBuildDate>Fri, 18 Nov 2016 17:05:43 +0000</lastBuildDate>
+    <generator>Jekyll v3.3.0</generator>
+    
+      <item>
+        <title>Hacking HTML5 Xonix</title>
+        <description>&lt;p&gt;Time for yet another casual hack of a little browser game that hasn’t been secured. A game called “Xonix” was released for DOS in 1984. It involved incrementally tracing areas on a grid while avoiding moving dots, and when an area is outlined, it would be filled in automatically. As the levels increased in difficulty, the goal was to get a certain percentage of the grid filled in without running out of lives. Some of you might be familiar with this style of game — this may in fact be the first of it’s kind!&lt;/p&gt;
+
+&lt;p&gt;Anyway, there have been subsequent ports and clones of this game, and in 2012 two guys ported Xonix to HTML5 such that &lt;a href=&quot;http://html5xonix.appspot.com/&quot;&gt;it can be played in a browser&lt;/a&gt;. It’s pretty fun, but as usual I want to take the easy way out, so out come the dev tools!&lt;/p&gt;
+
+&lt;p&gt;Unlike the previous game, the developers were a bit more efficient, in that they don’t bother sending a score if it’s you haven’t defeated the top 15 on the high-score list. The only request made on losing is one to get the top N players. I wasn’t about to actually try and win, so I set an XHR breakpoint for any requests, to see where this one fires.&lt;/p&gt;
+
+&lt;p&gt;After some snooping around where it does fire, I found the check it does before submitting the score. The devs had everything nice and wrapped up in a little function I can call from the console:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;LeaderBoard.set(&quot;amar.io&quot;, 44488, Game.LEADERBOARD, function(){});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And, voilà, top of the leaderboard!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/xonix-highscore.png&quot; alt=&quot;Image of hacked Xonix high-score list&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Poor Daniel Shapira, assuming he got those scores fairly, must be raging pretty hard right about now. Sorry Daniel!&lt;/p&gt;
+
+&lt;h2 id=&quot;bonus-round&quot;&gt;Bonus round!&lt;/h2&gt;
+
+&lt;p&gt;While probing around a little more, I tried changing the parameter for the number of entries when retrieving the high-score list. When I set it to a huge number, it spits back a nasty stack trace (turns out they’re using Google App Engine with Python in the back end) and crashed the server. I felt pretty bad, but fortunately after a very short period of time it was back up. That’s the extent of the issue though, since when fingerprinting MySQL, the server returns:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Traceback (most recent call last):
+	File &amp;amp;quot;/base/data/home/runtimes/python/python_lib/versions/1/google/appengine/ext/webapp/_webapp25.py&amp;amp;quot;, line 715, in __call__
+		handler.get(*groups)
+	File &amp;amp;quot;/base/data/home/apps/s~html5xonix/1.357745203681401670/leaderboard.py&amp;amp;quot;, line 17, in get
+		count = int(cgi.escape(self.request.get('count')))
+ValueError: invalid literal for int() with base 10: '1 /*! and 1=0 */'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can actually see the line of python that they use to get the “count” parameter and escape it, then convert it to an integer. The same thing happens with submitting a name to the list; it escapes all HTML entities and doesn’t seem vulnerable to injections. They’re most likely not even using SQL since it returns JSON documents.&lt;/p&gt;
+
+&lt;p&gt;Good on ya, devs!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 18 Nov 2016 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/blog/2016/11/18/hacking-html5-xonix.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/11/18/hacking-html5-xonix.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Hacking PlaySnake.org</title>
+        <description>&lt;p&gt;Yet another random flash game with a high-score list without any security. This time it’s as simple as whipping out DevTools, losing the game, and copying the score POST request as a cURL command from the network tab. The “game” argument can be &lt;code class=&quot;highlighter-rouge&quot;&gt;snake1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;snake2&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;snake3&lt;/code&gt; depending on the list (slug, worm, or python respectively), and “score” and “name” are score and name obviously. The name seems to be sanitized properly server-side as far as I can tell, so no funny business dropping the whole list from the database, or hijacking the website with HTML entities etc, and it is flash after all.&lt;/p&gt;
+
+&lt;p&gt;This time I left a link to amar.io — I wonder how that might affect unique visitor count?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/snake-highscore-slug.png&quot; alt=&quot;Image of hacked slug high-score list&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Looks like a game dev at reacentration.com might have had the same idea!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/snake-highscore-python.png&quot; alt=&quot;Image of hacked python high-score list&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 13 Nov 2016 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/blog/2016/11/13/hacking-playsnake-org.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/11/13/hacking-playsnake-org.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>To Fail the Turing Test Against Yourself</title>
+        <description>&lt;p&gt;The folks over at &lt;a href=&quot;https://deepmind.com&quot;&gt;DeepMind&lt;/a&gt; have just released results introducing &lt;a href=&quot;https://deepmind.com/blog/wavenet-generative-model-raw-audio/&quot;&gt;WaveNet&lt;/a&gt; a Text-to-Speech engine that uses deep learning. The outputs are beyond anything that exists today, and span across languages. It can even be used to generate music! Just listen to the different common approaches as compared to WaveNet:&lt;/p&gt;
+
+&lt;iframe frameborder=&quot;0&quot; width=&quot;400&quot; height=&quot;360&quot; src=&quot;https://storage.googleapis.com/deepmind-media/pixie/iframe1.html&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The technique itself is ingenious, and surprisingly does not rely on recurrent neural networks, but instead a special form of convolutional neural networks (which are feed-forward).&lt;/p&gt;
+
+&lt;p&gt;Although at the moment it takes an hour and a half to synthesize one second of audio, the potential uses are still numerous. Before long, audio books can be generated by the thousands, and soon even artistic expressions using voice may be revolutionized! A small indie game or animation studio might not need to hire voice actors, and &lt;a href=&quot;https://en.wikipedia.org/wiki/Vocaloid&quot;&gt;Vocaloid&lt;/a&gt; can be completely revamped!&lt;/p&gt;
+
+&lt;p&gt;It’s not hard to imagine that before long speech synthesis at this fidelity will reach real-time speeds. At that point, there will be some much more far-reaching implications. Let’s focus on just one.&lt;/p&gt;
+
+&lt;p&gt;You may have noticed that, like other neural networks of this kind, WaveNet is trained with samples of real human voice. As such, if you train it with your voice, the result will be something that can uncannily mimic your voice.&lt;/p&gt;
+
+&lt;p&gt;We’ve seen &lt;a href=&quot;http://www.graphics.stanford.edu/~niessner/thies2016face.html&quot;&gt;something like this&lt;/a&gt; before:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ohmajJTcpNk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;In our digital age, gone are the days where seeing is believing. You can no longer know for certain if the person you’re Skyping is who they say they are. Although technology like this is very exciting, we need to fundamentally change the way we think about identity, and identity verification. Just remember kids:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/PTnAvvT.jpg&quot; alt=&quot;On the Internet, Nobody Knows You're a Dog&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 13 Sep 2016 11:23:46 +0100</pubDate>
+        <link>http://localhost:4000/blog/2016/09/13/to-fail-the-turing-test-against-yourself.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/09/13/to-fail-the-turing-test-against-yourself.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>An Image Scraping Challenge</title>
+        <description>&lt;p&gt;&lt;em&gt;Original post from 12 March 2015 restored from backup&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A little over a year ago a friend sent me a 4chan banner:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s.4cdn.org/image/title/195.gif&quot; alt=&quot;4chan banner&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We started thinking about whether or not these are randomised when we realised that they’re all just static links to images with URLs that start with &lt;code class=&quot;highlighter-rouge&quot;&gt;https://s.4cdn.org/image/title/&lt;/code&gt; and file names that range from &lt;code class=&quot;highlighter-rouge&quot;&gt;0.png&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;260.png&lt;/code&gt; and from &lt;code class=&quot;highlighter-rouge&quot;&gt;0.gif&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;251.gif&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;So we challenged each other to write a scraper that would download all of these banners knowing it would be a matter of minutes. I decided to write the script in Python and he decided to write it in JavaScript with Node.js. We also agreed to have one second intervals between image downloads so we don’t don’t annoy moot (though I’m pretty sure we wouldn’t have even made a blip in requests),&lt;/p&gt;
+
+&lt;p&gt;To make a long story short, Python is much better suited for this kind of job. With I/O in Node you’re in callback hell or waste time on async control flow.&lt;/p&gt;
+
+&lt;p&gt;I was hardly aiming for tiny code but here is all you need:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import urllib
+import time
+import os
+
+if not os.path.exists(&quot;imgs&quot;):
+    os.makedirs(&quot;imgs&quot;)
+
+for i in xrange(1,260):
+    urllib.urlretrieve(&quot;http://s.4cdn.org/image/title/&quot;+str(i)+&quot;.png&quot;, &quot;imgs/&quot;+str(i)+&quot;.png&quot;)
+    time.sleep(1)
+
+for i in xrange(1,251):
+    urllib.urlretrieve(&quot;http://s.4cdn.org/image/title/&quot;+str(i)+&quot;.gif&quot;, &quot;imgs/&quot;+str(i)+&quot;.gif&quot;)
+    time.sleep(1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 11 May 2015 01:29:36 +0100</pubDate>
+        <link>http://localhost:4000/blog/2015/05/11/an-image-scraping-challenge.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2015/05/11/an-image-scraping-challenge.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Write More</title>
+        <description>&lt;p&gt;There are a lot of things that I want to write about but never do. Usually it’s due to a mixture of occupation, perfectionism, and procrastintion.&lt;/p&gt;
+
+&lt;p&gt;To solve the first, I’ve switched to &lt;a href=&quot;https://ghost.org/&quot;&gt;Ghost&lt;/a&gt; as a blogging platform since a while now, and I much prefer it to WordPress for a whole bunch of reasons. Also, my new policy is brutal conciceness. I’ll be writing short, condensed articles so that having no time can no longer be an excuse.&lt;/p&gt;
+
+&lt;p&gt;The curse of perfectionism can only be lifted with practice it seems. It reaches a point where it becomes a hindering factor. If you focus too much of quality and not quantity, you’ll never get anywhere. And in &lt;a href=&quot;http://blog.codinghorror.com/quantity-always-trumps-quality/&quot;&gt;certain cases&lt;/a&gt; (thanks for the link Aku), quantity produces superior quality. So now I’ll be posting fast and frequently for greater good.&lt;/p&gt;
+
+&lt;p&gt;Finally, I’ll need to stop procrastinating. To do that I promise in writing - in the form of this blog post - that I will. Now if don’t, there will be public proof of my failure to do so. And I don’t want &lt;em&gt;that&lt;/em&gt;!&lt;/p&gt;
+
+&lt;p&gt;No more excuses!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 15 Feb 2015 15:07:04 +0000</pubDate>
+        <link>http://localhost:4000/blog/2015/02/15/write-more.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2015/02/15/write-more.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>The Importance of Making Backups</title>
+        <description>&lt;p&gt;I don’t know how I manage to be this insanely lucky…&lt;/p&gt;
+
+&lt;p&gt;While doing some server maintenance I accidentally deleted the database that contains my entire blog (yeah, I know) with posts, comments, users, and everything else. Thanks to some incredible stroke of sheer luck, I had a corrupted the volume that my blog was on once before and simply made a new one and copied stuff over without bothering to delete the old one. That old one is the reason I could recover most of my blog (everything up to a couple of weeks ago) and there was only one other post that I’ve published since then.&lt;/p&gt;
+
+&lt;p&gt;Luckily for me, glorious Google exists and their bots had already cached that last blog post, so I was able to recover that one with the aid of Google’s cache. The rest of the changes I simply redid manually. The only thing I couldn’t recover was the account of the single, solitary user that had subscribed to my blog, so if you’re reading this loffeno, sorry!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 28 Oct 2013 15:55:48 +0000</pubDate>
+        <link>http://localhost:4000/blog/2013/10/28/the-importance-of-making-backups.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2013/10/28/the-importance-of-making-backups.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Apple Maps 3D: How did they do it?</title>
+        <description>&lt;p&gt;With the release of OS X Mavericks came a bunch of new features like full screen support on multiple monitors (about time, Apple!). One other such feature is the new Maps app. Its unique selling point is 3D flyover maps. How does it work?&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://amar.io/blog/wp-content/uploads/2013/10/new-york-3d.png&quot;&gt;&lt;img class=&quot;size-full wp-image-127 &quot; alt=&quot;New York City, now in 3D!&quot; src=&quot;http://amarport.com/blog/wp-content/uploads/2013/10/new-york-3d.png&quot; width=&quot;1000&quot; height=&quot;691&quot; /&gt;&lt;/a&gt; &lt;em&gt;New York City, now in 3D!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Not too shabby! Here’s the same shot in Google Earth for comparison:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://amar.io/blog/wp-content/uploads/2013/10/new-york-4d.png&quot;&gt;&lt;img class=&quot;size-full wp-image-128 &quot; alt=&quot;Smooth as always, Google!&quot; src=&quot;http://amarport.com/blog/wp-content/uploads/2013/10/new-york-4d.png&quot; width=&quot;1107&quot; height=&quot;666&quot; /&gt;&lt;/a&gt; &lt;em&gt;Smooth as always, Google!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Sorry, but I’m gonna have to side with Google on this one on aesthetics! 3D models in Google Earth are often crowdsourced and built and skinned my hand using the idiot-proof modeling tool Google Sketchup. They’re made to look right. Apple’s Maps on the other hand are built automatically.&lt;/p&gt;
+
+&lt;p&gt;Back in late 2011, Apple bought up a Swedish 3D mapping company called C3 Technologies that then disappeared off the radar. C3′s mapping technology was originally intended to help missiles home in on targets but was then used by Nokia’s map app Ovi, before Apple bought the company.&lt;/p&gt;
+
+&lt;p&gt;How does it work? It involves taking pictures at a whole range of different angles to the ground from a plane then using computer vision software figure out depth from different images of the same object just like our own eyes do.&lt;a title=&quot;Ultrasharp 3-D Maps&quot; href=&quot;http://www.technologyreview.com/news/423838/ultrasharp-3-d-maps/&quot; target=&quot;_blank&quot;&gt;[1]&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;That’s why it gets a little wobbly when you zoom in. The advantage is that the skin quality is often much better. Here’s an image of the clock tower at my university in the Maps app:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://amar.io/blog/wp-content/uploads/2013/10/old-joe-front.png&quot;&gt;&lt;img class=&quot;size-full wp-image-130 &quot; alt=&quot;Old Joe’s Front&quot; src=&quot;http://amarport.com/blog/wp-content/uploads/2013/10/old-joe-front.png&quot; width=&quot;1002&quot; height=&quot;692&quot; /&gt;&lt;/a&gt; &lt;em&gt;Old Joe’s Front&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;And here it is from the other side:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://amar.io/blog/wp-content/uploads/2013/10/old-joe-back.png&quot;&gt;&lt;img class=&quot;size-full wp-image-129 &quot; alt=&quot;Old Joe’s Behind ಠ&amp;gt;_&amp;gt;ಠ&quot; src=&quot;http://amarport.com/blog/wp-content/uploads/2013/10/old-joe-back.png&quot; width=&quot;1001&quot; height=&quot;691&quot; /&gt;&lt;/a&gt; &lt;em&gt;Old Joe’s Behind ಠ&amp;gt;_&amp;gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You’ll notice the that in each image, one side of the clock tower is a couple of hours apart temporally from the other side. Clearly the plane must have flown by more than once to get all the sides. Another explanation is that the time difference comes from the time it took for the plane to get situated in a way such that one of the perspective cameras lined up with the clock tower just right. In other words, the plane could have been busy taking pictures of the lake in The Vale (north) from above, but at that time, one of its cameras were pointing towards the clock tower from the side. The pictures of the other side would have been taken while the plane was somewhere in Selly Oak (south) by the opposite perspective camera a couple of hours late. Either way, pretty cool stuff.&lt;/p&gt;
+
+&lt;p&gt;Let’s see what Google Earth has to offer.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://amar.io/blog/wp-content/uploads/2013/10/old-joe-google.png&quot;&gt;&lt;img class=&quot;size-full wp-image-131 &quot; alt=&quot;Well, that’s embarrassing…&quot; src=&quot;http://amarport.com/blog/wp-content/uploads/2013/10/old-joe-google.png&quot; width=&quot;841&quot; height=&quot;609&quot; /&gt;&lt;/a&gt; &lt;em&gt;Well, that’s embarrassing…&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Weak. Well known places get a lot of attention when crafted, especially when it’s by volunteers. Here, the Great Hall (building with the largest Dome) has it’s entrance blocked by a mysterious clock face that I can assure you is not there in real life.&lt;/p&gt;
+
+&lt;p&gt;Apple++ for decent automatic mapping software! Get it together, Google!&lt;/p&gt;
+
+&lt;p&gt;Update: I spoke to my project supervisor about this recently and he mentioned how SketchUp can let you take an image of something and define outlines manually on it and let it automatically extrude and skin a model for you (search: “Photo Match”). That would explain how the clock tower skin covers the entrance to the Great Hall; the image that was used to build the models was taken from an angle where the clock tower was covering the Great Hall and hence the model!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 24 Oct 2013 21:14:10 +0100</pubDate>
+        <link>http://localhost:4000/blog/2013/10/24/apple-maps-3d-how-did-they-do-it.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2013/10/24/apple-maps-3d-how-did-they-do-it.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Ludum Dare 27: &quot;10 Seconds&quot; Entry</title>
+        <description>&lt;p&gt;Last weekend I submitted my new game, &lt;a title=&quot;Out of Breath&quot; href=&quot;http://www.ludumdare.com/compo/ludum-dare-27/?action=preview&amp;amp;uid=21239&quot; target=&quot;_blank&quot;&gt;Out of Breath&lt;/a&gt;, for the 27th &lt;a title=&quot;Ludum Dare&quot; href=&quot;http://www.ludumdare.com/&quot; target=&quot;_blank&quot;&gt;Ludum Dare&lt;/a&gt; competition; the first ever I’ve found the time to finish for Ludum Dare. Written in JavaScript from scratch with zero libraries!&lt;/p&gt;
+
+&lt;p&gt;Here are some screenshots:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;   &quot; alt=&quot;Out of Breath Screenshot 1&quot; src=&quot;http://www.ludumdare.com/compo/wp-content/compo2/273708/21239-shot0.png&quot; width=&quot;800&quot; height=&quot;450&quot; /&gt;&amp;lt;/img&amp;gt; &lt;em&gt;Searching for the Treasure&lt;/em&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;img class=&quot;   &quot; alt=&quot;Out of Breath Screenshot 2&quot; src=&quot;http://www.ludumdare.com/compo/wp-content/compo2/273708/21239-shot1.png&quot; width=&quot;800&quot; height=&quot;450&quot; /&gt; &lt;em&gt;Waiting for some Bubbles&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;   &quot; alt=&quot;Out of Breath Screenshot 3&quot; src=&quot;http://www.ludumdare.com/compo/wp-content/compo2/273708/21239-shot2.png&quot; width=&quot;800&quot; height=&quot;450&quot; /&gt; &lt;em&gt;Chilling in a Cavern&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;    &quot; alt=&quot;Out of Breath Screenshot 4&quot; src=&quot;http://www.ludumdare.com/compo/wp-content/compo2/273708/21239-shot3.png&quot; width=&quot;800&quot; height=&quot;450&quot; /&gt; &lt;em&gt;Skirting Stalagmites and Stalactites&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You can play the game here too if you want; just scroll down. Controls are WASD or arrow keys. The game has been tested in Chrome and FireFox, but I recommend Chrome since it seems to give me a faster frame rate.&lt;/p&gt;
+
+&lt;p&gt;If the game seems impossibly hard, it only means that you were very, very, VERY unlucky. Refresh the page to generate a more normal distribution of flora. Art and sound are quite lacking to say the least, but the game does have an “ending” so don’t give up! I’ll definitely continue working on it after the LD27.&lt;/p&gt;
+
+&lt;p&gt;The source code can either be viewed within your browser the standard way (it is entirely unobfuscated although not very commented) or downloaded in a zip file. It’s not open source yet though so please don’t steal. ;)&lt;/p&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+function removeCanvasMargin() {
+	var gameFrame = document.getElementById('gameFrame');
+	var canvas = (gameFrame.contentDocument || gameFrame.contentWindow.document).getElementById('canvas').style.marginTop = 0;
+}
+&lt;/script&gt;
+
+&lt;center&gt;&lt;iframe id=&quot;gameFrame&quot; src=&quot;/apps/outofbreath&quot; height=&quot;450&quot; width=&quot;800&quot; onload=&quot;removeCanvasMargin()&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
+</description>
+        <pubDate>Mon, 26 Aug 2013 16:50:39 +0100</pubDate>
+        <link>http://localhost:4000/blog/2013/08/26/ludum-dare-27-10-seconds-entry.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2013/08/26/ludum-dare-27-10-seconds-entry.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Migration to WordPress</title>
+        <description>&lt;p&gt;After taking a closer look at what WordPress has to offer, I don’t know what I was thinking using Tumblr as a blogging platform. Not that I left Tumblr because it’s bad, it’s just not at all suited for my kind of format. WordPress is to Tumblr what Tumblr is to Twitter if that makes any sense. I didn’t leave Tumblr because Yahoo bought it, just to be clear.&lt;/p&gt;
+
+&lt;p&gt;So now I have much better control over what goes on here especially since all of this is running on my own server. This will probably mean I’ll post more stuff too!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 17 Jun 2013 09:34:59 +0100</pubDate>
+        <link>http://localhost:4000/blog/2013/06/17/migration-to-wordpress.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2013/06/17/migration-to-wordpress.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Hacking Every Second Counts</title>
+        <description>&lt;p&gt;Once again I needed a break from hardcore coding and decided to play some online games. As I was surfing around I came across &lt;a title=&quot;EverySecond&quot; href=&quot;http://www.zefrank.com/everysecond/index.html&quot; target=&quot;_blank&quot;&gt;this game&lt;/a&gt; on zefrank.com, a website as old as the internet itself. A simple game that tests the accuracy of your internal clock with no end. The only incentive is beating the people on the highscore list. The player with the highest score gets to leave a little message for the world to see.&lt;/p&gt;
+&lt;div&gt;&lt;img class=&quot;aligncenter&quot; alt=&quot;image&quot; src=&quot;http://media.tumblr.com/9697cdbf0ea95135a4b2bdd6bc172606/tumblr_inline_mohogrvnYx1qz4rgp.png&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;The game is not at all easy even if you use some kind of timer and it’s pretty safe to assume that #1 is there to stay. Or is he?&lt;!--more--&gt;&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve decided to hack this. I’m still not sure if it will work (I’m literally typing this at the same time as said hacking) but I have high hopes since it’s unlikely there’s going to be a lot of security layers in my way. I wouldn’t even really call it “hacking”. Ze, if you’re reading this, I’m sorry ahead of time and if I do end up on the highscore list, feel free to remove me from your database.&lt;/p&gt;
+
+&lt;p&gt;Changing the score with the usual memory scanner/hex editor treatment looks like a no-go alone due to the nature of the game. Right, so let decompile the code and look for anything immediately noticeable. Ah a url:&lt;/p&gt;
+
+&lt;p&gt;http://www.zefrank.com/everysecond/getdata.php?tablename=everysecond&amp;amp;cache=“+random(999),”_root.highscore”&lt;/p&gt;
+
+&lt;p&gt;Looks like it queries some database for data via PHP. Plug in a random number up to 999 and you get this:&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;&amp;amp;name0=Sorry Sean..&amp;amp;score0=136.2&amp;amp;extra0=How the mighty have fallen! ~Matt&amp;amp;name1=BIG SEAN&amp;amp;score1=135&amp;amp;extra1=VICTORY IS MINE- I LEAVE BEHIND ME A PATH OF DESTRUCTION, A LEGACY OF TRIUMPH. KNEEL BEFORE MY AWESOME POWER AND TYRANNY; THIS CONQUEST OF THE SCIENCES SHALL FOREVER BE REMEMBERED IN AWE AND FEAR. KNEEL!!&amp;amp;name2=JoJoBloMo&amp;amp;score2=125.2&amp;amp;extra2=I am internet famous! This is a story all about how my life got flipped, turned upside down… Go to flash.landrycoolers.com to learn how to get these high scores.&amp;amp;name3=Logger067&amp;amp;score3=104.4&amp;amp;extra3=Ha-ha! Losers!&amp;amp;name4=Ralle&amp;amp;score4=100&amp;amp;extra4=Hahahaha!&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Nice! Looks like we can read the messages for all the runner-ups too. You don’t even need the “cache” variable. Let’s clean that up a bit:&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;Sorry Sean.. - 136.2
+&lt;/span&gt;&lt;span&gt;How the mighty have fallen! ~Matt&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;BIG SEAN - 135
+&lt;/span&gt;&lt;span&gt;VICTORY IS MINE- I LEAVE BEHIND ME A PATH OF DESTRUCTION, A LEGACY OF TRIUMPH. KNEEL BEFORE MY AWESOME POWER AND TYRANNY; THIS CONQUEST OF THE SCIENCES SHALL FOREVER BE REMEMBERED IN AWE AND FEAR. KNEEL!!&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;JoJoBloMo - 125.2
+&lt;/span&gt;&lt;span&gt;I am internet famous! This is a story all about how my life got flipped, turned upside down… Go to flash.landrycoolers.com to learn how to get these high scores.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;Logger067 - 104.4
+&lt;/span&gt;&lt;span&gt;Ha-ha! Losers!&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;Ralle - &lt;/span&gt;&lt;span&gt;100
+&lt;/span&gt;&lt;span&gt;Hahahaha!&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;So far so good! It looked like JoJoBloMo may have gotten there before me but their website seems to be dead and has nothing relevant on it on &lt;a title=&quot;WayBack Machine&quot; href=&quot;http://archive.org/web/web.php&quot; target=&quot;_blank&quot;&gt;WayBack Machine&lt;/a&gt;. Chances are some of them got those scores unfairly too though. To get a score of 100 you would have to play perfectly for 16.83 minutes (0.2 * n*(n+1)/2) and to beat “Matt” you need to do the same for at least 31.14 mins. Ain’t nobody got time fo’ that!&lt;/p&gt;
+
+&lt;p&gt;So let’s see what else we can find…&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;if(!(_root.level&amp;lt;hiscore))
+{
+   submit.userscore=_root.level;
+   win_message=&quot;Cogratulations! You have the top score. Enter your name below, as well as you victory message and press submit.&quot;;
+}
+else
+{
+   win_message=&quot;Cogratulations! You have a high score. Enter your name below and press submit.&quot;;
+   submit.userscore=_root.level;
+   submit.usermessage=&quot;You need the top score to post a message!&quot;;
+}
+update();
+stop();&lt;/pre&gt;
+&lt;p&gt;And Jackpot!&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;if(userscore&amp;gt;_root.lowestscore&amp;amp;&amp;amp;sent&amp;lt;1)
+{
+   sent=1;
+   output=&quot;please wait : sending score&quot;;
+   lowscore=_root.lowestscore;
+   loadVariables(&quot;http://www.zefrank.com/everysecond/insertdelete.php?tablename=everysecond&amp;amp;cache=&quot;+random(9999),this);
+}&lt;/pre&gt;
+&lt;p&gt;Huehuehuehue…&lt;/p&gt;
+
+&lt;p&gt;Well, I don’t feel like trying to figure out what the correct GET variables are and I don’t want to screw it up so instead I’ll just set the starting level to 1337 (literally just a single assignment) and lose the game immediately. It would take 49.69 perfect, non-stop hours to get that score fairly. Advertising my blog in the message may be a bit tactless so instead I’ll just let whoever sees it google my name for more info.&lt;/p&gt;
+&lt;div&gt;&lt;img class=&quot;aligncenter&quot; alt=&quot;image&quot; src=&quot;http://media.tumblr.com/95076a9d7cb16a34893da1ab460354cf/tumblr_inline_mohugrhaM81qz4rgp.png&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;And happy trails to you too!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 16 Jun 2013 16:22:00 +0100</pubDate>
+        <link>http://localhost:4000/blog/2013/06/16/hacking-every-second-counts.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2013/06/16/hacking-every-second-counts.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

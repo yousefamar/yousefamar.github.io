@@ -1,0 +1,9 @@
+---
+layout: post
+title: Hello, world!
+date: '2012-10-09 14:47:18'
+---
+
+In an effort to consolidate my blogging endeavours, I'll be posting here from now on. Chances are said posts will centre around software and hardware but every once in a while something completely random might make its way in. The first few posts will probably be reposts of stuff I wrote before but after that, you, dear reader, can hopefully have the pleasure of getting a behind the scenes look at my projects or learning from thoughts, tips, and techniques that I get a chance to document.
+
+Happy trails!
