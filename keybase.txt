@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/drmr
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://yousefamar.com
+  * I am drmr (https://keybase.io/drmr) on keybase.
+  * I have a public key with fingerprint 1DBB 55D3 6533 1AD1 554E  875C B85C 26CC 81EF 6F49
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120a8e8120a8ab81e837b52033313f5384585ce17497a84f556c780c19cc06a30fc0a",
+            "fingerprint": "1dbb55d365331ad1554e875cb85c26cc81ef6f49",
+            "host": "keybase.io",
+            "key_id": "b85c26cc81ef6f49",
+            "kid": "010129cb8f76d234b0b3c12b2d2d8538dfe85478dd1ac388dc808955bfb58bd1cbbf0a",
+            "uid": "f48b2f576cd62ee44b945a6952ea9019",
+            "username": "drmr"
+        },
+        "service": {
+            "hostname": "yousefamar.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1498504852,
+    "expire_in": 157680000,
+    "prev": "7858a7076ccebe60ebcdf1de156bcfa56808644163b5146993d56ad32da0acb8",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.72
+Comment: https://keybase.io/crypto
+
+yMNxAnicbZJ7UFRVHMcXYYGQp5bNVJreBgQkvHfvPXfP7jTGW2owXxig2HrPvefC
+Buxd9sFjFkZJA8fhUUNaFEEZ2YOHwigjSBMIRSAhDEUTzIgjFpDAotnDHKyzjP7X
++efMOef7/fy+v9+cPj93lY/bxfSQoRKn8pLblZ6TdlXa7tfecVBIkQopvYPKwisb
+zpaw1WbIMkqUnqIZDS1ADFc2AUEGQ1aLgIZmWZZhZcBCDkAgYkbL6bQC5GQAeFEL
+aZHRiSLNCywti7RARVCy0ZSBLWaL0WQjWEZCCACJ5QHBCBIDAIehFoiIsDS8KJI6
+Mi9zOmLMVKwuBwmHBCuONCrkjhwMK/H+R/8oN0muIzxZy0salkM0YkVGgzSSRoIk
+tSRjCDgtlCRGEFkIJRHSUAcAkhGASGJEhOSV3PYVnMxBpJGBlhclXoMxxyEdBwRe
+BzRY0NGMq67dii0mIQcTtWTJsVDFERS5yTOK2DVUVxcPXwsVIpWFHMESKSo5xGm2
+KDZFVLLJW6bNZta7rLZCs0ubj5HhIcWAjCaJDJEY8rDFalRMlJ4hStFmdGEZTgcB
+zUGgiaBwgdlowQajS0EyQ5osVxmcR5BaCKCgpUkrIkaYpzESJZmRMAN4JMoCIHLI
+cxzDswgwHK/TsRLgBYnVSAItkIFSrr5yTQphE6hNyCBMqzHDJNjsFkwVX+5J91C5
++ag81atcv0vl81jgoz/nsS1QVWIdvbkxtOhACJM5ZS5pCh8vu5P7Tbh66t3GEWdx
+V/LNW4l5J9xOL86F/RDWO/ZgSU3fS1volcbbGn0PW+IKs/oXZ5TRzw5/sBDnjS45
+frlVs6X2hY92+kUfebE6dX3K1sGhP2aeT13f9v7+jz2/DJlvCNrcNxZWffLzwq1b
+OjvOdV+dDA+69yTYXX4/e9h/avv8na455mj6EeOV1e7N8f47m+ujkqZXd0bEeS3t
+qfp3dmFX/IJf7cx009X+2z7O9uNtaxK8Gp2ZPY6A7FD/HdsTDhieznKeWhg3fLGU
+WuZbfParu/smz8Z4I3lsI12+IbkrdLHndijdEuNcs47eE12xOd/jw6ENpenLdVJp
+2exyX3z3qpDzYlLlmZdb9913l09/69NaFTDrQMXC8nCMtnX0cT6F+cTuUI3o2oPS
+1OtOdauv538XeyZL7RG119R89/vYWejdtN8eXPf6n0U3iir7LxwcGQ9pe6OlXZ6b
+SFxbUH3pVzFqcPr4xD8Hv15KDLrG+O461FDbHVCTGZv8zKAqxeu9QwnbSrzqG64p
+rzw1MbB2GVh/fiv5gTwd2FFVmvzswED2jYrK3/hX2WXxcm5B8LyseDo3bYx+s73r
+ibAfhx3Dyu81dSDy3N7y0fP1zx0FHbFJx05k/PTpxdy/PPS5wTh+U2/nUpS+4lhD
+y9/Xp+Zi3va7sKN6sivuP8KUwts=
+=og7a
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/drmr
+
+==================================================================
