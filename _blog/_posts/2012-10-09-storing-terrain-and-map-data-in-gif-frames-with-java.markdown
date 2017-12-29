@@ -23,11 +23,11 @@ Let’s go through this step by step. First, we get an image reader that can rea
 
 Using this technique, we can eventually turned this, an easily drawn map:
 
-<img alt="Test Map" src="https://dl.dropbox.com/u/704818/web/tumblr/images/testMap.gif" width="64" height="64" align="middle" />
+![Test Map]({{ site.baseurl }}/assets/images/testMap.gif)
 
 To this, a tile-based map for a 2D top-down game:
-<p style="text-align: center;"><img alt="A tile based 2D top-down game" src="https://dl.dropbox.com/u/704818/web/tumblr/images/screen1.png" align="middle" /></p>
-<img class="aligncenter" alt="A tile based 2D top-down game" src="https://dl.dropbox.com/u/704818/web/tumblr/images/screen2.png" align="middle" />
+![A tile based 2D top-down game]({{ site.baseurl }}/assets/images/screen1.png)
+![A tile based 2D top-down game]({{ site.baseurl }}/assets/images/screen2.png)
 
 If you open up the gif above in GIMP for example, you’ll see the separate layers. Every pixel represents a tile type that eventually becomes a 32*32 tile. As such I obviously couldn’t depict the entire map as a 64*64 map (of which multiple exist, e.g. the inside of the house which is bigger on the inside by far) becomes a 2048*2048 world. How’s that for compacting data?
 
