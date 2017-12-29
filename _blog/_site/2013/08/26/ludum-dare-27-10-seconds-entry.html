@@ -82,12 +82,13 @@
 
 <script type="text/javascript">
 function removeCanvasMargin() {
+	return;
 	var gameFrame = document.getElementById('gameFrame');
 	var canvas = (gameFrame.contentDocument || gameFrame.contentWindow.document).getElementById('canvas').style.marginTop = 0;
 }
 </script>
 
-<center><iframe id="gameFrame" src="https://amar.io/outofbreath" height="450" width="800" onload="removeCanvasMargin()"></iframe></center>
+<center><iframe id="gameFrame" src="https://amar.io/out-of-breath" height="450" width="800" onload="removeCanvasMargin()"></iframe></center>
 
   </div>
 
