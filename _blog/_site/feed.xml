@@ -4,11 +4,11 @@
     <title>Lab Book of Life</title>
     <description>Ruminations of Yousef Amar
 </description>
-    <link>http://localhost:4000/blog/</link>
-    <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 18 Nov 2016 17:05:43 +0000</pubDate>
-    <lastBuildDate>Fri, 18 Nov 2016 17:05:43 +0000</lastBuildDate>
-    <generator>Jekyll v3.3.0</generator>
+    <link>http://yousefamar.com/blog/</link>
+    <atom:link href="http://yousefamar.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 29 Dec 2017 20:56:51 +0000</pubDate>
+    <lastBuildDate>Fri, 29 Dec 2017 20:56:51 +0000</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>Hacking HTML5 Xonix</title>
@@ -48,8 +48,8 @@ ValueError: invalid literal for int() with base 10: '1 /*! and 1=0 */'
 &lt;p&gt;Good on ya, devs!&lt;/p&gt;
 </description>
         <pubDate>Fri, 18 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/blog/2016/11/18/hacking-html5-xonix.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/11/18/hacking-html5-xonix.html</guid>
+        <link>http://yousefamar.com/blog/2016/11/18/hacking-html5-xonix.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2016/11/18/hacking-html5-xonix.html</guid>
         
         
       </item>
@@ -67,8 +67,8 @@ ValueError: invalid literal for int() with base 10: '1 /*! and 1=0 */'
 &lt;p&gt;&lt;img src=&quot;/blog/assets/images/snake-highscore-python.png&quot; alt=&quot;Image of hacked python high-score list&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/blog/2016/11/13/hacking-playsnake-org.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/11/13/hacking-playsnake-org.html</guid>
+        <link>http://yousefamar.com/blog/2016/11/13/hacking-playsnake-org.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2016/11/13/hacking-playsnake-org.html</guid>
         
         
       </item>
@@ -96,8 +96,8 @@ ValueError: invalid literal for int() with base 10: '1 /*! and 1=0 */'
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/PTnAvvT.jpg&quot; alt=&quot;On the Internet, Nobody Knows You're a Dog&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 13 Sep 2016 11:23:46 +0100</pubDate>
-        <link>http://localhost:4000/blog/2016/09/13/to-fail-the-turing-test-against-yourself.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/09/13/to-fail-the-turing-test-against-yourself.html</guid>
+        <link>http://yousefamar.com/blog/2016/09/13/to-fail-the-turing-test-against-yourself.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2016/09/13/to-fail-the-turing-test-against-yourself.html</guid>
         
         
       </item>
@@ -136,8 +136,8 @@ for i in xrange(1,251):
 &lt;/div&gt;
 </description>
         <pubDate>Mon, 11 May 2015 01:29:36 +0100</pubDate>
-        <link>http://localhost:4000/blog/2015/05/11/an-image-scraping-challenge.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2015/05/11/an-image-scraping-challenge.html</guid>
+        <link>http://yousefamar.com/blog/2015/05/11/an-image-scraping-challenge.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2015/05/11/an-image-scraping-challenge.html</guid>
         
         
       </item>
@@ -155,8 +155,8 @@ for i in xrange(1,251):
 &lt;p&gt;No more excuses!&lt;/p&gt;
 </description>
         <pubDate>Sun, 15 Feb 2015 15:07:04 +0000</pubDate>
-        <link>http://localhost:4000/blog/2015/02/15/write-more.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2015/02/15/write-more.html</guid>
+        <link>http://yousefamar.com/blog/2015/02/15/write-more.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2015/02/15/write-more.html</guid>
         
         
       </item>
@@ -170,8 +170,8 @@ for i in xrange(1,251):
 &lt;p&gt;Luckily for me, glorious Google exists and their bots had already cached that last blog post, so I was able to recover that one with the aid of Google’s cache. The rest of the changes I simply redid manually. The only thing I couldn’t recover was the account of the single, solitary user that had subscribed to my blog, so if you’re reading this loffeno, sorry!&lt;/p&gt;
 </description>
         <pubDate>Mon, 28 Oct 2013 15:55:48 +0000</pubDate>
-        <link>http://localhost:4000/blog/2013/10/28/the-importance-of-making-backups.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2013/10/28/the-importance-of-making-backups.html</guid>
+        <link>http://yousefamar.com/blog/2013/10/28/the-importance-of-making-backups.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2013/10/28/the-importance-of-making-backups.html</guid>
         
         
       </item>
@@ -213,8 +213,8 @@ for i in xrange(1,251):
 &lt;p&gt;Update: I spoke to my project supervisor about this recently and he mentioned how SketchUp can let you take an image of something and define outlines manually on it and let it automatically extrude and skin a model for you (search: “Photo Match”). That would explain how the clock tower skin covers the entrance to the Great Hall; the image that was used to build the models was taken from an angle where the clock tower was covering the Great Hall and hence the model!&lt;/p&gt;
 </description>
         <pubDate>Thu, 24 Oct 2013 21:14:10 +0100</pubDate>
-        <link>http://localhost:4000/blog/2013/10/24/apple-maps-3d-how-did-they-do-it.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2013/10/24/apple-maps-3d-how-did-they-do-it.html</guid>
+        <link>http://yousefamar.com/blog/2013/10/24/apple-maps-3d-how-did-they-do-it.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2013/10/24/apple-maps-3d-how-did-they-do-it.html</guid>
         
         
       </item>
@@ -250,11 +250,11 @@ function removeCanvasMargin() {
 }
 &lt;/script&gt;
 
-&lt;center&gt;&lt;iframe id=&quot;gameFrame&quot; src=&quot;/apps/outofbreath&quot; height=&quot;450&quot; width=&quot;800&quot; onload=&quot;removeCanvasMargin()&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
+&lt;center&gt;&lt;iframe id=&quot;gameFrame&quot; src=&quot;https://amar.io/outofbreath&quot; height=&quot;450&quot; width=&quot;800&quot; onload=&quot;removeCanvasMargin()&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
 </description>
         <pubDate>Mon, 26 Aug 2013 16:50:39 +0100</pubDate>
-        <link>http://localhost:4000/blog/2013/08/26/ludum-dare-27-10-seconds-entry.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2013/08/26/ludum-dare-27-10-seconds-entry.html</guid>
+        <link>http://yousefamar.com/blog/2013/08/26/ludum-dare-27-10-seconds-entry.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2013/08/26/ludum-dare-27-10-seconds-entry.html</guid>
         
         
       </item>
@@ -266,8 +266,8 @@ function removeCanvasMargin() {
 &lt;p&gt;So now I have much better control over what goes on here especially since all of this is running on my own server. This will probably mean I’ll post more stuff too!&lt;/p&gt;
 </description>
         <pubDate>Mon, 17 Jun 2013 09:34:59 +0100</pubDate>
-        <link>http://localhost:4000/blog/2013/06/17/migration-to-wordpress.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2013/06/17/migration-to-wordpress.html</guid>
+        <link>http://yousefamar.com/blog/2013/06/17/migration-to-wordpress.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2013/06/17/migration-to-wordpress.html</guid>
         
         
       </item>
@@ -336,8 +336,8 @@ stop();&lt;/pre&gt;
 &lt;p&gt;And happy trails to you too!&lt;/p&gt;
 </description>
         <pubDate>Sun, 16 Jun 2013 16:22:00 +0100</pubDate>
-        <link>http://localhost:4000/blog/2013/06/16/hacking-every-second-counts.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2013/06/16/hacking-every-second-counts.html</guid>
+        <link>http://yousefamar.com/blog/2013/06/16/hacking-every-second-counts.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2013/06/16/hacking-every-second-counts.html</guid>
         
         
       </item>
