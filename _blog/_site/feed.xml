@@ -6,8 +6,8 @@
 </description>
     <link>http://yousefamar.com/blog/</link>
     <atom:link href="http://yousefamar.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 30 Dec 2017 10:09:50 +0000</pubDate>
-    <lastBuildDate>Sat, 30 Dec 2017 10:09:50 +0000</lastBuildDate>
+    <pubDate>Sat, 30 Dec 2017 10:15:59 +0000</pubDate>
+    <lastBuildDate>Sat, 30 Dec 2017 10:15:59 +0000</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -180,11 +180,11 @@ for i in xrange(1,251):
         <title>Apple Maps 3D: How did they do it?</title>
         <description>&lt;p&gt;With the release of OS X Mavericks came a bunch of new features like full screen support on multiple monitors (about time, Apple!). One other such feature is the new Maps app. Its unique selling point is 3D flyover maps. How does it work?&lt;!--more--&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://amar.io/blog/wp-content/uploads/2013/10/new-york-3d.png&quot;&gt;&lt;img class=&quot;size-full wp-image-127 &quot; alt=&quot;New York City, now in 3D!&quot; src=&quot;http://amarport.com/blog/wp-content/uploads/2013/10/new-york-3d.png&quot; width=&quot;1000&quot; height=&quot;691&quot; /&gt;&lt;/a&gt; &lt;em&gt;New York City, now in 3D!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/new-york-3d.png&quot; alt=&quot;New York City, now in 3D!&quot; /&gt; &lt;em&gt;New York City, now in 3D!&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Not too shabby! Here’s the same shot in Google Earth for comparison:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://amar.io/blog/wp-content/uploads/2013/10/new-york-4d.png&quot;&gt;&lt;img class=&quot;size-full wp-image-128 &quot; alt=&quot;Smooth as always, Google!&quot; src=&quot;http://amarport.com/blog/wp-content/uploads/2013/10/new-york-4d.png&quot; width=&quot;1107&quot; height=&quot;666&quot; /&gt;&lt;/a&gt; &lt;em&gt;Smooth as always, Google!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/new-york-4d.png&quot; alt=&quot;Smooth as always, Google!&quot; /&gt; &lt;em&gt;Smooth as always, Google!&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Sorry, but I’m gonna have to side with Google on this one on aesthetics! 3D models in Google Earth are often crowdsourced and built and skinned my hand using the idiot-proof modeling tool Google Sketchup. They’re made to look right. Apple’s Maps on the other hand are built automatically.&lt;/p&gt;
 
@@ -194,17 +194,17 @@ for i in xrange(1,251):
 
 &lt;p&gt;That’s why it gets a little wobbly when you zoom in. The advantage is that the skin quality is often much better. Here’s an image of the clock tower at my university in the Maps app:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://amar.io/blog/wp-content/uploads/2013/10/old-joe-front.png&quot;&gt;&lt;img class=&quot;size-full wp-image-130 &quot; alt=&quot;Old Joe’s Front&quot; src=&quot;http://amarport.com/blog/wp-content/uploads/2013/10/old-joe-front.png&quot; width=&quot;1002&quot; height=&quot;692&quot; /&gt;&lt;/a&gt; &lt;em&gt;Old Joe’s Front&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/old-joe-front.png&quot; alt=&quot;Old Joe's Front&quot; /&gt; &lt;em&gt;Old Joe’s Front&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;And here it is from the other side:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://amar.io/blog/wp-content/uploads/2013/10/old-joe-back.png&quot;&gt;&lt;img class=&quot;size-full wp-image-129 &quot; alt=&quot;Old Joe’s Behind ಠ&amp;gt;_&amp;gt;ಠ&quot; src=&quot;http://amarport.com/blog/wp-content/uploads/2013/10/old-joe-back.png&quot; width=&quot;1001&quot; height=&quot;691&quot; /&gt;&lt;/a&gt; &lt;em&gt;Old Joe’s Behind ಠ&amp;gt;_&amp;gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/old-joe-back.png&quot; alt=&quot;Old Joe's Behind ಠ_ಠ&quot; /&gt; &lt;em&gt;Old Joe’s Behind ಠ_ಠ&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;You’ll notice the that in each image, one side of the clock tower is a couple of hours apart temporally from the other side. Clearly the plane must have flown by more than once to get all the sides. Another explanation is that the time difference comes from the time it took for the plane to get situated in a way such that one of the perspective cameras lined up with the clock tower just right. In other words, the plane could have been busy taking pictures of the lake in The Vale (north) from above, but at that time, one of its cameras were pointing towards the clock tower from the side. The pictures of the other side would have been taken while the plane was somewhere in Selly Oak (south) by the opposite perspective camera a couple of hours late. Either way, pretty cool stuff.&lt;/p&gt;
 
 &lt;p&gt;Let’s see what Google Earth has to offer.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://amar.io/blog/wp-content/uploads/2013/10/old-joe-google.png&quot;&gt;&lt;img class=&quot;size-full wp-image-131 &quot; alt=&quot;Well, that’s embarrassing…&quot; src=&quot;http://amarport.com/blog/wp-content/uploads/2013/10/old-joe-google.png&quot; width=&quot;841&quot; height=&quot;609&quot; /&gt;&lt;/a&gt; &lt;em&gt;Well, that’s embarrassing…&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/old-joe-back.png&quot; alt=&quot;Well, that's embarrassing...&quot; /&gt; &lt;em&gt;Well, that’s embarrassing…&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Weak. Well known places get a lot of attention when crafted, especially when it’s by volunteers. Here, the Great Hall (building with the largest Dome) has it’s entrance blocked by a mysterious clock face that I can assure you is not there in real life.&lt;/p&gt;
 
