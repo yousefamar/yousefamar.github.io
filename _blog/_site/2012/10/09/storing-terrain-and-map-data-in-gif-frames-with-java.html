@@ -62,7 +62,7 @@
 
 <p>I feel like the GIF format is under-appreciated since it is pretty much the only common format able to store image layers in a lightweight manner, display them as an animation or each layer overlaying the next, have support in most image loading APIs, and is easily creatable in common image manipulation software such as GIMP or Photoshop.</p>
 
-<p>With this in mind I have devised a technique to store terrain and entity data within the GIF format for easy visual editing.<!--more--> I don’t think anybody has ever loaded gifs layer by layer in this manner, let alone done anything quite like this in the first place, but it’s quite nice.</p>
+<p>With this in mind I have devised a technique to store terrain and entity data within the GIF format for easy visual editing.<!--more--> I don’t think anybody has ever loaded gifs layer by layer in this manner, let alone done anything quite like this in the first place, but itis quite nice.</p>
 <pre class="prettyprint">BufferedImage tileMap = null;
 BufferedImage entityMap = null;
 try {
@@ -73,7 +73,7 @@ try {
 } catch (IOException e) {
 	System.err.println("Unable to load custom map ""+mapName+"".");
 }</pre>
-<p>Let’s go through this step by step. First, we get an image reader that can read the GIF format (another advantage of using a well known format). Then we create an input stream using <a title="Universal Resource Loading in Java" href="http://amarport.com/blog/?p=27" target="_blank">my preferred method</a>. To read the separate layers/frames, we simply use “ir.read(layerIndex);”. That’s it! So simple and yet so overlooked.</p>
+<p>Let’s go through this step by step. First, we get an image reader that can read the GIF format (another advantage of using a well known format). Then we create an input stream using <a href="/blog/2012/10/09/universal-resource-loading-in-java.html">my preferred method</a>. To read the separate layers/frames, we simply use “ir.read(layerIndex);”. That’s it! So simple and yet so overlooked.</p>
 
 <p>Using this technique, we can eventually turned this, an easily drawn map:</p>
 
