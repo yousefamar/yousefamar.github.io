@@ -30,7 +30,7 @@ You'll notice the that in each image, one side of the clock tower is a couple of
 
 Let's see what Google Earth has to offer.
 
-![Well, that's embarrassing...]({{ site.baseurl }}/assets/images/old-joe-back.png) *Well, that's embarrassing...*
+![Well, that's embarrassing...]({{ site.baseurl }}/assets/images/old-joe-google.png) *Well, that's embarrassing...*
 
 Weak. Well known places get a lot of attention when crafted, especially when it's by volunteers. Here, the Great Hall (building with the largest Dome) has it's entrance blocked by a mysterious clock face that I can assure you is not there in real life.
 
