@@ -4,7 +4,7 @@ title: Storing Terrain and Map Data in GIF Frames with Java
 date: '2012-10-09 22:08:00'
 ---
 
-In Java, nobody really ever uses gifs (that is, images of the *.gif persuasion) and when they do, it’s usually as an ImageIcon for Swing GUIs and the like and even then they don’t look very professional.
+In Java, nobody really ever uses gifs (that is, images of the \*.gif persuasion) and when they do, it’s usually as an ImageIcon for Swing GUIs and the like and even then they don’t look very professional.
 
 I feel like the GIF format is under-appreciated since it is pretty much the only common format able to store image layers in a lightweight manner, display them as an animation or each layer overlaying the next, have support in most image loading APIs, and is easily creatable in common image manipulation software such as GIMP or Photoshop.
 
@@ -29,7 +29,7 @@ To this, a tile-based map for a 2D top-down game:
 ![A tile based 2D top-down game]({{ site.baseurl }}/assets/images/screen1.png)
 ![A tile based 2D top-down game]({{ site.baseurl }}/assets/images/screen2.png)
 
-If you open up the gif above in GIMP for example, you’ll see the separate layers. Every pixel represents a tile type that eventually becomes a 32*32 tile. As such I obviously couldn’t depict the entire map as a 64*64 map (of which multiple exist, e.g. the inside of the house which is bigger on the inside by far) becomes a 2048*2048 world. How’s that for compacting data?
+If you open up the gif above in GIMP for example, you’ll see the separate layers. Every pixel represents a tile type that eventually becomes a 32\*32 tile. As such I obviously couldn’t depict the entire map as a 64\*64 map (of which multiple exist, e.g. the inside of the house which is bigger on the inside by far) becomes a 2048\*2048 world. How’s that for compacting data?
 
 After the image is loaded, we then iterate through the pixels and do with the information whatever we like, such as build a map while additionally being able to use data such as image size or settings encoded in one layer that can be interpreted using a custom protocol of your imagining.
 
