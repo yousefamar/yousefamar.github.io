@@ -8,7 +8,7 @@ Last weekend I submitted my new game, <a title="Out of Breath" href="http://www.
 
 Here are some screenshots:
 
-<img class="   " alt="Out of Breath Screenshot 1" src="http://www.ludumdare.com/compo/wp-content/compo2/273708/21239-shot0.png" width="800" height="450" /></img> *Searching for the Treasure*
+<img class="   " alt="Out of Breath Screenshot 1" src="http://www.ludumdare.com/compo/wp-content/compo2/273708/21239-shot0.png" width="800" height="450" /> *Searching for the Treasure*
 
 <!--more-->
 
