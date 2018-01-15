@@ -42,38 +42,38 @@ html.no-js(lang='en')
 				li
 					a.no-scroll(href='mailto:yousef@amar.io?Subject=Hello%2C%20Yousef!') Contact
 
-		#lead
+		div(itemscope, itemtype='http://schema.org/Person')
+			#lead
+				#lead-content
+					h1 #[span(itemprop="name") Yousef Amar]
+					h2 #[span(itemprop="jobTitle") PhD Student]
+					a.btn-rounded-white(href='res/cv/cv.pdf', target='_blank') Download CV
 
-			#lead-content
-				h1 Yousef Amar
-				h2 PhD Student
-				a.btn-rounded-white(href='res/cv/cv.pdf', target='_blank') Download CV
+				#lead-overlay
 
-			#lead-overlay
+				#lead-down
+					span
+						i.fa.fa-chevron-down(aria-hidden='true')
 
-			#lead-down
-				span
-					i.fa.fa-chevron-down(aria-hidden='true')
-
-		#about
-			.container
-				.row
-					.col-md-4
-						h2.heading About
-					.col-md-8
-						p Software, hardware, and everything in between!
-						br
-						p
-							| PhD student currently at Imperial College London with a focus on Systems, Networks, Security, and Personal Data under 
-							a(href='https://www.imperial.ac.uk/people/h.haddadi') Dr Hamed Haddadi
-							| .
-						br
-						p
-							| This page is still under construction. If you're interested in my volunteering or STEM outreach work, please 
-							a.no-scroll(href='mailto:yousef@amar.io?Subject=Hello%2C%20Yousef!') email me
-							| . My project list is also at about 1%. Until I sort that out, for a better picture of the personal and open-source projects I work on, please see my 
-							a(href='https://github.com/yousefamar') GitHub profile
-							| . Eventually all my projects should make their way online.
+			#about
+				.container
+					.row
+						.col-md-4
+							h2.heading About
+						.col-md-8
+							p Software, hardware, and everything in between!
+							br
+							p(itemprop="description")
+								| PhD student currently at #[span(itemprop="affiliation") Imperial College London] with a focus on Systems, Networks, Security, and Personal Data under 
+								a(href='https://www.imperial.ac.uk/people/h.haddadi') Dr Hamed Haddadi
+								| .
+							br
+							p
+								| This page is still under construction. If you're interested in my volunteering or STEM outreach work, please 
+								a.no-scroll(href='mailto:yousef@amar.io?Subject=Hello%2C%20Yousef!') email me
+								| . My project list is also at about 1%. Until I sort that out, for a better picture of the personal and open-source projects I work on, please see my 
+								a(href='https://github.com/yousefamar') GitHub profile
+								| . Eventually all my projects should make their way online.
 
 		#publications.background-alt
 			h2.heading Publications
