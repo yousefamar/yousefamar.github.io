@@ -1,48 +1,363 @@
 let publications = [
 	{
-		title: 'Zest: REST over ZeroMQ',
-		publisher: 'SPT-IoT 2019',
-		description: 'In this paper we introduce, Zest (REST over ZeroMQ), a middleware technology in support of an Internet of Things (IoT).',
-		pdf: 'res/papers/1570510166.pdf'
+		title: "Zest: REST over ZeroMQ",
+		publisher: "SPT-IoT 2019",
+		description: "In this paper we introduce, Zest (REST over ZeroMQ), a middleware technology in support of an Internet of Things (IoT).",
+		link: {
+			href: "res/papers/1570510166.pdf",
+			label: "PDF"
+		}
 	}, {
-		title: 'Providing Occupancy as a Service with Databox',
-		publisher: 'CitiFog 2018',
-		description: 'In this paper we present Occupancy-as-a-Service (OaaS) implemented as an app on Databox.',
-		pdf: 'res/papers/citifog18-final7.pdf'
+		title: "Providing Occupancy as a Service with Databox",
+		publisher: "CitiFog 2018",
+		description: "In this paper we present Occupancy-as-a-Service (OaaS) implemented as an app on Databox.",
+		link: {
+			href: "res/papers/citifog18-final7.pdf",
+			label: "PDF"
+		}
 	}, {
-		title: 'An Information-Theoretic Approach to Time-Series Data Privacy',
-		publisher: 'W-P2DS 2018 / EuroDW 2018',
-		description: 'This paper presents a system for efficiently augmenting token-based access control with privacy-awareness without significantly impacting performance or utility.',
-		pdf: 'res/papers/a3-amar.pdf'
+		title: "An Information-Theoretic Approach to Time-Series Data Privacy",
+		publisher: "W-P2DS 2018 / EuroDW 2018",
+		description: "This paper presents a system for efficiently augmenting token-based access control with privacy-awareness without significantly impacting performance or utility.",
+		link: {
+			href: "res/papers/a3-amar.pdf",
+			label: "PDF"
+		}
 	}, {
-		title: 'Building Accountability into the Internet of Things: The IoT Databox Model',
-		publisher: 'Journal of Reliable Intelligent Environments December 2017',
-		description: 'This paper outlines the IoT Databox model as a means of making the Internet of Things (IoT) accountable to individuals.',
-		pdf: 'res/papers/JREI-D-17-00019.pdf'
+		title: "Building Accountability into the Internet of Things: The IoT Databox Model",
+		publisher: "Journal of Reliable Intelligent Environments December 2017",
+		description: "This paper outlines the IoT Databox model as a means of making the Internet of Things (IoT) accountable to individuals.",
+		link: {
+			href: "res/papers/JREI-D-17-00019.pdf",
+			label: "PDF"
+		}
 	}, {
-		title: 'Balanced Message Distribution in Distributed Message Handling Systems',
-		publisher: 'US Patent (serial number: 15/794440) 2017',
-		description: 'This patent describes a combination of methodologies for arriving at near-optimal message distribution decisions in distributed messaging systems under specific constraints.',
-		pdf: 'javascript:alert("Coming soon!")'
+		title: "Balanced Message Distribution in Distributed Message Handling Systems",
+		publisher: "US Patent (serial number: 15/794440) 2017",
+		description: "This patent describes a combination of methodologies for arriving at near-optimal message distribution decisions in distributed messaging systems under specific constraints.",
+		link: {
+			href: "javascript:alert('Coming soon!')",
+			label: "PDF"
+		}
 	}, {
-		title: 'Route-based Authorization and Discovery for Personal Data',
-		publisher: 'EuroDW 2017',
-		description: 'When faced with systems in which third party components need to advertise the availability of data they gather, while other such components need to access it, solutions for delegated authorisation and discovery APIs for interoperability are needed. This work explores possible solutions, and converges on a testable implementation.',
-		pdf: 'res/papers/eurodw17-final3.pdf'
+		title: "Route-based Authorization and Discovery for Personal Data",
+		publisher: "EuroDW 2017",
+		description: "When faced with systems in which third party components need to advertise the availability of data they gather, while other such components need to access it, solutions for delegated authorisation and discovery APIs for interoperability are needed. This work explores possible solutions, and converges on a testable implementation.",
+		link: {
+			href: "res/papers/eurodw17-final3.pdf",
+			label: "PDF"
+		}
 	}, {
-		title: 'Personal Data Management with the Databox: What\'s Inside the Box?',
-		publisher: 'CAN 2016',
-		description: 'A more detailed look at the Databox as it stood; a collection of physical and cloudhosted software components that provide for an individual data subject to manage, log and audit access to their data by other parties.',
-		pdf: 'res/papers/p49-mortier.pdf'
+		title: "Personal Data Management with the Databox: What's Inside the Box?",
+		publisher: "CAN 2016",
+		description: "A more detailed look at the Databox as it stood; a collection of physical and cloudhosted software components that provide for an individual data subject to manage, log and audit access to their data by other parties.",
+		link: {
+			href: "res/papers/p49-mortier.pdf",
+			label: "PDF"
+		}
 	}, {
-		title: 'Privacy-Aware Infrastructure for Managing Personal Data',
-		publisher: 'SIGCOMM 2016',
-		description: 'A poster abstract giving an overview of Databox systems as they stood with a stronger focus on arbiter interactions.',
-		pdf: 'res/papers/p571-amar.pdf'
+		title: "Privacy-Aware Infrastructure for Managing Personal Data",
+		publisher: "SIGCOMM 2016",
+		description: "A poster abstract giving an overview of Databox systems as they stood with a stronger focus on arbiter interactions.",
+		link: {
+			href: "res/papers/p571-amar.pdf",
+			label: "PDF"
+		}
 	}, {
-		title: 'Incremental Dense Multi-modal 3D Scene Reconstruction',
-		publisher: 'IROS 2015',
-		description: 'In this paper, we propose a probabilistic model that efficiently exploits complementarity between different depth-sensing modalities for incremental dense scene reconstruction.',
-		pdf: 'res/papers/ondra2015iros.pdf'
+		title: "Incremental Dense Multi-modal 3D Scene Reconstruction",
+		publisher: "IROS 2015",
+		description: "In this paper, we propose a probabilistic model that efficiently exploits complementarity between different depth-sensing modalities for incremental dense scene reconstruction.",
+		link: {
+			href: "res/papers/ondra2015iros.pdf",
+			label: "PDF"
+		}
 	}
+];
+
+let awards = [
+	{
+		name: "EuroSys 2018 Shadow PC and Conference Travel Grant",
+		image: {
+			thumb: "res/images/awards/eurosys-logo.png",
+			alt: "EuroSys Logo",
+		},
+		description: "Two travel grants to Shadow PC meeting and top-tier systems conference EuroSys in Porto, Portugal, where Yousef <a href=\"/res/images/awards/yousef-poster-eurodw18.jpg\">presented</a> a poster and <a href=\"/res/images/awards/yousef-presenting-eurodw18.jpg\">gave</a> a workshop talk for EuroDW '17 (slides available <a href=\"http://conferences.inf.ed.ac.uk/EuroDW2018/#program\">here</a>) as well as <a href=\"/res/images/awards/yousef-presenting-wp2ds18.jpg\">giving</a> a workshop talk for the first W-P2DS (slides available <a href=\"/res/papers/w-p2ds18-presentation.pdf\">here</a>)."
+	}, {
+		name: "EuroSys 2017 Travel Grant",
+		image: {
+			thumb: "res/images/awards/eurosys-logo.png",
+			alt: "EuroSys Logo",
+		},
+		description: "A grant of $500 covering travel and lodging in addition to free registration to top-tier systems conference EuroSys in Belgrade, Serbia, where Yousef <a href=\"/res/images/awards/yousef-poster-eurodw17.jpg\">presented</a> a poster and <a href=\"/res/images/awards/yousef-presenting-eurodw17.jpg\">gave</a> a workshop talk (EuroDW '17). Abstract and slides are available <a href=\"https://eurodw17.kaust.edu.sa/workshop.html\">here</a>."
+	}, {
+		name: "IEEE Circuit Building Competition Winner",
+		image: {
+			thumb: "res/images/awards/ieee-student-branch.png",
+			alt: "QMUL IEEE Student Branch Logo",
+		},
+		description: "For fairness, entrants were divided into beginners and veterans. Yousef was selected as winner among the veteran contestants, based on build speed, circuit layout, design, soldering quality, and functionality. Photos available <a href=\"http://ieeesb.eecs.qmul.ac.uk/2017/02/22/valentines-day-circuit-building-2017/\">here</a> — that Amazon gift card, valued at £35, was aptly used to buy more electronics."
+	}, {
+		name: "SIGCOMM 2016 Travel Grant",
+		image: {
+			thumb: "res/images/awards/sigcomm16-logo.png",
+			alt: "SIGCOMM 2016 Logo",
+		},
+		description: "A grant of $1,500 covering registration, lodging, and travel to ACM's Special Interest Group on Data Communications (SIGCOMM) conference in Florianópolis, Brazil, where Yousef <a href=\"/res/images/awards/yousef-poster-sigcomm16.jpg\">presented</a> a poster, attended stimulating talks, and met brilliant people."
+	}, {
+		name: "AP Jarvis Prize",
+		image: {
+			thumb: "res/images/awards/apjarvis-thumb.png",
+			alt: "AP Jarvis Award Certificate",
+			href: "res/images/awards/apjarvis-small.png"
+		},
+		description: "An annual award, valued at £50, for an outstanding performance in the project undertaken by students in the final year in Electronic and Electrical Engineering. In addition, the project poster was voted student favourite!"
+	}, {
+		name: "Personal Skills Award (Advanced)",
+		image: {
+			thumb: "res/images/awards/PSA-thumb.png",
+			alt: "PSA Advanced Award Certificate",
+			href: "res/images/awards/PSA-small.png"
+		},
+		description: "The advanced level of the university's optional employability award, achieved by demonstrating an exceptional commitment to developing employability through attending workshops, networking events, and volunteering. Additionally, PSA (Advanced) students demonstrate professional skills to an employer led interview panel and foster professional practice. <a href=\"http://intranet.birmingham.ac.uk/as/employability/psa/index.aspx\" target=\"_blank\">More info...</a>"
+	}, {
+		name: "PASS Leader of the Year 2013-2014",
+		image: {
+			thumb: "res/images/awards/PASS-thumb.png",
+			alt: "PASS Leader of the Year Certificate",
+			href: "res/images/awards/PASS-small.png"
+		},
+		description: "The <a href=\"http://intranet.birmingham.ac.uk/as/libraryservices/pass/whatispass.aspx\" target=\"_blank\">Peer-assisted Study Sessions (PASS)</a> scheme is part of an internationally recognised network where higher year students lead study sessions for lower year students. <a href=\"http://web.archive.org/web/20150816043636/https://intranet.birmingham.ac.uk/as/libraryservices/pass/awards.aspx\">Yousef</a> was named <a href=\"http://intranet.birmingham.ac.uk/as/libraryservices/pass/awards.aspx\" target=\"_blank\">PASS Leader of the Year</a> after successfully setting up the scheme in the department of EECE after lobbying the administration for over a year as Chair of Student Representatives. <a href=\"http://www.birmingham.ac.uk/schools/eece/news/pass-awards.aspx\" target=\"_blank\">Full news article...</a>"
+	}, {
+		name: "Student Mobile App Competition (SMAC) Winner",
+		image: {
+			thumb: "res/images/awards/SMAC-thumb.png",
+			alt: "SMAC Certificate",
+			href: "res/images/awards/SMAC-small.png"
+		},
+		description: "A competition, led by the university's IT Innovation Centre, thats goal is to prototype the best mobile app that will most benefit the university and students as a whole. The competition was won by writing a marketplace app for students to buy and sell secondhand textbooks with built in messaging. Prizes included an Amazon Kindle Fire HD tablet and a 14 week paid industrial placement offer (which was respectfully declined). <a href=\"http://intranet.birmingham.ac.uk/it/innovation/Student-Mobile-App-Competition/Student-Mobile-App-Competition-2014.aspx\" target=\"_blank\">More info...</a>"
+	}, {
+		name: "IBM Mainframe Challenge 2012 Winner",
+		image: {
+			thumb: "res/images/awards/IBM.png",
+			alt: "IBM Mainframe Challenge 2012 Logo",
+		},
+		description: "Achieved by swiftly completing a series of mainframe and systems programming tasks on IBM's own servers. <a href=\"http://www-05.ibm.com/employment/uk/graduate-programmes/mainframe/index.shtml\" target=\"_blank\">More info...</a>"
+	}, {
+		name: "First Class Excellence Scholarship x4",
+		image: {
+			thumb: "res/images/awards/scholarship-thumb.png",
+			alt: "First Class Excellence Scholarship Letter",
+			href: "res/images/awards/scholarship-small.png"
+		},
+		description: "Awarded for excellent baccalaureate results and maintained for four consecutive years (the entire degree) by consistently achieving first class honours."
+	}
+];
+
+let experience = [
+	{
+		role: "Research Intern",
+		organisation: "Nokia Bell Labs Stuttgart",
+		period: "May 2017 – August 2017",
+		description: "Research in distributed function scheduling and dynamic load balancing for minimising latency in the context of serverless computing."
+	}, {
+		role: "Teaching Assistant",
+		organisation: "Queen Mary University of London",
+		period: "January 2016 – January 2019",
+		description: `Teaching, supervision, and examination of undergraduates and postgraduates in a variety of EECS modules.
+<ul class="small">
+	<li>Digital Systems Design (hardware design and VHDL)</li>
+	<li>Software and Network Services Design / IT Programming (basically a Java module)</li>
+	<li>2x Digital Media and Social Networks (graphs, network analysis, web APIs)</li>
+</ul>`
+	}, {
+		role: "Research Intern",
+		organisation: "University of Oxford",
+		period: "September 2015 – September 2016",
+		description: `Research in robotics, computer vision, machine learning, and A.I. &ndash; among other areas with <a href="http://www.robots.ox.ac.uk/~tvg/">Torr Vision Group</a> under <a href="http://www.robots.ox.ac.uk/~phst/">Professor Philip Torr</a> at the Department
+of Engineering Science.
+<h6>Publications</h6>
+<ul class="small">
+	<li><a href="res/papers/ondra2015iros.pdf">Incremental Dense Multi-modal 3D Scene Reconstruction</a></li>
+</ul>`
+	}, {
+		role: "Programming Tutor",
+		organisation: "Self-employed",
+		period: "September 2010 – June 2014",
+		description: "Personal tutor to 16 students"
+	}, {
+		role: "Teaching Assistant",
+		organisation: "University of Birmingham",
+		period: "November 2011 – November 2011",
+		description: "Teaching and supervision of a group of sixth form students considering higher education."
+	}, {
+		role: "Shop Floor Worker",
+		organisation: "Aquila Aviation by Excellence AG",
+		period: "May 2008 – September 2008",
+		description: "Construction and assembly of fiber composite plane parts. Extensive experience in sweeping the factory after hours and dealing with occupational injuries."
+	}
+];
+
+let education = [
+	{
+		qualification: "PhD in Electronic Engineering and Computer Science",
+		institution: "Queen Mary University of London<br/>University of Genoa<br/>Imperial College London",
+		period: "Jan 2016 – Present",
+		description: `PhD research with a focus on Systems, Networks, Security, and Personal Data
+<h6>Societies</h6>
+<ul>
+	<li>Artificial Intelligence and Robotics Society</li>
+	<li>IEEE Student Branch</li>
+	<li>Engineers Without Borders</li>
+	<li>Trading and Investment Society</li>
+	<li>Design Society</li>
+</ul>`
+	}, {
+		qualification: "Master of Engineering in Computer Systems Engineering with Business Management",
+		institution: "The University of Birmingham",
+		period: "Sept 2010 – July 2014",
+		description: `<h6>First class Honours</h6>
+Decided to transfer course from Electronic Engineering with Business Management on completion of my first year. Awarded the First Class Excellence Scholarship for four consecutive years as a result of an impeccable record.
+<h6>Societies</h6>
+<ul>
+	<li>Electronic, Electrical & Computer Engineering Society</li>
+	<li>Birmingham Enterprise and Entrepreneur’s Society (BEES)</li>
+	<li>Games Development Society</li>
+	<li>Investment Society</li>
+</ul>
+<h6>Modules Pertinent to Current Interests</h6>
+<ul>
+	<li>Data Mining</li>
+	<li>Computer Vision</li>
+	<li>Computer Networking</li>
+	<li>Computer Hardware and Digital Design</li>
+	<li>Digital Systems and Embedded Computing</li>
+	<li>Digital Logic and Microprocessor Systems</li>
+	<li>Object Oriented Software Design</li>
+	<li>Computer Systems, Algorithms and Data Structures</li>
+	<li>C Programming and Algorithmic Problem Solving</li>
+	<li>Project Management and Professional Practice</li>
+	<li>Advanced Interactive 3D Design for Virtual Environments and Serious Games</li>
+</ul>
+<h6>Miscellaneous</h6>
+<ul>
+	<li>Student Representative of the Department of Electronic, Electrical, and Computer Engineering for 2 consecutive years and Student Rep Chair for 1 year</li>
+	<li>Peer Assisted Study Sessions (PASS) Leader; tutoring first year students</li>
+	<li>Ambassador for the University of Birmingham on a cultural exchange program in China for future direct-entry students</li>
+	<li>EECE Green Impact project assistant for 2 years and sole student delegate</li>
+	<li>Certification of completion of Birmingham Start-Up Masterclasses 2013</li>
+</ul>`
+	}, {
+		qualification: "European Baccalaureate",
+		institution: "European School Frankfurt am Main",
+		period: "Sept 2002 – Sept 2010",
+		description: `<ul>
+	<li>Twice presenter at the annual European School Science Symposium</li>
+	<li>Student council president candidate</li>
+	<li>Lead role in 3 Shakespearean plays</li>
+</ul>`
+	}
+];
+
+let volunteering = [
+	{
+		role: "Duolingo Global Ambassador",
+		description: `Yousef runs the sole <a href="https://events.duolingo.com/london-german-2/" target="_blank">German chapter in London</a> with over 1,800 members for the popular language learning platform <a href="https://www.duolingo.com/" target="_blank">Duolingo</a>, organising and hosting weekly German language events.`
+	}, {
+		role: "Various STEM Outreach",
+		description: `<ul>
+	<li><a href="https://www.stem.org.uk/stem-ambassadors" target="_blank">STEM Ambassador</a> for 3 years through which I maintain DBS certification</li>
+	<li><a href="https://faraday-secondary.theiet.org/" target="_blank">Faraday Challenge</a> Volunteer</li>
+	<li><a href="http://www.teentech.com/" target="_blank">Teen Tech</a> Instructor (Telford, Surrey, London) teaching classes from dozens of schools to build an <a href="https://www.eecs.qmul.ac.uk/~andrewm/arduinitar.html" target="_blank">Arduinitar</a></li>
+	<li>Teen Tech Competition Consultant leading <a href="https://twitter.com/teentechevent/status/879368699140067329" target="_blank">our team</a> to victory!</li>
+	<li><a href="http://www.firstlegoleague.org/" target="_blank">Lego League</a> Judge</li>
+</ul>`
+	}, {
+		role: "Open Source Maintainer",
+		description: `Yousef's open source work warrants its own section. Aside from the myriad of codebases Yousef has contributed to on and off of <a href="https://github.com/yousefamar" target="_blank">GitHub</a>, Yousef helps thousands of people on <a href="https://stackexchange.com/users/508897/yousef-amar" target="_blank">Stack Exchange sites</a>, maintains packages for Arch and Void Linux, and is active in several video game modding communities and has grown a large following. More information on these will be added to the <a href="#projects" target="_blank">project</a> graph soon.`
+	}, {
+		role: "Invited Speaker",
+		description: "Yousef is regularly invited to present and discuss Islam and its influence in his life to the senior year Catholic class at his old school."
+	}, {
+		role: "Student Representative and Chair",
+		description: "Yousef was elected student representative of the Department of Electronic, Electrical, and Computer Engineering for 2 consecutive years and Student Rep Chair for 1 year."
+	}, {
+		role: "EECE Green Impact Project Assistant",
+		description: "Yousef was the sole student delegate in the department Green Impact team, mobilising the student body as their representative to spur on sustainability. As a result, the team won the Gold, Gold Plus for Lab, and Community Action awards."
+	}, {
+		role: "Peer Assisted Study Sessions (PASS) Leader",
+		description: "As a PASS leader, Yousef tutored first year students, and was named university-wide PASS leader of the year due to utilising his capacity as student representative to successfully lobby the EECE department to introduce the PASS scheme for the modules students would benefit most from."
+	}, {
+		role: "Cultural Ambassador",
+		description: "Ambassador for the University of Birmingham on a two-week cultural exchange program in China (Beijing, Wuhan) for future direct-entry students."
+	}
+];
+
+let projects = [
+	{
+		name: "4<sup>th</sup> Year MEng Final Year Project",
+		image: {
+			thumb: "res/images/projects/fourth-year.png",
+			alt: "Shipwreck 3D scan"
+		},
+		description: "Design and implementation of a low-cost UAV sensor system for constructing object and topographical 3D models in real-time.",
+		link: {
+			href: "javascript:alert('Coming soon!')",
+			label: "Report"
+		}
+	}, {
+		name: "3<sup>rd</sup> Year MEng Group Project",
+		image: {
+			thumb: "res/images/projects/third-year.png",
+			alt: "Quadcopter-mounted teddy bear"
+		},
+		description: "Building a quadcopter that can autonomously transport a payload from the roof of the EECE building to an arbitrary target.",
+		link: {
+			href: "javascript:alert('Coming soon!')",
+			label: "Report"
+		}
+	}
+];
+
+let skills = [
+	"English (fluent)",
+	"German (fluent)",
+	"Arabic (fluent)",
+	"Italian (4 years)",
+	"Mandarin (1 year)",
+	"HTML5",
+	"CSS3",
+	"JavaScript",
+	"LiveScript",
+	"PHP",
+	"SQL",
+	"Node.js",
+	"AngularJS",
+	"React",
+	"Vue.js",
+	"MongoDB",
+	"AWS (EC2, S3, R53)",
+	"Java",
+	"Python",
+	"C",
+	"C++",
+	"C#",
+	"Unity3D",
+	"Blender",
+	"VHDL",
+	"OpenGL",
+	"GLSL",
+	"WebGL",
+	"WebSocket",
+	"CUDA",
+	"OpenCL",
+	"SSE Programming",
+	"R",
+	"MATLAB",
+	"Bash",
+	"CUPL",
+	"MP Assembly",
+	"LaTeX",
+	"Cordova",
+	"Git/Hg/SVN",
+	"IBM z/OS mainframe (CICS, WebSphere MQ, JCL)"
 ];

@@ -1,5 +1,5 @@
 let listing = Vue.component('listing', {
-	props: [ 'title', 'subtitle', 'description', 'link' ],
+	props: [ 'title', 'subtitle', 'subsubtitle', 'description', 'image', 'link' ],
 	template: '#listing'
 });
 
@@ -28,7 +28,13 @@ new Vue({
 	},
 	data: {
 		input: '#hello',
-		publications: publications
+		publications: publications,
+		awards: awards,
+		experience: experience,
+		education: education,
+		volunteering: volunteering,
+		projects: projects,
+		skills: skills
 	},
 	created: function () {
 		// Fix annoying navbar stuck width bug

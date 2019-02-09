@@ -84,6 +84,7 @@ a:active {
 	position: fixed;
 	top: 8px;
 	right: 8px;
+	z-index: 1;
 	width: 1em;
 	height: 1em;
 	font-size: 3em;
@@ -99,6 +100,7 @@ nav {
 	display: block;
 	top: 0;
 	right: 0;
+	z-index: 1;
 	background-color: #282836;
 	margin: 0;
 	padding: 0;
@@ -133,8 +135,6 @@ nav a:hover {
 	display: flex;
 	align-items: center;
 }
-.sectionBody {
-}
 .collapsible {
 	max-height: 0;
 	overflow: hidden;
@@ -151,19 +151,64 @@ nav a:hover {
 	content: '–';
 }
 .listing {
+	position: relative;
 	border-radius: 0.1em;
 	padding: 1em;
 	margin-bottom: 1em;
-}
-.listing:last-child{
-	margin-bottom: 0;
+	overflow: auto;
 }
 .listing h3 {
 	margin-top: 0;
+	text-align: center;
+}
+.listing h4 {
+	text-align: center;
+}
+.listing h5 {
+	margin-top: 0;
+	text-align: center;
+	color: #a9b0b3;
+	font-style: italic;
+}
+.listing h6 {
+	color: #a9b0b3;
+	font-size: 1em;
+	margin: 1em 0 1em 0;
+}
+.listing .thumb {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.listing .thumb img {
+	max-width: 100px;
 }
 .listing .link {
 	display: block;
 	text-align: center;
+}
+#skills ul {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 800px;
+	text-align: center;
+}
+#skills li {
+	display: inline-block;
+	margin: 7px;
+	padding: 5px 10px;
+	color: #e5e7e8;
+	background: #283450;
+	list-style: none;
+	cursor: default;
+	font-size: 1.2em;
+}
+#footer {
+	width: 100%;
+	text-align: center;
+	color: #a9b0b3;
+	margin: 1em 0 1em 0;
 }
 
 @media (min-width: 550px) {
@@ -182,7 +227,7 @@ nav a:hover {
 		display: none;
 	}
 	nav {
-		position: relative;
+		position: static;
 		display: flex;
 		width: 100%;
 		max-width: 100%;
@@ -203,10 +248,26 @@ nav a:hover {
 	#navWrapper.fixed {
 		position: fixed;
 		top: 0;
+		z-index: 1;
 		height: auto;
 		border-bottom: 1px solid rgb(224, 212, 152);
 		background-color: #282836;
 		transition: background-color 0.5s;
+	}
+	.listing h3, .listing h4, .listing h5 {
+		text-align: left;
+	}
+	.listing h5 {
+		position: absolute;
+		top: 1em;
+		right: 1em;
+	}
+	.listing .thumb {
+		float: left;
+		width: 120px;
+	}
+	.listing p.shift {
+		margin-left: 130px;
 	}
 }
 

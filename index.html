@@ -16,11 +16,16 @@
 	</head>
 	<body>
 		<script type="text/x-template" id="listing">
-			<div class='listing highlight'>
-				<h3>{{ title }}</h3>
-				<h4>{{ subtitle }}</h4>
-				<p>{{ description }}</p>
-				<a class='link' :href="link" target="_blank">PDF</a>
+			<div class="listing highlight">
+				<h3 v-html="title"></h3>
+				<h4 v-if="subtitle" v-html="subtitle"></h4>
+				<h5 v-if="subsubtitle">{{ subsubtitle }}</h5>
+				<div v-if="image" class="thumb">
+					<a v-if="image.href" :href="image.href" target="_blank"><img :src="image.thumb" alt="image.alt"/></a>
+					<img v-else :src="image.thumb" alt="image.alt"/>
+				</div>
+				<p :class="[{ shift: image }]" v-html="description"></p>
+				<a v-if="link" class='link' :href="link.href" target="_blank">{{ link.label }}</a>
 			</div>
 		</script>
 
@@ -30,15 +35,15 @@
 			<div id="navLockPosition"></div>
 			<div id="navWrapper">
 				<nav @click="closeMenu">
-					<a href="#about">About</a>
-					<a href="#blog">Blog</a>
+					<!-- <a href="#about">About</a> -->
 					<a href="#publications">Publications</a>
 					<a href="#awards">Awards</a>
 					<a href="#experience">Experience</a>
 					<a href="#education">Education</a>
+					<a href="#volunteering">Volunteering</a>
 					<a href="#projects">Projects</a>
-					<a href="#skills">Skills</a>
-					<a href="#contact">Contact</a>
+					<a href="blog" target="_blank">Blog</a>
+					<a href="mailto:yousef@amar.io?Subject=Hello%2C%20Yousef!">Contact</a>
 				</nav>
 			</div>
 			<div id="menu" class="lowlight button" @click="toggleMenu"></div>
@@ -51,8 +56,9 @@
 				</div>
 				<div class="sectionBody">
 					<p>Software, hardware, and everything in between!</p>
-					<p itemprop="description">PhD student currently visiting <span itemprop="affiliation">Imperial College London</span> with a focus on Systems, Networks, Security, and Personal Data under <a href="https://www.imperial.ac.uk/people/h.haddadi">Dr Hamed Haddadi</a>.</p>
-					<p>This page is still under construction. If you're interested in my volunteering or STEM outreach work, please <a class="no-scroll" href="mailto:yousef@amar.io?Subject=Hello%2C%20Yousef!">email me</a>. My project list is also at about 1%. Until I sort that out, for a better picture of the personal and open-source projects I work on, please see my <a href="https://github.com/yousefamar">GitHub profile</a>. Eventually all my projects should make their way online.</p>
+					<p>As an MEng graduate in Computer Systems Engineering with Business Management, my skills are multi-faceted. With strengths in hardware design, low to high-level programming, and every layer of web development, but also project management and business administration, I am a jack of all trades.</p>
+					<p>I live to create and empower others to do the same. I care about technology (obviously), education, and creative expression, among other things too.</p>
+					<p>I am currently writing up my PhD thesis on Systems, Networks, Privacy, and Security. As my PhD grant nears its end, I am on the market for short-term, part-time employment while I finish my PhD.</p>
 				</div>
 			</div>
 
@@ -68,12 +74,112 @@
 						:title="publication.title"
 						:subtitle="publication.publisher"
 						:description="publication.description"
-						:link="publication.pdf"
+						:link="publication.link"
 						></listing>
 				</div>
 			</div>
 
+			<div id="awards">
+				<div class="sectionHeader">
+					<h1>Awards</h1>
+					<div class="toggle lowlight button" @click="toggleSection"></div>
+				</div>
+				<div class="sectionBody collapsible">
+					<listing
+						v-for="award in awards"
+						:key="award.name"
+						:title="award.name"
+						:image="award.image"
+						:description="award.description"
+						></listing>
+				</div>
+			</div>
+
+			<div id="experience">
+				<div class="sectionHeader">
+					<h1>Experience</h1>
+					<div class="toggle lowlight button" @click="toggleSection"></div>
+				</div>
+				<div class="sectionBody collapsible">
+					<listing
+						v-for="job in experience"
+						:key="job.organisation"
+						:title="job.role"
+						:subtitle="job.organisation"
+						:subsubtitle="job.period"
+						:description="job.description"
+						></listing>
+				</div>
+			</div>
+
+			<div id="education">
+				<div class="sectionHeader">
+					<h1>Education</h1>
+					<div class="toggle lowlight button" @click="toggleSection"></div>
+				</div>
+				<div class="sectionBody collapsible">
+					<listing
+						v-for="uni in education"
+						:key="uni.qualification"
+						:title="uni.qualification"
+						:subtitle="uni.institution"
+						:subsubtitle="uni.period"
+						:description="uni.description"
+						></listing>
+				</div>
+			</div>
+
+			<div id="volunteering">
+				<div class="sectionHeader">
+					<h1>Volunteering</h1>
+					<div class="toggle lowlight button" @click="toggleSection"></div>
+				</div>
+				<div class="sectionBody collapsible">
+					<listing
+						v-for="pos in volunteering"
+						:key="pos.role"
+						:title="pos.role"
+						:description="pos.description"
+						></listing>
+				</div>
+			</div>
+
+			<div id="projects">
+				<div class="sectionHeader">
+					<h1>Projects</h1>
+					<div class="toggle lowlight button" @click="toggleSection"></div>
+				</div>
+				<div class="sectionBody collapsible">
+					<p>This section will soon be replaced by my <a href="graph.html" target="_blank">Project Graph (WIP)</a>. In the meantime, please browse <a href="//github.com/yousefamar" target="_blank">my GitHub profile</a>.</p>
+					<listing
+						v-for="project in projects"
+						:key="project.name"
+						:title="project.name"
+						:image="project.image"
+						:description="project.description"
+						:link="project.link"
+						></listing>
+				</div>
+			</div>
+
+			<div id="skills">
+				<div class="sectionHeader">
+					<h1>Skills</h1>
+					<div class="toggle lowlight button" @click="toggleSection"></div>
+				</div>
+				<div class="sectionBody collapsible">
+					<p>This section will soon be replaced by my <a href="graph.html" target="_blank">Project Graph (WIP)</a>. In the meantime, please browse <a href="//github.com/yousefamar" target="_blank">my GitHub profile</a>.</p>
+					<ul>
+						<li class="skill" v-for="skill in skills">{{ skill }}</li>
+					</ul>
+				</div>
+			</div>
 		</div>
+
+		<div id="footer">Copyright &copy; 2019 Yousef Amar</div>
+
+		<!-- TODO: To top button? -->
+
 		<script src="data.js"></script>
 		<script src="index.js"></script>
 	</body>
