@@ -53,6 +53,7 @@ a:active {
 	font-size: 1.5em;
 	color: #E0D498;
 	align-items: center;
+	vertical-align: middle;
 	justify-content: center;
 	border-radius: 0.2em;
 	background-color: #282836;
@@ -60,6 +61,9 @@ a:active {
 .button:hover {
 	color: #3e3e53;
 	background-color: #eee;
+}
+.button:hover a {
+	color: #3e3e53;
 }
 #header {
 	padding-top: 0.5rem;
@@ -134,6 +138,11 @@ nav a:hover {
 .sectionHeader {
 	display: flex;
 	align-items: center;
+}
+#cvButton {
+	font-weight: bold;
+	padding: 0.2em 1em 0.2em 1em;
+	margin: 1em auto 1em auto;
 }
 .collapsible {
 	max-height: 0;
