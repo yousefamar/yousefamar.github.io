@@ -1,7 +1,9 @@
 let publications = [
 	{
 		title: "Zest: REST over ZeroMQ",
+		year: "2019",
 		publisher: "SPT-IoT 2019",
+		publisherFull: "In Proceedings of the 3rd Workshop on Security, Privacy and Trust in the Internet of Things, in conjunction with IEEE PERCOM",
 		description: "In this paper we introduce, Zest (REST over ZeroMQ), a middleware technology in support of an Internet of Things (IoT).",
 		link: {
 			href: "res/papers/1570510166.pdf",
@@ -9,7 +11,9 @@ let publications = [
 		}
 	}, {
 		title: "Providing Occupancy as a Service with Databox",
+		year: "2018",
 		publisher: "CitiFog 2018",
+		publisherFull: "In Proceedings of the 1st ACM International Workshop on Smart Cities and Fog Computing; (pp. 29-34) ACM",
 		description: "In this paper we present Occupancy-as-a-Service (OaaS) implemented as an app on Databox.",
 		link: {
 			href: "res/papers/citifog18-final7.pdf",
@@ -17,7 +21,9 @@ let publications = [
 		}
 	}, {
 		title: "An Information-Theoretic Approach to Time-Series Data Privacy",
+		year: "2018",
 		publisher: "W-P2DS 2018 / EuroDW 2018",
+		publisherFull: "In Proceedings of the 1st Workshop on Privacy by Design in Distributed Systems; (p. 3) ACM",
 		description: "This paper presents a system for efficiently augmenting token-based access control with privacy-awareness without significantly impacting performance or utility.",
 		link: {
 			href: "res/papers/a3-amar.pdf",
@@ -25,7 +31,9 @@ let publications = [
 		}
 	}, {
 		title: "Building Accountability into the Internet of Things: The IoT Databox Model",
+		year: "2017",
 		publisher: "Journal of Reliable Intelligent Environments December 2017",
+		publisherFull: "Journal of Reliable Intelligent Environments; (pp. 1-17) Springer",
 		description: "This paper outlines the IoT Databox model as a means of making the Internet of Things (IoT) accountable to individuals.",
 		link: {
 			href: "res/papers/JREI-D-17-00019.pdf",
@@ -33,7 +41,9 @@ let publications = [
 		}
 	}, {
 		title: "Balanced Message Distribution in Distributed Message Handling Systems",
+		year: "2017",
 		publisher: "US Patent (serial number: 15/794440) 2017",
+		publisherFull: "US Patent (serial number: 15/794440)",
 		description: "This patent describes a combination of methodologies for arriving at near-optimal message distribution decisions in distributed messaging systems under specific constraints.",
 		link: {
 			href: "javascript:alert('Coming soon!')",
@@ -41,7 +51,9 @@ let publications = [
 		}
 	}, {
 		title: "Route-based Authorization and Discovery for Personal Data",
+		year: "2017",
 		publisher: "EuroDW 2017",
+		publisherFull: "In the 11th EuroSys Doctoral Workshop",
 		description: "When faced with systems in which third party components need to advertise the availability of data they gather, while other such components need to access it, solutions for delegated authorisation and discovery APIs for interoperability are needed. This work explores possible solutions, and converges on a testable implementation.",
 		link: {
 			href: "res/papers/eurodw17-final3.pdf",
@@ -49,7 +61,9 @@ let publications = [
 		}
 	}, {
 		title: "Personal Data Management with the Databox: What's Inside the Box?",
+		year: "2016",
 		publisher: "CAN 2016",
+		publisherFull: "In Proceedings of the 2016 ACM Workshop on Cloud-Assisted Networking; (pp. 49-54) ACM",
 		description: "A more detailed look at the Databox as it stood; a collection of physical and cloudhosted software components that provide for an individual data subject to manage, log and audit access to their data by other parties.",
 		link: {
 			href: "res/papers/p49-mortier.pdf",
@@ -57,7 +71,9 @@ let publications = [
 		}
 	}, {
 		title: "Privacy-Aware Infrastructure for Managing Personal Data",
+		year: "2016",
 		publisher: "SIGCOMM 2016",
+		publisherFull: "In Proceedings of the 2016 ACM SIGCOMM Conference; (pp. 571-572) ACM",
 		description: "A poster abstract giving an overview of Databox systems as they stood with a stronger focus on arbiter interactions.",
 		link: {
 			href: "res/papers/p571-amar.pdf",
@@ -65,7 +81,9 @@ let publications = [
 		}
 	}, {
 		title: "Incremental Dense Multi-modal 3D Scene Reconstruction",
+		year: "2015",
 		publisher: "IROS 2015",
+		publisherFull: "In Intelligent Robots and Systems (IROS), 2015 IEEE/RSJ International Conference on; (pp. 908-915) IEEE",
 		description: "In this paper, we propose a probabilistic model that efficiently exploits complementarity between different depth-sensing modalities for incremental dense scene reconstruction.",
 		link: {
 			href: "res/papers/ondra2015iros.pdf",
@@ -77,6 +95,7 @@ let publications = [
 let awards = [
 	{
 		name: "EuroSys 2018 Shadow PC and Conference Travel Grant",
+		year: "2018",
 		image: {
 			thumb: "res/images/awards/eurosys-logo.png",
 			alt: "EuroSys Logo",
@@ -84,6 +103,7 @@ let awards = [
 		description: "Two travel grants to Shadow PC meeting and top-tier systems conference EuroSys in Porto, Portugal, where Yousef <a href=\"/res/images/awards/yousef-poster-eurodw18.jpg\">presented</a> a poster and <a href=\"/res/images/awards/yousef-presenting-eurodw18.jpg\">gave</a> a workshop talk for EuroDW '17 (slides available <a href=\"http://conferences.inf.ed.ac.uk/EuroDW2018/#program\">here</a>) as well as <a href=\"/res/images/awards/yousef-presenting-wp2ds18.jpg\">giving</a> a workshop talk for the first W-P2DS (slides available <a href=\"/res/papers/w-p2ds18-presentation.pdf\">here</a>)."
 	}, {
 		name: "EuroSys 2017 Travel Grant",
+		year: "2017",
 		image: {
 			thumb: "res/images/awards/eurosys-logo.png",
 			alt: "EuroSys Logo",
@@ -91,6 +111,7 @@ let awards = [
 		description: "A grant of $500 covering travel and lodging in addition to free registration to top-tier systems conference EuroSys in Belgrade, Serbia, where Yousef <a href=\"/res/images/awards/yousef-poster-eurodw17.jpg\">presented</a> a poster and <a href=\"/res/images/awards/yousef-presenting-eurodw17.jpg\">gave</a> a workshop talk (EuroDW '17). Abstract and slides are available <a href=\"https://eurodw17.kaust.edu.sa/workshop.html\">here</a>."
 	}, {
 		name: "IEEE Circuit Building Competition Winner",
+		year: "2017",
 		image: {
 			thumb: "res/images/awards/ieee-student-branch.png",
 			alt: "QMUL IEEE Student Branch Logo",
@@ -98,6 +119,7 @@ let awards = [
 		description: "For fairness, entrants were divided into beginners and veterans. Yousef was selected as winner among the veteran contestants, based on build speed, circuit layout, design, soldering quality, and functionality. Photos available <a href=\"http://ieeesb.eecs.qmul.ac.uk/2017/02/22/valentines-day-circuit-building-2017/\">here</a> — that Amazon gift card, valued at £35, was aptly used to buy more electronics."
 	}, {
 		name: "SIGCOMM 2016 Travel Grant",
+		year: "2016",
 		image: {
 			thumb: "res/images/awards/sigcomm16-logo.png",
 			alt: "SIGCOMM 2016 Logo",
@@ -105,6 +127,7 @@ let awards = [
 		description: "A grant of $1,500 covering registration, lodging, and travel to ACM's Special Interest Group on Data Communications (SIGCOMM) conference in Florianópolis, Brazil, where Yousef <a href=\"/res/images/awards/yousef-poster-sigcomm16.jpg\">presented</a> a poster, attended stimulating talks, and met brilliant people."
 	}, {
 		name: "AP Jarvis Prize",
+		year: "2014",
 		image: {
 			thumb: "res/images/awards/apjarvis-thumb.png",
 			alt: "AP Jarvis Award Certificate",
@@ -113,6 +136,7 @@ let awards = [
 		description: "An annual award, valued at £50, for an outstanding performance in the project undertaken by students in the final year in Electronic and Electrical Engineering. In addition, the project poster was voted student favourite!"
 	}, {
 		name: "Personal Skills Award (Advanced)",
+		year: "2014",
 		image: {
 			thumb: "res/images/awards/PSA-thumb.png",
 			alt: "PSA Advanced Award Certificate",
@@ -121,6 +145,7 @@ let awards = [
 		description: "The advanced level of the university's optional employability award, achieved by demonstrating an exceptional commitment to developing employability through attending workshops, networking events, and volunteering. Additionally, PSA (Advanced) students demonstrate professional skills to an employer led interview panel and foster professional practice. <a href=\"http://intranet.birmingham.ac.uk/as/employability/psa/index.aspx\" target=\"_blank\">More info...</a>"
 	}, {
 		name: "PASS Leader of the Year 2013-2014",
+		year: "2014",
 		image: {
 			thumb: "res/images/awards/PASS-thumb.png",
 			alt: "PASS Leader of the Year Certificate",
@@ -129,6 +154,7 @@ let awards = [
 		description: "The <a href=\"http://intranet.birmingham.ac.uk/as/libraryservices/pass/whatispass.aspx\" target=\"_blank\">Peer-assisted Study Sessions (PASS)</a> scheme is part of an internationally recognised network where higher year students lead study sessions for lower year students. <a href=\"http://web.archive.org/web/20150816043636/https://intranet.birmingham.ac.uk/as/libraryservices/pass/awards.aspx\">Yousef</a> was named <a href=\"http://intranet.birmingham.ac.uk/as/libraryservices/pass/awards.aspx\" target=\"_blank\">PASS Leader of the Year</a> after successfully setting up the scheme in the department of EECE after lobbying the administration for over a year as Chair of Student Representatives. <a href=\"http://www.birmingham.ac.uk/schools/eece/news/pass-awards.aspx\" target=\"_blank\">Full news article...</a>"
 	}, {
 		name: "Student Mobile App Competition (SMAC) Winner",
+		year: "2014",
 		image: {
 			thumb: "res/images/awards/SMAC-thumb.png",
 			alt: "SMAC Certificate",
@@ -137,6 +163,7 @@ let awards = [
 		description: "A competition, led by the university's IT Innovation Centre, thats goal is to prototype the best mobile app that will most benefit the university and students as a whole. The competition was won by writing a marketplace app for students to buy and sell secondhand textbooks with built in messaging. Prizes included an Amazon Kindle Fire HD tablet and a 14 week paid industrial placement offer (which was respectfully declined). <a href=\"http://intranet.birmingham.ac.uk/it/innovation/Student-Mobile-App-Competition/Student-Mobile-App-Competition-2014.aspx\" target=\"_blank\">More info...</a>"
 	}, {
 		name: "IBM Mainframe Challenge 2012 Winner",
+		year: "2013",
 		image: {
 			thumb: "res/images/awards/IBM.png",
 			alt: "IBM Mainframe Challenge 2012 Logo",
@@ -144,6 +171,7 @@ let awards = [
 		description: "Achieved by swiftly completing a series of mainframe and systems programming tasks on IBM's own servers. <a href=\"http://www-05.ibm.com/employment/uk/graduate-programmes/mainframe/index.shtml\" target=\"_blank\">More info...</a>"
 	}, {
 		name: "First Class Excellence Scholarship x4",
+		year: "2009-2013",
 		image: {
 			thumb: "res/images/awards/scholarship-thumb.png",
 			alt: "First Class Excellence Scholarship Letter",
@@ -157,12 +185,12 @@ let experience = [
 	{
 		role: "Research Intern",
 		organisation: "Nokia Bell Labs Stuttgart",
-		period: "May 2017 – August 2017",
+		period: "May 2017 – Aug 2017",
 		description: "Research in distributed function scheduling and dynamic load balancing for minimising latency in the context of serverless computing."
 	}, {
 		role: "Teaching Assistant",
 		organisation: "Queen Mary University of London",
-		period: "January 2016 – January 2019",
+		period: "Jan 2016 – Jan 2019",
 		description: `Teaching, supervision, and examination of undergraduates and postgraduates in a variety of EECS modules.
 <ul class="small">
 	<li>Digital Systems Design (hardware design and VHDL)</li>
@@ -172,7 +200,7 @@ let experience = [
 	}, {
 		role: "Research Intern",
 		organisation: "University of Oxford",
-		period: "September 2015 – September 2016",
+		period: "Sept 2015 – Sept 2016",
 		description: `Research in robotics, computer vision, machine learning, and A.I. &ndash; among other areas with <a href="http://www.robots.ox.ac.uk/~tvg/">Torr Vision Group</a> under <a href="http://www.robots.ox.ac.uk/~phst/">Professor Philip Torr</a> at the Department
 of Engineering Science.
 <h6>Publications</h6>
@@ -182,17 +210,17 @@ of Engineering Science.
 	}, {
 		role: "Programming Tutor",
 		organisation: "Self-employed",
-		period: "September 2010 – June 2014",
+		period: "Sept 2010 – June 2014",
 		description: "Personal tutor to 16 students"
 	}, {
 		role: "Teaching Assistant",
 		organisation: "University of Birmingham",
-		period: "November 2011 – November 2011",
+		period: "Nov 2011 – Nov 2011",
 		description: "Teaching and supervision of a group of sixth form students considering higher education."
 	}, {
 		role: "Shop Floor Worker",
 		organisation: "Aquila Aviation by Excellence AG",
-		period: "May 2008 – September 2008",
+		period: "May 2008 – Sept 2008",
 		description: "Construction and assembly of fiber composite plane parts. Extensive experience in sweeping the factory after hours and dealing with occupational injuries."
 	}
 ];
@@ -202,7 +230,7 @@ let education = [
 		qualification: "PhD in Electronic Engineering and Computer Science",
 		institution: "Queen Mary University of London<br/>University of Genoa<br/>Imperial College London",
 		period: "Jan 2016 – Present",
-		description: `PhD research with a focus on Systems, Networks, Security, and Personal Data
+		description: `PhD research with a focus on Systems, Networks, Privacy, and Security
 <h6>Societies</h6>
 <ul>
 	<li>Artificial Intelligence and Robotics Society</li>
@@ -251,7 +279,7 @@ Decided to transfer course from Electronic Engineering with Business Management 
 		institution: "European School Frankfurt am Main",
 		period: "Sept 2002 – Sept 2010",
 		description: `<ul>
-	<li>Twice presenter at the annual European School Science Symposium</li>
+	<li>Twice medalist at the annual European School Science Symposium</li>
 	<li>Student council president candidate</li>
 	<li>Lead role in 3 Shakespearean plays</li>
 </ul>`
@@ -282,13 +310,13 @@ let volunteering = [
 		description: "Yousef was elected student representative of the Department of Electronic, Electrical, and Computer Engineering for 2 consecutive years and Student Rep Chair for 1 year."
 	}, {
 		role: "EECE Green Impact Project Assistant",
-		description: "Yousef was the sole student delegate in the department Green Impact team, mobilising the student body as their representative to spur on sustainability. As a result, the team won the Gold, Gold Plus for Lab, and Community Action awards."
+		description: "Yousef was the sole student delegate in the department Green Impact team for 2 years, mobilising the student body as their representative to spur on sustainability. As a result, the team won the Gold, Gold Plus for Lab, and Community Action awards."
 	}, {
 		role: "Peer Assisted Study Sessions (PASS) Leader",
 		description: "As a PASS leader, Yousef tutored first year students, and was named university-wide PASS leader of the year due to utilising his capacity as student representative to successfully lobby the EECE department to introduce the PASS scheme for the modules students would benefit most from."
 	}, {
 		role: "Cultural Ambassador",
-		description: "Ambassador for the University of Birmingham on a two-week cultural exchange program in China (Beijing, Wuhan) for future direct-entry students."
+		description: "Ambassador for the University of Birmingham on a two-week cultural exchange program to China (Beijing, Wuhan) for future direct-entry students."
 	}
 ];
 

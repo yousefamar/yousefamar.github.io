@@ -48,6 +48,8 @@ new Vue({
 			}
 		});
 		window.addEventListener('scroll', () => {
+			if (window.innerWidth <= 768)
+				return;
 			let navLock = document.getElementById('navLockPosition');
 			if (window.scrollY >= navLock.offsetTop) {
 				navbar.parentElement.classList.add('fixed');
