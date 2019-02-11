@@ -142,7 +142,7 @@ nav a:hover {
 #cvButton {
 	font-weight: bold;
 	padding: 0.2em 1em 0.2em 1em;
-	margin: 1em auto 1em auto;
+	margin: 1em auto 0 auto;
 }
 .collapsible {
 	max-height: 0;
