@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="index.css" />
 
 		<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.2"></script>
 	</head>
 	<body>
 		<script type="text/x-template" id="listing">
@@ -59,16 +59,13 @@
 					<p>As an MEng graduate in Computer Systems Engineering with Business Management, my skills are multi-faceted. With strengths in hardware design, low to high-level programming, and every layer of web development, but also project management and business administration, I am a jack of all trades.</p>
 					<p>I live to create and empower others to do the same. I care about technology (obviously), education, and creative expression, among other things too.</p>
 					<p>I am currently writing up my PhD thesis on Systems, Networks, Privacy, and Security. As my PhD grant nears its end, I am on the market for short-term, part-time employment while I finish my PhD.</p>
-					<div id="cvButton" class="button">
-						<a href="cv.html" target="_blank">CV</a>
-					</div>
 				</div>
 			</div>
 
 			<div id="publications">
-				<div class="sectionHeader">
+				<div class="sectionHeader" @click="toggleSection">
 					<h1>Publications</h1>
-					<div class="toggle lowlight button" @click="toggleSection"></div>
+					<div class="toggle lowlight button"></div>
 				</div>
 				<div class="sectionBody collapsible">
 					<listing
@@ -83,16 +80,15 @@
 			</div>
 
 			<div id="awards">
-				<div class="sectionHeader">
+				<div class="sectionHeader" @click="toggleSection">
 					<h1>Awards</h1>
-					<div class="toggle lowlight button" @click="toggleSection"></div>
+					<div class="toggle lowlight button"></div>
 				</div>
 				<div class="sectionBody collapsible">
 					<listing
 						v-for="award in awards"
 						:key="award.name"
 						:title="award.name"
-						:subsubtitle="award.year"
 						:image="award.image"
 						:description="award.description"
 						></listing>
@@ -100,9 +96,9 @@
 			</div>
 
 			<div id="experience">
-				<div class="sectionHeader">
+				<div class="sectionHeader" @click="toggleSection">
 					<h1>Experience</h1>
-					<div class="toggle lowlight button" @click="toggleSection"></div>
+					<div class="toggle lowlight button"></div>
 				</div>
 				<div class="sectionBody collapsible">
 					<listing
@@ -117,9 +113,9 @@
 			</div>
 
 			<div id="education">
-				<div class="sectionHeader">
+				<div class="sectionHeader" @click="toggleSection">
 					<h1>Education</h1>
-					<div class="toggle lowlight button" @click="toggleSection"></div>
+					<div class="toggle lowlight button"></div>
 				</div>
 				<div class="sectionBody collapsible">
 					<listing
@@ -134,9 +130,9 @@
 			</div>
 
 			<div id="volunteering">
-				<div class="sectionHeader">
+				<div class="sectionHeader" @click="toggleSection">
 					<h1>Volunteering</h1>
-					<div class="toggle lowlight button" @click="toggleSection"></div>
+					<div class="toggle lowlight button"></div>
 				</div>
 				<div class="sectionBody collapsible">
 					<listing
@@ -149,9 +145,9 @@
 			</div>
 
 			<div id="projects">
-				<div class="sectionHeader">
+				<div class="sectionHeader" @click="toggleSection">
 					<h1>Projects</h1>
-					<div class="toggle lowlight button" @click="toggleSection"></div>
+					<div class="toggle lowlight button"></div>
 				</div>
 				<div class="sectionBody collapsible">
 					<p>This section will soon be replaced by my <a href="graph.html" target="_blank">Project Graph (WIP)</a>. In the meantime, please browse <a href="//github.com/yousefamar" target="_blank">my GitHub profile</a>.</p>
@@ -167,9 +163,9 @@
 			</div>
 
 			<div id="skills">
-				<div class="sectionHeader">
+				<div class="sectionHeader" @click="toggleSection">
 					<h1>Skills</h1>
-					<div class="toggle lowlight button" @click="toggleSection"></div>
+					<div class="toggle lowlight button"></div>
 				</div>
 				<div class="sectionBody collapsible">
 					<p>This section will soon be replaced by my <a href="graph.html" target="_blank">Project Graph (WIP)</a>. In the meantime, please browse <a href="//github.com/yousefamar" target="_blank">my GitHub profile</a>.</p>
