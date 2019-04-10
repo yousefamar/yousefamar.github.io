@@ -30,6 +30,16 @@ let publications = [
 			label: "PDF"
 		}
 	}, {
+		title: "An Analysis of Home IoT Network Traffic and Behaviour",
+		year: "2018",
+		publisher: "arXiv:1803.05368 [cs.NI]",
+		publisherFull: "arXiv:1803.05368 [cs.NI]",
+		description: "In this work, we analyse and fingerprint network traces from a testbed of common IoT devices and demonstrate where privacy and security risks manifest themselves.",
+		link: {
+			href: "res/papers/1803.05368.pdf",
+			label: "PDF"
+		}
+	}, {
 		title: "Building Accountability into the Internet of Things: The IoT Databox Model",
 		year: "2017",
 		publisher: "Journal of Reliable Intelligent Environments December 2017",
