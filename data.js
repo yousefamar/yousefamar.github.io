@@ -185,7 +185,7 @@ let awards = [
 		image: {
 			thumb: "res/images/awards/scholarship-thumb.png",
 			alt: "First Class Excellence Scholarship Letter",
-			href: "res/images/awards/scholarship-small.png"
+			href: "res/images/awards/scholarship-mall.png"
 		},
 		description: "Awarded for excellent baccalaureate results and maintained for four consecutive years (the entire degree) by consistently achieving first class honours."
 	}
@@ -193,6 +193,18 @@ let awards = [
 
 let experience = [
 	{
+		role: "Primary School Computing Teacher",
+		organisation: "Oriel Academy",
+		period: "Feb 2019 – July 2019",
+		description: `Teaching computing to approximately 240 children across years 1 to 5, utilising pedagogical and behavioural management skills.
+<h6>Certifications</h6>
+<ul>
+	<li><a href="res/certificates/dbs.jpg">DBS Check</a></li>
+	<li><a href="res/certificates/safeguarding.pdf">NSPCC Safeguarding Certification</a></li>
+	<li><a href="res/certificates/prevent.pdf">Prevent Certification</a></li>
+	<li>First Aid</li>
+</ul>`
+	}, {
 		role: "Research Intern",
 		organisation: "Nokia Bell Labs Stuttgart",
 		period: "May 2017 – Aug 2017",
@@ -202,7 +214,7 @@ let experience = [
 		organisation: "Queen Mary University of London",
 		period: "Jan 2016 – Jan 2019",
 		description: `Teaching, supervision, and examination of undergraduates and postgraduates in a variety of EECS modules.
-<ul class="small">
+<ul>
 	<li>Digital Systems Design (hardware design and VHDL)</li>
 	<li>Software and Network Services Design / IT Programming (basically a Java module)</li>
 	<li>2x Digital Media and Social Networks (graphs, network analysis, web APIs)</li>
@@ -211,10 +223,9 @@ let experience = [
 		role: "Research Intern",
 		organisation: "University of Oxford",
 		period: "Sept 2015 – Sept 2016",
-		description: `Research in robotics, computer vision, machine learning, and A.I. &ndash; among other areas with <a href="http://www.robots.ox.ac.uk/~tvg/">Torr Vision Group</a> under <a href="http://www.robots.ox.ac.uk/~phst/">Professor Philip Torr</a> at the Department
-of Engineering Science.
+		description: `Research in robotics, computer vision, machine learning, and A.I. &ndash; among other areas with <a href="http://www.robots.ox.ac.uk/~tvg/">Torr Vision Group</a> under <a href="http://www.robots.ox.ac.uk/~phst/">Professor Philip Torr</a> at the Department of Engineering Science.
 <h6>Publications</h6>
-<ul class="small">
+<ul>
 	<li><a href="res/papers/ondra2015iros.pdf">Incremental Dense Multi-modal 3D Scene Reconstruction</a></li>
 </ul>`
 	}, {
