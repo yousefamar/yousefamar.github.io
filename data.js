@@ -1,5 +1,15 @@
 let publications = [
 	{
+		title: "Towards Cheap Scalable Browser Multiplayer",
+		year: "2019",
+		publisher: "CoG 2019",
+		publisherFull: "In Proceedings of the Conference on Games (CoG) 2019; IEEE",
+		description: "In this work, we introduce and evaluate a P2P-based method and library that aims to minimse running costs and development overhead for independent, multiplayer, browser games.",
+		link: {
+			href: "res/papers/PID5999227.pdf",
+			label: "PDF"
+		}
+	}, {
 		title: "Zest: REST over ZeroMQ",
 		year: "2019",
 		publisher: "SPT-IoT 2019",
@@ -309,6 +319,9 @@ Decided to transfer course from Electronic Engineering with Business Management 
 
 let volunteering = [
 	{
+		role: "Sustainability Ambassador",
+		description: `Yousef volunteered as Welcome Team member and later Sustainability Ambassador for <a href="https://mycauseuk.com/" target="_blank">My Cause UK</a> to raise money for <a href="https://www.thecalmzone.net/" target="_blank">CALM</a>.`
+	}, {
 		role: "Duolingo Global Ambassador",
 		description: `Yousef runs the sole <a href="https://events.duolingo.com/london-german-2/" target="_blank">German chapter in London</a> with over 1,800 members for the popular language learning platform <a href="https://www.duolingo.com/" target="_blank">Duolingo</a>, organising and hosting weekly German language events.`
 	}, {
