@@ -3,7 +3,7 @@ let publications = [
 		title: "Towards Cheap Scalable Browser Multiplayer",
 		year: "2019",
 		publisher: "CoG 2019",
-		publisherFull: "In Proceedings of the Conference on Games (CoG) 2019; IEEE",
+		publisherFull: "In Proceedings of the 2019 IEEE Conference on Games (CoG) 2019; IEEE",
 		description: "In this work, we introduce and evaluate a P2P-based method and library that aims to minimse running costs and development overhead for independent, multiplayer, browser games.",
 		link: {
 			href: "res/papers/PID5999227.pdf",
