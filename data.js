@@ -120,7 +120,7 @@ let awards = [
 			thumb: "res/images/awards/eurosys-logo.png",
 			alt: "EuroSys Logo",
 		},
-		description: "Two travel grants to Shadow PC meeting and top-tier systems conference EuroSys in Porto, Portugal, where Yousef <a href=\"/res/images/awards/yousef-poster-eurodw18.jpg\">presented</a> a poster and <a href=\"/res/images/awards/yousef-presenting-eurodw18.jpg\">gave</a> a workshop talk for EuroDW '17 (slides available <a href=\"http://conferences.inf.ed.ac.uk/EuroDW2018/#program\">here</a>) as well as <a href=\"/res/images/awards/yousef-presenting-wp2ds18.jpg\">giving</a> a workshop talk for the first W-P2DS (slides available <a href=\"/res/papers/w-p2ds18-presentation.pdf\">here</a>)."
+		description: "Two travel grants to Shadow PC meeting and top-tier systems conference EuroSys in Porto, Portugal, where Yousef <a href=\"/res/images/awards/yousef-poster-eurodw18.jpg\" target=\"_blank\">presented</a> a poster and <a href=\"/res/images/awards/yousef-presenting-eurodw18.jpg\" target=\"_blank\">gave</a> a workshop talk for EuroDW '17 (slides available <a href=\"http://conferences.inf.ed.ac.uk/EuroDW2018/#program\" target=\"_blank\">here</a>) as well as <a href=\"/res/images/awards/yousef-presenting-wp2ds18.jpg\" target=\"_blank\">giving</a> a workshop talk for the first W-P2DS (slides available <a href=\"/res/papers/w-p2ds18-presentation.pdf\" target=\"_blank\">here</a>)."
 	}, {
 		name: "EuroSys 2017 Travel Grant",
 		year: "2017",
@@ -128,7 +128,7 @@ let awards = [
 			thumb: "res/images/awards/eurosys-logo.png",
 			alt: "EuroSys Logo",
 		},
-		description: "A grant of $500 covering travel and lodging in addition to free registration to top-tier systems conference EuroSys in Belgrade, Serbia, where Yousef <a href=\"/res/images/awards/yousef-poster-eurodw17.jpg\">presented</a> a poster and <a href=\"/res/images/awards/yousef-presenting-eurodw17.jpg\">gave</a> a workshop talk (EuroDW '17). Abstract and slides are available <a href=\"https://eurodw17.kaust.edu.sa/workshop.html\">here</a>."
+		description: "A grant of $500 covering travel and lodging in addition to free registration to top-tier systems conference EuroSys in Belgrade, Serbia, where Yousef <a href=\"/res/images/awards/yousef-poster-eurodw17.jpg\" target=\"_blank\">presented</a> a poster and <a href=\"/res/images/awards/yousef-presenting-eurodw17.jpg\" target=\"_blank\">gave</a> a workshop talk (EuroDW '17). Abstract and slides are available <a href=\"https://eurodw17.kaust.edu.sa/workshop.html\" target=\"_blank\">here</a>."
 	}, {
 		name: "IEEE Circuit Building Competition Winner",
 		year: "2017",
@@ -136,7 +136,7 @@ let awards = [
 			thumb: "res/images/awards/ieee-student-branch.png",
 			alt: "QMUL IEEE Student Branch Logo",
 		},
-		description: "For fairness, entrants were divided into beginners and veterans. Yousef was selected as winner among the veteran contestants, based on build speed, circuit layout, design, soldering quality, and functionality. Photos available <a href=\"http://ieeesb.eecs.qmul.ac.uk/2017/02/22/valentines-day-circuit-building-2017/\">here</a> — that Amazon gift card, valued at £35, was aptly used to buy more electronics."
+		description: "For fairness, entrants were divided into beginners and veterans. Yousef was selected as winner among the veteran contestants, based on build speed, circuit layout, design, soldering quality, and functionality. Photos available <a href=\"http://ieeesb.eecs.qmul.ac.uk/2017/02/22/valentines-day-circuit-building-2017/\" target=\"_blank\">here</a> — that Amazon gift card, valued at £35, was aptly used to buy more electronics."
 	}, {
 		name: "SIGCOMM 2016 Travel Grant",
 		year: "2016",
@@ -144,7 +144,7 @@ let awards = [
 			thumb: "res/images/awards/sigcomm16-logo.png",
 			alt: "SIGCOMM 2016 Logo",
 		},
-		description: "A grant of $1,500 covering registration, lodging, and travel to ACM's Special Interest Group on Data Communications (SIGCOMM) conference in Florianópolis, Brazil, where Yousef <a href=\"/res/images/awards/yousef-poster-sigcomm16.jpg\">presented</a> a poster, attended stimulating talks, and met brilliant people."
+		description: "A grant of $1,500 covering registration, lodging, and travel to ACM's Special Interest Group on Data Communications (SIGCOMM) conference in Florianópolis, Brazil, where Yousef <a href=\"/res/images/awards/yousef-poster-sigcomm16.jpg\" target=\"_blank\">presented</a> a poster, attended stimulating talks, and met brilliant people."
 	}, {
 		name: "AP Jarvis Prize",
 		year: "2014",
@@ -171,7 +171,7 @@ let awards = [
 			alt: "PASS Leader of the Year Certificate",
 			href: "res/images/awards/PASS-small.png"
 		},
-		description: "The <a href=\"http://intranet.birmingham.ac.uk/as/libraryservices/pass/whatispass.aspx\" target=\"_blank\">Peer-assisted Study Sessions (PASS)</a> scheme is part of an internationally recognised network where higher year students lead study sessions for lower year students. <a href=\"http://web.archive.org/web/20150816043636/https://intranet.birmingham.ac.uk/as/libraryservices/pass/awards.aspx\">Yousef</a> was named <a href=\"http://intranet.birmingham.ac.uk/as/libraryservices/pass/awards.aspx\" target=\"_blank\">PASS Leader of the Year</a> after successfully setting up the scheme in the department of EECE after lobbying the administration for over a year as Chair of Student Representatives. <a href=\"http://www.birmingham.ac.uk/schools/eece/news/pass-awards.aspx\" target=\"_blank\">Full news article...</a>"
+		description: "The <a href=\"http://intranet.birmingham.ac.uk/as/libraryservices/pass/whatispass.aspx\" target=\"_blank\">Peer-assisted Study Sessions (PASS)</a> scheme is part of an internationally recognised network where higher year students lead study sessions for lower year students. <a href=\"http://web.archive.org/web/20150816043636/https://intranet.birmingham.ac.uk/as/libraryservices/pass/awards.aspx\" target=\"_blank\">Yousef</a> was named <a href=\"http://intranet.birmingham.ac.uk/as/libraryservices/pass/awards.aspx\" target=\"_blank\">PASS Leader of the Year</a> after successfully setting up the scheme in the department of EECE after lobbying the administration for over a year as Chair of Student Representatives. <a href=\"http://www.birmingham.ac.uk/schools/eece/news/pass-awards.aspx\" target=\"_blank\">Full news article...</a>"
 	}, {
 		name: "Student Mobile App Competition (SMAC) Winner",
 		year: "2014",
@@ -203,15 +203,20 @@ let awards = [
 
 let experience = [
 	{
+		role: "Programming Teacher",
+		organisation: "The London School of Mathematics and Programming",
+		period: "Sep 2019 – Present",
+		description: `Teaching Scratch classes to ages 8&ndash;10, three different Python courses to age ranges from 10 onwards, and assisting/substituting several other courses. All of my teaching material is freely available <a href="https://py.amar.io/" target="_blank">online</a>.`
+	}, {
 		role: "Primary School Computing Teacher",
 		organisation: "Oriel Academy",
 		period: "Feb 2019 – July 2019",
 		description: `Teaching computing to approximately 240 children across years 1 to 5, utilising pedagogical and behavioural management skills.
 <h6>Certifications</h6>
 <ul>
-	<li><a href="res/certificates/dbs.jpg">DBS Check</a></li>
-	<li><a href="res/certificates/safeguarding.pdf">NSPCC Safeguarding Certification</a></li>
-	<li><a href="res/certificates/prevent.pdf">Prevent Certification</a></li>
+	<li><a href="res/certificates/dbs.jpg" target="_blank">DBS Check</a></li>
+	<li><a href="res/certificates/safeguarding.pdf" target="_blank">NSPCC Safeguarding Certification</a></li>
+	<li><a href="res/certificates/prevent.pdf" target="_blank">Prevent Certification</a></li>
 	<li>First Aid</li>
 </ul>`
 	}, {
@@ -233,10 +238,10 @@ let experience = [
 		role: "Research Intern",
 		organisation: "University of Oxford",
 		period: "Sept 2015 – Sept 2016",
-		description: `Research in robotics, computer vision, machine learning, and A.I. &ndash; among other areas with <a href="http://www.robots.ox.ac.uk/~tvg/">Torr Vision Group</a> under <a href="http://www.robots.ox.ac.uk/~phst/">Professor Philip Torr</a> at the Department of Engineering Science.
+		description: `Research in robotics, computer vision, machine learning, and A.I. &ndash; among other areas with <a href="http://www.robots.ox.ac.uk/~tvg/" target="_blank">Torr Vision Group</a> under <a href="http://www.robots.ox.ac.uk/~phst/" target="_blank">Professor Philip Torr</a> at the Department of Engineering Science.
 <h6>Publications</h6>
 <ul>
-	<li><a href="res/papers/ondra2015iros.pdf">Incremental Dense Multi-modal 3D Scene Reconstruction</a></li>
+	<li><a href="res/papers/ondra2015iros.pdf" target="_blank">Incremental Dense Multi-modal 3D Scene Reconstruction</a></li>
 </ul>`
 	}, {
 		role: "Programming Tutor",

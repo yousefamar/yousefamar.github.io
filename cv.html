@@ -102,10 +102,16 @@
 		<script src="data.js"></script>
 		<script>
 			// Shorten some descriptions
-			experience[2].description = experience[2].description.substr(0, experience[2].description.indexOf('<h'));
-			education[0].description = education[0].description.substr(0, education[0].description.indexOf('<h6>S'));
-			education[1].description = education[1].description.substr(0, education[1].description.indexOf('<h6>S'));
-			education[2].description = education[2].description.substr(0, education[2].description.indexOf('<ul'));
+			let shorten = (section, invID, from) => {
+				let element = section[section.length - 1 - invID];
+				element.description = element.description.substr(0, element.description.indexOf(from));
+			};
+			shorten(experience, 6, '<h');
+			shorten(experience, 4, '<ul');
+			shorten(experience, 3, '<h');
+			shorten(education, 2, '<h6>S');
+			shorten(education, 1, '<h6>S');
+			shorten(education, 0, '<ul');
 			let listing = Vue.component('listing', {
 				props: [ 'title', 'subtitle', 'subsubtitle', 'description', 'image', 'link' ],
 				template: '#listing'
