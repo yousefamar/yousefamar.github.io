@@ -61,8 +61,17 @@ new Vue({
 			}
 		});
 	},
+	mounted() {
+		let hash    = location.hash;
+		let section = document.querySelector(hash + ' .toggle');
+		if (!hash || !section)
+			return;
+		this.toggleSection({ target: section });
+	},
 	methods: {
 		toggleSection(event) {
+			if (!event.target)
+				return;
 			event.target.classList.toggle('active');
 			let elem = event.target.parentElement.parentElement.lastElementChild;
 			elem.style.maxHeight = elem.style.maxHeight ? null : elem.scrollHeight + 'px';

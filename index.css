@@ -278,6 +278,12 @@ nav a:hover {
 	.listing p.shift {
 		margin-left: 130px;
 	}
+	:target::before {
+		content: '';
+		display: block;
+		height: 45px;
+		margin-top: -45px;
+	}
 }
 
 @media (min-width: 992px) {
