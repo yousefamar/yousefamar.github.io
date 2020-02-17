@@ -114,6 +114,14 @@ let publications = [
 
 let awards = [
 	{
+		name: "IEEE CoG Registration Grant",
+		year: "2019",
+		image: {
+			thumb: "res/images/awards/ieee-cog-logo.png",
+			alt: "IEEE CoG Logo",
+		},
+		description: "A £620 grant, awarded by the JP fund, to cover the registration to <a href=\"http://ieee-cog.org/2019/\" target=\"_blank\">IEEE CoG 2019</a> in London (no travel expenses needed!) where Yousef <a href=\"/res/images/awards/yousef-poster-cog19.jpg\" target=\"_blank\">presented</a> a poster."
+	}, {
 		name: "EuroSys 2018 Shadow PC and Conference Travel Grant",
 		year: "2018",
 		image: {
