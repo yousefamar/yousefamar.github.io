@@ -211,6 +211,11 @@ let awards = [
 
 let experience = [
 	{
+		role: "Entrepreneur (LD14)",
+		organisation: "Entrepreneur First",
+		period: "Apr 2020 – Present",
+		description: `Member of the 14th London cohort of world's leading talent investor and deep tech startup accelerator <a href="https://www.joinef.com/" target="_blank">Entrepreneur First</a> where we founded Krew <a href="https://krew.live/" target="_blank">Krew</a>, became <a href="https://www.producthunt.com/posts/krew" target="_blank">&#35;1 product of the day and week</a> on Product Hunt, and secured pre-seed funding at a million USD valuation.`
+	}, {
 		role: "Programming Teacher",
 		organisation: "The London School of Mathematics and Programming",
 		period: "Sep 2019 – Present",
@@ -273,7 +278,7 @@ let education = [
 	{
 		qualification: "PhD in Electronic Engineering and Computer Science",
 		institution: "Queen Mary University of London<br/>University of Genoa<br/>Imperial College London",
-		period: "Jan 2016 – Present",
+		period: "Jan 2016 – Apr 2020",
 		description: `PhD research with a focus on Systems, Networks, Privacy, and Security
 <h6>Societies</h6>
 <ul>
