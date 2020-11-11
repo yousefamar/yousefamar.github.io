@@ -66,7 +66,7 @@ let publications = [
 		publisherFull: "US Patent (serial number: 15/794440)",
 		description: "This patent describes a combination of methodologies for arriving at near-optimal message distribution decisions in distributed messaging systems under specific constraints.",
 		link: {
-			href: "javascript:alert('Coming soon!')",
+			href: "res/papers/US20190129771A1.pdf",
 			label: "PDF"
 		}
 	}, {
