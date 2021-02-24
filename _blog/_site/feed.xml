@@ -6,8 +6,8 @@
 </description>
     <link>http://yousefamar.com/blog/</link>
     <atom:link href="http://yousefamar.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 24 Feb 2021 03:00:49 +0000</pubDate>
-    <lastBuildDate>Wed, 24 Feb 2021 03:00:49 +0000</lastBuildDate>
+    <pubDate>Wed, 24 Feb 2021 03:18:33 +0000</pubDate>
+    <lastBuildDate>Wed, 24 Feb 2021 03:18:33 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -336,6 +336,311 @@ stop();&lt;/pre&gt;
         <pubDate>Sun, 16 Jun 2013 16:22:00 +0100</pubDate>
         <link>http://yousefamar.com/blog/2013/06/16/hacking-every-second-counts.html</link>
         <guid isPermaLink="true">http://yousefamar.com/blog/2013/06/16/hacking-every-second-counts.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Client-side Password Verification in JavaScript</title>
+        <description>&lt;p&gt;Business websites often only act as an online brochure. As such, those that need some kind of password protection often don’t go too all-out in implementing it. Reasons for this could be:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;span&gt;Skill; &lt;/span&gt;&lt;span&gt;checking user input client-side is much easier than server-side.&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span&gt;Budget; why pay for a server only for checking passwords when you can just host your HTML/CSS/JS files online for much cheaper and not have to worry about any server-side scripting.&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span&gt;Security; maybe the information you’re password protecting isn’t that critical and doesn’t need airtight security.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span&gt;The reason is most likely a combination of the latter two. However, a web developer can take just a few simple extra steps to make their website much more secure.&lt;!--more--&gt;&lt;!-- more --&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;span&gt;What NOT To Do&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span&gt;Take &lt;/span&gt;&lt;a href=&quot;http://www.zahnarzt-frankfurt.de/&quot; target=&quot;_blank&quot;&gt;http://www.zahnarzt-frankfurt.de/&lt;/a&gt;, an informational website for a German association of dentists, for instance. I stumbled upon this particular specimen while searching for my own dentist’s phone number. The home page presents you with two buttons; one for patients and one for dentists. Clicking on the patients button will take you to the information that you, the patient, were looking for. Clicking on the dentists button will take you to a page with a single password field and a continue button.&lt;span&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;div&gt;&lt;img alt=&quot;image&quot; src=&quot;http://media.tumblr.com/49cedc5623d61d878f5df2322e4c2101/tumblr_inline_mo1hwztwEf1qz4rgp.png&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;The website itself looks semi-professional. It looks like it was made with a decent IDE but I can’t shake the suspicion that getting into this “Doctors Only section” isn’t very hard.&lt;/p&gt;
+
+&lt;p&gt;Time to check out the source code. Inspect Element? Nope, right-click disabled. Haha now it’s obvious this web developer had something to hide. Let’s bring out the Developer Tools the old fashioned way and inspect that form from there. What’s this?&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;&amp;lt;form action=&quot;javascript:loadpage();&quot; method=&quot;post&quot; name=&quot;passwort&quot;&amp;gt;&lt;/pre&gt;
+&lt;p&gt;Bingo! Client-side verification. And right above it:&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;&amp;lt;script language=&quot;JavaScript&quot; type=&quot;text/JavaScript&quot;&amp;gt;
+    &amp;lt;!--
+    function loadpage() {
+        if (document.passwort.pswd.value != &quot;chirurgie&quot;){
+            document.location.href=&quot;passwort_falsch_en.html&quot;
+        } else {
+            document.location.href=&quot;chirurgie/&quot; + document.passwort.pswd.value + &quot;.html&quot;
+        }
+    }
+    //--&amp;gt;
+&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;p&gt;The code above has been cleaned up slightly to make it readable. You can also tell by the developer’s style that JavaScript was &lt;em&gt;not&lt;/em&gt; their first language to say the least. Well, now we know their dictionary word password and can successfully infiltrate the “Dentist Only section” without being dentists! 1337 h4x0r life.&lt;/p&gt;
+&lt;h2&gt;What To Do Instead&lt;/h2&gt;
+&lt;p&gt;Obviously the best solution is to check everything server-side against a hashed password. &lt;em&gt;Hashed&lt;/em&gt;, not encrypted; encrypted passwords can still be decrypted. The way I like to hash passwords is with a (randomly) salted SHA256 hash to have a nice balance between security and speed/complexity. That way even if somehow my servers are compromised by some insanely skilled hackers, they still can’t figure out my users’ passwords (which are all required to be complex; i.e. long, with capitals/numbers/punctuation, no dictionary words etc.) without spending a virtually infinite amount of time brute-forcing them.&lt;/p&gt;
+
+&lt;p&gt;On the client side however, the best we can do is hash a complex password with a strong, difficult to crack hash function like a salted SHA-3 hash (very easy in JavaScript) and hardcode it in. In fact, the hash algorithm can be as complex as we want because it’s all being run on the user’s computer and not wasting server CPU processing time. With just the hashed password, even the most skilled hacker can only attempt an educated brute-force attack. It would be easier for them to instead find the owner of the website and torture them into revealing the password.&lt;/p&gt;
+
+&lt;p&gt;Here’s a practical example of client-side hashing and password verification in the same function as the example website above:&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;var salt = 'Hack THIS!';
+var hashedPass = '99c0c3ea5c83f8608f488100a1f42e6478fdb2042d24dee0f1c997c75d65efad';
+function loadpage() {
+    if (SHA256(salt+document.passwort.pswd.value) !== hashedPass){
+        document.location.href='passwort_falsch_en.html';
+    } else {
+        document.location.href='chirurgie/'+document.passwort.pswd.value+'.html';
+    }
+}&lt;/pre&gt;
+&lt;p&gt;&lt;span&gt;JavaScript hash functions can be found in libraries such as &lt;/span&gt;&lt;a title=&quot;CryptoJS&quot; href=&quot;https://code.google.com/p/crypto-js/&quot; target=&quot;_blank&quot;&gt;CryptoJS&lt;/a&gt;&lt;span&gt; or just &lt;/span&gt;&lt;a title=&quot;Webtoolkit Javascript SHA-256&quot; href=&quot;http://www.webtoolkit.info/javascript-sha256.html&quot; target=&quot;_blank&quot;&gt;online&lt;/a&gt;&lt;span&gt;. After some minification and obfuscation, this code would make the dentist website’s password verification leagues better with very little extra effort! &lt;/span&gt;Of course make sure that visitors and web crawlers can’t see your protected pages! For visitors, use &lt;span&gt;.htaccess’ “Options All -Indexes”, or “IndexIgnore&lt;/span&gt; ./zahnaerzte/chirurgie/*&lt;span&gt;” in this case, and for spiders, put “&lt;/span&gt;&lt;span&gt;Disallow: /&lt;/span&gt;&lt;span&gt;zahnaerzte/chirurgie/&lt;/span&gt;&lt;span&gt;” in your robots.txt (and hide that from visitors too!) and so on. Obviously there’s no point in implementing a timeout on too many password attempts as it would take mere seconds to circumvent.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;That’s all it takes to fend off script kiddies!&lt;/span&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 07 Jun 2013 22:06:00 +0100</pubDate>
+        <link>http://yousefamar.com/blog/2013/06/07/password-verification-in-client-side-javascript.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2013/06/07/password-verification-in-client-side-javascript.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>The Ternary Operator: Java vs PHP</title>
+        <description>&lt;p&gt;Oftentimes when verbosity isn’t required, I like to chain ternary operations (inline ifs) together. The resulting code isn’t necessarily hard to read with a trained eye. It’s for the same reason that doing this:&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;var x = y || 'default';&lt;/pre&gt;
+&lt;p&gt;in JavaScript can save a lot of extra code and complexity. Ain’t nobody got time to check if a variable is undefined.&lt;/p&gt;
+
+&lt;p&gt;Here’s something that took me a while to realise was the source of a bug though.&lt;!--more--&gt;&lt;!-- more --&gt; Would you say these two snippets of code do the same thing?&lt;/p&gt;
+
+&lt;p&gt;Java:&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;public class Main {
+    public static void main(String []args){
+        boolean a = true;
+        boolean b = false;
+        int output = a?0:b?1:2;
+        System.out.println(output);
+    }
+}
+&lt;/pre&gt;
+&lt;p&gt;PHP:&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;&amp;lt;?php   
+    $a = true;
+    $b = false;
+    $output = $a?0:$b?1:2;
+    echo $output;
+?&amp;gt;
+&lt;/pre&gt;
+&lt;p&gt;Nope. Java does the intuitive (like most other C-like languages) and outputs 0. PHP outputs 2. Why? &lt;span&gt;Java and PHP Order of Operations/Operator Precedence can’t tell us anything because we’re comparing which of the same thing comes first.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;It turns out ternary expressions are evaluated from left to right in PHP. In Java the expression is the same as “a?0:(b?1:2)”. To get the same behaviour in PHP, you would need the brackets. As it stands, the expression in PHP is the same as “(a?0:b)?1:2” where (unlike in strongly-typed Java) 0 is evaluated as false making the final result 2.&lt;/p&gt;
+
+&lt;p&gt;Here’s the same code again in C for good measure:&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+int main() {
+    int a = 1;
+    int b = 0;
+    int output = (a?0:b)?1:2;
+    printf(&quot;%d&quot;, output);
+    return 0;
+}
+&lt;/pre&gt;
+&lt;p&gt;Yup, outputs a 2 as expected. Beware of these little inconsistencies across syntactically similar languages; you never know when it will cost you hours of debugging!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 04 Jun 2013 15:24:00 +0100</pubDate>
+        <link>http://yousefamar.com/blog/2013/06/04/the-ternary-operator-java-vs-php.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2013/06/04/the-ternary-operator-java-vs-php.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Reaching the Infamous Star in CLOP</title>
+        <description>&lt;p&gt;In &lt;a title=&quot;CLOP&quot; href=&quot;http://www.foddy.net/CLOP.html&quot; target=&quot;_blank&quot;&gt;CLOP&lt;/a&gt;, you play a perambulatory challenged unicorn attempting to reach a virgin on the far side of a hill. Sound simple? What if I told you that CLOP was made by the same person who made &lt;a title=&quot;GIRP&quot; href=&quot;http://www.foddy.net/GIRP.html&quot; target=&quot;_blank&quot;&gt;GIRP&lt;/a&gt; and &lt;a title=&quot;QWOP&quot; href=&quot;http://www.foddy.net/Athletics.html&quot; target=&quot;_blank&quot;&gt;QWOP&lt;/a&gt;. Yeah, &lt;em&gt;that&lt;/em&gt; QWOP.&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;img alt=&quot;image&quot; src=&quot;http://media.tumblr.com/25612e330d15e0df7abd696874e3976a/tumblr_inline_mntty4wjIq1qz4rgp.png&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;Well, although CLOP may seem easier at first, the learning curve only gets steeper as the game progresses. Even after trying what must have been hundreds of times by now, I still can’t get past the giant cliff about 3/4 of the way to the virgin.&lt;/p&gt;
+
+&lt;p&gt;However, just like QWOP, it &lt;em&gt;is&lt;/em&gt; possible. Furthermore there seems to be this spinning star near the start just above the viewport. If you get the jump just right in the right spot you can just about see it.&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;img alt=&quot;image&quot; src=&quot;http://media.tumblr.com/2d72f7a109c97e10f2b8fe8b93def1bd/tumblr_inline_mnub98BqfF1qz4rgp.png&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;It doesn’t take many tries to realise how utterly impossible it is to reach it. The internet doesn’t seem to know what it is and it doesn’t look like anybody has ever reached it (prove me wrong). I &lt;strong&gt;must&lt;/strong&gt; find out what it does.&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Judging by the few YouTube play-throughs that there are, towards the end of the actual game it becomes a matter of luck no matter how good you are at timing the patterns (the ones I find work for me are HJ-KL, H-JK-H-KL, and HJ*-K/L by the way). Even though I already know how the game ends, I figure one day I’ll play it through since I know it’s possible.&lt;/p&gt;
+
+&lt;p&gt;Difficult games like these have a certain quality to them; they can easily turn into obsessions for certain players, like the “Nintendo-hard” games of old. When a goal is virtually impossible though, like the reaching the star, some people chose to give up. Others chose to hack the game. Guess which category I fall into.&lt;/p&gt;
+
+&lt;p&gt;A quick “Inspect Element” will reveal that the SWF file is located at http://www.foddy.net/CLOP.swf, so download and decompile that (I use &lt;a title=&quot;JPEXS&quot; href=&quot;http://www.free-decompiler.com/&quot; target=&quot;_blank&quot;&gt;JPEXS&lt;/a&gt;) and we have our source code.&lt;/p&gt;
+
+&lt;p&gt;Sure enough, everything we need is plain as day and not obfuscated. You can even read the entire list of Sherrod’s taunts in “PlayState” (one giant switch statement).&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;img alt=&quot;image&quot; src=&quot;http://media.tumblr.com/b4dae3540724fb8ecea73909f53c701c/tumblr_inline_mntwonacjD1qz4rgp.png&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span&gt;The next step is to find the code responsible for the infamous star. I can immediately see a class called “Star” that loads the star sprite and plays the spinning animation and since the rest of the code is not obfuscated, all you need to do is search for where a “Star” is initialised.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Instead of cheating and bringing the star down rendering the goal far too easy, why not do something else that will step the goal down from impossible to “Nintendo-hard”? Hmm, let’s see…&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;private var _gravity:Number = 270;&lt;/pre&gt;
+&lt;p&gt;Muahahaha! Let’s crank that down to 10 aaand yup, CLOP should now be able to fly. Time to try it out! But wait, what’s this?&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;img alt=&quot;image&quot; src=&quot;http://media.tumblr.com/6d743e1b320ad65f03c1a3e09d88c6b7/tumblr_inline_mnu9m5hofJ1qz4rgp.png&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;A quick search for “permission” yielded only one result in “FlxPreloader” (probably a feature of Flixel) and the if statement was quickly put out of commission.&lt;/p&gt;
+
+&lt;p&gt;And presto, moon gravity mode! It’s a little hard to move now but it’s also hard to die since you complete a flip before you can hit the ground.&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;img alt=&quot;image&quot; src=&quot;http://media.tumblr.com/f18c5ddf2e9b166be8197e57e388a289/tumblr_inline_mnua0pQKS91qz4rgp.png&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;If you want to play around with low gravity CLOP, drop me a line. I’d host it here but Bennett Foddy might not be too pleased about that.&lt;/p&gt;
+
+&lt;p&gt;After flying around a bit it’s finally time to reach for the star. Does touching it grant us supernatural powers of dexterity beyond the wildest dreams of a unicorn? Does it teleport us to a world of rainbows and magic? Does it finally shut that SOB Sherrod up? Well, we’re about to find out. Then we’ll finally know if it is truly an easter egg that requires skills that transcend gaming and enter the realm of hacking to reach, or simply an artifact; an echo of an orphaned game feature that never quite made the cut. Here it is, the moment we’ve all been waiting for:&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;img alt=&quot;image&quot; src=&quot;http://media.tumblr.com/93154e29eb0305b4bef05a12ab336e35/tumblr_inline_mnuahlSz4x1qz4rgp.gif&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;Well that was anti-climactic…&lt;/p&gt;
+</description>
+        <pubDate>Mon, 03 Jun 2013 23:30:00 +0100</pubDate>
+        <link>http://yousefamar.com/blog/2013/06/03/reaching-the-infamous-star-in-clop.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2013/06/03/reaching-the-infamous-star-in-clop.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Storing Terrain and Map Data in GIF Frames with Java</title>
+        <description>&lt;p&gt;In Java, nobody really ever uses gifs (that is, images of the *.gif persuasion) and when they do, it’s usually as an ImageIcon for Swing GUIs and the like and even then they don’t look very professional.&lt;/p&gt;
+
+&lt;p&gt;I feel like the GIF format is under-appreciated since it is pretty much the only common format able to store image layers in a lightweight manner, display them as an animation or each layer overlaying the next, have support in most image loading APIs, and is easily creatable in common image manipulation software such as GIMP or Photoshop.&lt;/p&gt;
+
+&lt;p&gt;With this in mind I have devised a technique to store terrain and entity data within the GIF format for easy visual editing.&lt;!--more--&gt; I don’t think anybody has ever loaded gifs layer by layer in this manner, let alone done anything quite like this in the first place, but itis quite nice.&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;BufferedImage tileMap = null;
+BufferedImage entityMap = null;
+try {
+	ImageReader ir = ImageIO.getImageReadersBySuffix(&quot;GIF&quot;).next();
+	ir.setInput(ImageIO.createImageInputStream(Terrain.class.getResource(&quot;maps/&quot;+mapName+&quot;.gif&quot;).openStream()));
+	tileMap = ir.read(0);
+	entityMap = ir.read(1);
+} catch (IOException e) {
+	System.err.println(&quot;Unable to load custom map &quot;&quot;+mapName+&quot;&quot;.&quot;);
+}&lt;/pre&gt;
+&lt;p&gt;Let’s go through this step by step. First, we get an image reader that can read the GIF format (another advantage of using a well known format). Then we create an input stream using &lt;a href=&quot;/blog/2012/10/09/universal-resource-loading-in-java.html&quot;&gt;my preferred method&lt;/a&gt;. To read the separate layers/frames, we simply use “ir.read(layerIndex);”. That’s it! So simple and yet so overlooked.&lt;/p&gt;
+
+&lt;p&gt;Using this technique, we can eventually turned this, an easily drawn map:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/testMap.gif&quot; alt=&quot;Test Map&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To this, a tile-based map for a 2D top-down game:
+&lt;img src=&quot;/blog/assets/images/screen1.png&quot; alt=&quot;A tile based 2D top-down game&quot; /&gt;
+&lt;img src=&quot;/blog/assets/images/screen2.png&quot; alt=&quot;A tile based 2D top-down game&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you open up the gif above in GIMP for example, you’ll see the separate layers. Every pixel represents a tile type that eventually becomes a 32*32 tile. As such I obviously couldn’t depict the entire map as a 64*64 map (of which multiple exist, e.g. the inside of the house which is bigger on the inside by far) becomes a 2048*2048 world. How’s that for compacting data?&lt;/p&gt;
+
+&lt;p&gt;After the image is loaded, we then iterate through the pixels and do with the information whatever we like, such as build a map while additionally being able to use data such as image size or settings encoded in one layer that can be interpreted using a custom protocol of your imagining.&lt;/p&gt;
+
+&lt;p&gt;You might be thinking “But GIFs are only limited to 8-bit colours and I have more than 256 tile types!”. Not only are you wrong (gifs can support far more than that in exchange for making the file bigger) but you’ve overlooked the layers! That’s the beauty of it! Even if you have a million tile/colour IDs for whatever reason, you can always reuse them in different layers. In this example I use one layer for the terrain and the other for trees, buildings and decorative entities but one could for instance use a layer for fluids (water, lava, etc.) one for plants, one for in-traversable tiles that you collide with (such as water or or rocks) instead of interpreting it from the tile type, and so on. And at the same time, you could have custom maps as you don’t need to be a programmer to create a gif. Is this not better than custom file formats and complicated map editors and tools? The possibilities are endless!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 09 Oct 2012 22:08:00 +0100</pubDate>
+        <link>http://yousefamar.com/blog/2012/10/09/storing-terrain-and-map-data-in-gif-frames-with-java.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2012/10/09/storing-terrain-and-map-data-in-gif-frames-with-java.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Universal Resource Loading in Java</title>
+        <description>&lt;p&gt;Loading images and files in Java is relatively simple. Maybe not through one-liners like in Python, but the trade-off is flexibility. There are a number of ways to load resources within a Java program. On searching the internet, you’ll probably find something like this.&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;try{
+	File file = new File(&quot;file.txt&quot;);
+	FileInputStream fs = new FileInputStream(file);
+	DataInputStream in = new DataInputStream(fs);
+	BufferedReader br = new BufferedReader(new InputStreamReader(in));
+	String line;
+	while ((line = br.readLine()) != null)
+		System.out.println(line);
+	in.close();
+} catch (Exception e) {
+	e.printStackTrace();
+}&lt;/pre&gt;
+&lt;p&gt;Alternatively, we could have simply passed in the file name as a String directly into the FileInputStream constructor.&lt;/p&gt;
+
+&lt;p&gt;DataInputStreams are useful especially for reading binary files and calling methods such as “in.readInt()” amongst others for custom file formats. However, if we simply wanted to load a plain text file , there is an easier method.&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;try{
+	File file = new File(&quot;file.txt&quot;);
+	BufferedReader br = new BufferedReader(new FileReader(file));
+	String line;
+	while ((line = br.readLine()) != null)
+		System.out.println(line);
+} catch (Exception e) {
+	e.printStackTrace();
+}&lt;/pre&gt;
+&lt;p&gt;You might notice the fact that nobody ever bothers to cloes FileReaders, BufferedReaders, FileInputStreams and DataInputStreams by calling “close();” on their instances. This would be the primary reason to assign them to variables, not legibility, instead of cramming everything into one line. But that’s another story.&lt;/p&gt;
+
+&lt;p&gt;Anyway, there are many different ways to load files and manage errors and eventually things get messy and you’ll find yourself having to catch exceptions left and right.&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;The same goes for loading images; the most common way to load an image is as follows.&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;BufferedImage img = null;
+try {
+	img = ImageIO.read(new File(&quot;image.png&quot;));
+} catch (IOException e) {
+	e.printStackTrace();
+}&lt;/pre&gt;
+&lt;p&gt;If all of this is so widely accepted, why am I complaining you ask? The number one biggest issue with loading files by far, is getting the paths right and there is a simple solution that few people know that I’ll share with you today.&lt;/p&gt;
+
+&lt;p&gt;Assuming you’re creating an application that you plan to release, you’ll probably be packing your resources in the jar itself and want a relative path that you can get using “MyClass.class.getResource(“image.png”);” for example. However, if your project is reasonably complex, you might have organised your resources in folders such as “images/image.png” and you load it using that relative path thinking you’ve solved the problem.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem #1: Cross-platform compatibility&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you choose your file separator to be “\” you’re in for a world of hurt once you realise that this only works on Windows. You might think “Oh well I’ll solve this inconsistency by typing it as “images”+File.separator+”image.png” ” and generally, that would be fine only there’s one problem: applets. But we’ll get to that later. For now, trust me when I say always use forward slashes (/).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem #2: Applets&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to load an image in an applet, the standard way to go about it would be as follows.&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;BufferedImage img = null;
+try {
+	img = ImageIO.read(new URL(&quot;http://www.example.com/image.png&quot;));
+} catch (IOException e) {
+	e.printStackTrace();
+}&lt;/pre&gt;
+&lt;p&gt;So far it may seem fine. You can already imagine creating methods to store the root URL where the images are stored but it would only work for images outside of the jar and, depending on the server your jar is on, might be limited to getting images only off of that server.&lt;/p&gt;
+
+&lt;p&gt;Then the much, much bigger problem appears. You can’t load files using the above methods. At all. If you try to convert your path names to URIs using the “toURI();” method, you’ll notice the path starts with “file://” or something similar depending on your OS. You simply cannot load resources that exist on a web server using the traditional techniques.&lt;/p&gt;
+
+&lt;p&gt;Even worse, “File.separator” only applies to files! It will ruin the URL if you try it on a Windows PC so you &lt;em&gt;must&lt;/em&gt; use “/” and I guarantee you it will work most anywhere.&lt;/p&gt;
+
+&lt;p&gt;There are several solutions that I wont bother boring you with for now. We want a universal, elegant and safe solution that will work on anything. Scroll down and skip the next part to read it if you want to skip my reasoning.&lt;/p&gt;
+
+&lt;p&gt;Now if you’re like me, you’ll like to comply with intelligent standards and best practices but rage at things that have become “the standard way” out of tradition. This isn’t just a problem in programming; if you look at the field of economics for instance, you’ll find that when plotting supply and demand curves, price is put on the vertical axis simply because that’s the way it has always been done. Any mildly scientific person will tell you that it doesn’t make sense and that price should be on the horizontal axis and economists know this too but it doesn’t change because it’s too late! I digress.&lt;/p&gt;
+
+&lt;p&gt;So the only thing we can do is put in the extra mile to make sure our code works on all major OSs, browsers, and modes which I fundamentally believe is our duty as programmers. It doesn’t matter if I think Mac is crap, or if Windows 8 will ruin everything, people will use it and it is our job to fulfil these people’s needs to the best of our abilities.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Now to the final solution. I prefer to keep my resources in the jar themselves which (if you sign your jars) will guarantee that they are always there and you don’t have to rely on external resources. It’s also faster and safer than loading things from an arbitrary URL. The superior, little known way to load resources universally is as follows. Ready?&lt;/p&gt;
+
+&lt;p&gt;For images:&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;BufferedImage img = null;
+try {
+	img = ImageIO.read(MyClass.class.getResource(&quot;images/&quot;+fileName));
+} catch (IOException e) {
+	e.printStackTrace();
+}&lt;/pre&gt;
+&lt;p&gt;Where MyClass is a class in the same directory as the package/folder “images” and fileName is something like “image.png”.&lt;/p&gt;
+
+&lt;p&gt;For other files:&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;try {
+	InputStream in = MyClass.class.getResource(&quot;folder/&quot;+fileName).openStream();
+	InputStreamReader ir = new InputStreamReader(in);
+	BufferedReader br = new BufferedReader(ir);
+	String line;
+	while ((line = br.readLine()) != null)
+		System.out.println(line);
+	br.close();
+	ir.close();
+	in.close();
+} catch (IOException e) {
+	e.printStackTrace();
+}&lt;/pre&gt;
+&lt;p&gt;Now of course there are a bunch of types of files you can load, but the key points here are getResource(…), forward slashes, openStream() and having clean code. This will always work no matter what and spare you the headaches especially if you’re coding an application that can run as an applet or standalone. The rest is up for experimentation.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 09 Oct 2012 17:33:00 +0100</pubDate>
+        <link>http://yousefamar.com/blog/2012/10/09/universal-resource-loading-in-java.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2012/10/09/universal-resource-loading-in-java.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Hello, world!</title>
+        <description>&lt;p&gt;In an effort to consolidate my blogging endeavours, I’ll be posting here from now on. Chances are said posts will centre around software and hardware but every once in a while something completely random might make its way in. The first few posts will probably be reposts of stuff I wrote before but after that, you, dear reader, can hopefully have the pleasure of getting a behind the scenes look at my projects or learning from thoughts, tips, and techniques that I get a chance to document.&lt;/p&gt;
+
+&lt;p&gt;Happy trails!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 09 Oct 2012 14:47:18 +0100</pubDate>
+        <link>http://yousefamar.com/blog/2012/10/09/about.html</link>
+        <guid isPermaLink="true">http://yousefamar.com/blog/2012/10/09/about.html</guid>
         
         
       </item>
