@@ -6,9 +6,9 @@
 </description>
     <link>http://yousefamar.com/blog/</link>
     <atom:link href="http://yousefamar.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 30 Dec 2017 10:21:54 +0000</pubDate>
-    <lastBuildDate>Sat, 30 Dec 2017 10:21:54 +0000</lastBuildDate>
-    <generator>Jekyll v3.4.3</generator>
+    <pubDate>Wed, 24 Feb 2021 02:37:39 +0000</pubDate>
+    <lastBuildDate>Wed, 24 Feb 2021 02:37:39 +0000</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Hacking HTML5 Xonix</title>
@@ -20,9 +20,8 @@
 
 &lt;p&gt;After some snooping around where it does fire, I found the check it does before submitting the score. The devs had everything nice and wrapped up in a little function I can call from the console:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;LeaderBoard.set(&quot;amar.io&quot;, 44488, Game.LEADERBOARD, function(){});
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;LeaderBoard.set(&quot;amar.io&quot;, 44488, Game.LEADERBOARD, function(){});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;And, voilà, top of the leaderboard!&lt;/p&gt;
 
@@ -34,14 +33,13 @@
 
 &lt;p&gt;While probing around a little more, I tried changing the parameter for the number of entries when retrieving the high-score list. When I set it to a huge number, it spits back a nasty stack trace (turns out they’re using Google App Engine with Python in the back end) and crashed the server. I felt pretty bad, but fortunately after a very short period of time it was back up. That’s the extent of the issue though, since when fingerprinting MySQL, the server returns:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Traceback (most recent call last):
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Traceback (most recent call last):
 	File &amp;amp;quot;/base/data/home/runtimes/python/python_lib/versions/1/google/appengine/ext/webapp/_webapp25.py&amp;amp;quot;, line 715, in __call__
 		handler.get(*groups)
 	File &amp;amp;quot;/base/data/home/apps/s~html5xonix/1.357745203681401670/leaderboard.py&amp;amp;quot;, line 17, in get
 		count = int(cgi.escape(self.request.get('count')))
 ValueError: invalid literal for int() with base 10: '1 /*! and 1=0 */'
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;You can actually see the line of python that they use to get the “count” parameter and escape it, then convert it to an integer. The same thing happens with submitting a name to the list; it escapes all HTML entities and doesn’t seem vulnerable to injections. They’re most likely not even using SQL since it returns JSON documents.&lt;/p&gt;
 
@@ -118,7 +116,7 @@ ValueError: invalid literal for int() with base 10: '1 /*! and 1=0 */'
 
 &lt;p&gt;I was hardly aiming for tiny code but here is all you need:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import urllib
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import urllib
 import time
 import os
 
@@ -132,8 +130,7 @@ for i in xrange(1,260):
 for i in xrange(1,251):
     urllib.urlretrieve(&quot;http://s.4cdn.org/image/title/&quot;+str(i)+&quot;.gif&quot;, &quot;imgs/&quot;+str(i)+&quot;.gif&quot;)
     time.sleep(1)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Mon, 11 May 2015 01:29:36 +0100</pubDate>
         <link>http://yousefamar.com/blog/2015/05/11/an-image-scraping-challenge.html</link>
