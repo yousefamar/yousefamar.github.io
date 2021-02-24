@@ -18,3 +18,5 @@ github_username:  yousefamar
 # Build settings
 markdown: kramdown
 future: true
+feed:
+  posts_limit: 100
