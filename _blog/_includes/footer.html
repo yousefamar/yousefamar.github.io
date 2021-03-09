@@ -1,38 +1,44 @@
 <footer class="site-footer">
 
-  <div class="wrapper">
+	<div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+		<h2 class="footer-heading" style="text-align: center">Enjoy these posts? Get them straight to your inbox!</h2>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
+		<ul class="contact-list">
+			<!-- Begin Mailchimp Signup Form -->
+			<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+			<style type="text/css">
+#mc_embed_signup .button {
+	color: #E0D498;
+	background-color: #282836;
+}
+#mc_embed_signup .button:hover {
+	color: #3e3e53;
+	background-color: #eee;
+}
+			</style>
+			<script charset="utf-8">
+				const urlParams = new URLSearchParams(window.location.search);
+				const subscribed = urlParams.get('subscribed');
+				if (subscribed === 'true')
+					alert('Thank you for subscribing!');
+			</script>
 
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
 
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
+			<div id="mc_embed_signup">
+				<form action="https://yousefamar.us1.list-manage.com/subscribe/post?u=c9096a3fa4824a361cb989ec8&amp;id=873218c479" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<div>
+						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c9096a3fa4824a361cb989ec8_873218c479" tabindex="-1" value=""></div>
+						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+					</div>
+				</form>
+			</div>
 
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
-    </div>
+			<!--End mc_embed_signup-->
+		</ul>
 
-  </div>
+	</div>
 
 </footer>
