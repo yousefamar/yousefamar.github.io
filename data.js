@@ -1,5 +1,15 @@
 let publications = [
 	{
+		title: "Peer-to-peer update dissemination in browser-based networked virtual environments",
+		year: "2020",
+		publisher: "QMUL",
+		publisherFull: "Queen Mary University of London",
+		description: "This is my PhD thesis, and is the ultimate reference for real-time P2P update dissemination. It contains surveys and taxonomies of past solutions and evaluation methodologies, a detailed mapping of the problem space, in-depth measurement studies of rich NVE network traces, as well as the complete design, implementation, and evaluation of the state-of-the-art in UD systems. Among other contributions, the evaluation framework and workloads have been made available under open-source licences.",
+		link: {
+			href: "javascript:alert('This publication is currently under an embargo to protect the IP. Please email me at yousef@amar.io to request a copy.')",
+			label: "PDF"
+		}
+	}, {
 		title: "Towards Cheap Scalable Browser Multiplayer",
 		year: "2019",
 		publisher: "CoG 2019",
