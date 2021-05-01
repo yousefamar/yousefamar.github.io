@@ -1,2 +1,0 @@
-#!/bin/sh
-rsync -a ~/log/blog/ --info=progress2 yousefamar.com:~/blog

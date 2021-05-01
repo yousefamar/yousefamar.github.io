@@ -67,4 +67,4 @@ DEPENDENCIES
   jekyll-feed (>= 0.15.1)
 
 BUNDLED WITH
-   1.17.3
+   2.2.16
