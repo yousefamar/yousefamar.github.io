@@ -4,9 +4,9 @@ let publications = [
 		year: "2020",
 		publisher: "QMUL",
 		publisherFull: "Queen Mary University of London",
-		description: "This is my PhD thesis, and is the ultimate reference for real-time P2P update dissemination. It contains surveys and taxonomies of past solutions and evaluation methodologies, a detailed mapping of the problem space, in-depth measurement studies of rich NVE network traces, as well as the complete design, implementation, and evaluation of the state-of-the-art in UD systems. Among other contributions, the evaluation framework and workloads have been made available under open-source licences.",
+		description: `This is my PhD thesis, and is the ultimate reference for real-time P2P update dissemination. It contains surveys and taxonomies of past solutions and evaluation methodologies, a detailed mapping of the problem space, in-depth measurement studies of rich NVE network traces, as well as the complete design, implementation, and evaluation of the state-of-the-art in UD systems. Among other contributions, the evaluation framework and workloads have been made available under open-source licences. Libraries derived from this work are available at <a href="https://libfabric.com" target="_blank">libfabric.com</a>.`,
 		link: {
-			href: "javascript:alert('This publication is currently under an embargo to protect the IP. Please email me at yousef@amar.io to request a copy.')",
+			href: "https://amar.io/thesis.pdf",
 			label: "PDF"
 		}
 	}, {
@@ -124,6 +124,14 @@ let publications = [
 
 let awards = [
 	{
+		name: "ProductHunt #1 Product of the Day/Week",
+		year: "2020",
+		image: {
+			thumb: "res/images/awards/top-post-badge.svg",
+			alt: "ProductHunt Badges",
+		},
+		description: `<a href="https://krew.live" target="_blank">Krew</a> was featured on <a href="https://www.producthunt.com/posts/krew" target="_blank">ProductHunt</a> and was finalist for Product of the Year. It was an honour to stand out against so many amazing products and to join the ranks of the legends before us.`
+	}, {
 		name: "IEEE CoG Registration Grant",
 		year: "2019",
 		image: {
@@ -221,14 +229,24 @@ let awards = [
 
 let experience = [
 	{
+		role: "Co-founder / CTO",
+		organisation: "Krew Live Ltd",
+		period: "Apr 2020 – Present",
+		description: `<a href="https://krew.live" target="_blank">Krew</a> combines community and fitness. We have classes for any device and AI-powered leaderboards if your device has a camera! Easily share highlights and invite your friends to join you in hundreds of live and on-demand classes. We've been featured as #1 product of the day and week on <a href="https://www.producthunt.com/posts/krew" target="_blank">ProductHunt</a> and we raised a total of $1.8MM in less than a year by our <a href="https://www.businessinsider.com/krew-pitch-deck-fitness-peloton-seed-round-2021-9" target="_blank">seed round</a>.`
+	}, {
 		role: "Entrepreneur (LD14)",
 		organisation: "Entrepreneur First",
-		period: "Apr 2020 – Present",
+		period: "Apr 2020 – Sept 2020",
 		description: `Member of the 14th London cohort of world's leading talent investor and deep tech startup accelerator <a href="https://www.joinef.com/" target="_blank">Entrepreneur First</a> where we founded Krew <a href="https://krew.live/" target="_blank">Krew</a>, became <a href="https://www.producthunt.com/posts/krew" target="_blank">&#35;1 product of the day and week</a> on Product Hunt, and secured pre-seed funding at a million USD valuation.`
+	}, {
+		role: "Founder",
+		organisation: "Grandtutors",
+		period: "Aug 2019 – Mar 2020",
+		description: `<a href="https://grandtutors.org/" target="_blank">Grandtutors</a> provides vetting, agency, training, marketing, and managerial services to London-based tutors, in exchange for nominal per-lesson royalty payments. We also ran larger adult education classes across various venues in London, as well as free technological literacy classes for the elderly, up until the pandemic.`
 	}, {
 		role: "Programming Teacher",
 		organisation: "The London School of Mathematics and Programming",
-		period: "Sep 2019 – Present",
+		period: "Sep 2019 – Mar 2020",
 		description: `Teaching Scratch classes to ages 8&ndash;10, three different Python courses to age ranges from 10 onwards, and assisting/substituting several other courses. All of my teaching material is freely available <a href="https://py.amar.io/" target="_blank">online</a>.`
 	}, {
 		role: "Primary School Computing Teacher",
@@ -347,6 +365,9 @@ Decided to transfer course from Electronic Engineering with Business Management 
 
 let volunteering = [
 	{
+		role: "Tech and Entrepreneruship Mentor",
+		description: `Yousef tries to give back by providing mentorship and practical support to budding entrepreneurs and developers, primarily through <a href="https://muslamicmakers.com/" target="_blank">Muslamic Makers</a>.`
+	}, {
 		role: "Sustainability Ambassador",
 		description: `Yousef volunteered as Welcome Team member and later Sustainability Ambassador for <a href="https://mycauseuk.com/" target="_blank">My Cause UK</a> to raise money for <a href="https://www.thecalmzone.net/" target="_blank">CALM</a>.`
 	}, {
