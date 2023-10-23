@@ -43,6 +43,30 @@
 				<p>This is a summarised CV &mdash; for descriptions and PDFs of my publications, award and volunteering details, and projects, please visit <a href="http://yousefamar.com" target="_blank">my website</a>.</p>
 			</div>
 
+			<div id="experience">
+				<div class="leftbar"></div>
+				<h3>Experience</h3>
+				<listing
+					v-for="job in experience"
+					:key="job.organisation"
+					:title="job.role"
+					:subtitle="job.organisation"
+					:subsubtitle="job.period"
+					:description="job.description"
+					></listing>
+			</div>
+
+			<!--div id="awards">
+				<div class="leftbar"></div>
+				<h3>Awards</h3>
+				<listing
+					v-for="award in awards"
+					:key="award.name"
+					:title="award.name"
+					:subsubtitle="award.year"
+					></listing>
+			</div-->
+
 			<div id="publications">
 				<div class="leftbar"></div>
 				<h3>Publications</h3>
@@ -67,30 +91,6 @@
 					:description="uni.description"
 					></listing>
 			</div>
-
-			<div id="experience" style="page-break-before: always">
-				<div class="leftbar"></div>
-				<h3>Experience</h3>
-				<listing
-					v-for="job in experience"
-					:key="job.organisation"
-					:title="job.role"
-					:subtitle="job.organisation"
-					:subsubtitle="job.period"
-					:description="job.description"
-					></listing>
-			</div>
-
-			<!--div id="awards">
-				<div class="leftbar"></div>
-				<h3>Awards</h3>
-				<listing
-					v-for="award in awards"
-					:key="award.name"
-					:title="award.name"
-					:subsubtitle="award.year"
-					></listing>
-			</div-->
 
 			<div id="Referees">
 				<div class="leftbar"></div>
