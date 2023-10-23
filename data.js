@@ -238,7 +238,7 @@ let experience = [
 	}, {
 		role: "Fractional CTO",
 		organisation: "Cura Systems Ltd",
-		period: "Jul 2020 – Present",
+		period: "Jul 2023 – Present",
 		description: `AI secretary for clinicians, deployed in a week to two top private practices (London Clinic, Cleveland Clinic)`
 	}, {
 		role: "Fractional CTO",
@@ -383,7 +383,7 @@ Decided to transfer course from Electronic Engineering with Business Management 
 let volunteering = [
 	{
 		role: "Tech and Entrepreneruship Mentor",
-		description: `Yousef tries to give back by providing mentorship and practical support to budding entrepreneurs and developers, through <a href="https://muslamicmakers.com" target="_blank">Muslamic Makers</a>, <a href="https://adplist.org" target="_blank">ADPList</a>, and <a href="https://underdogdevs.org" target="_blank">Underdog Devs</a>.`
+		description: `Yousef tries to give back by providing mentorship and practical support to budding entrepreneurs and developers, through <a href="https://levelupo.com/" target="_blank">Levelupo</a>, <a href="https://adplist.org" target="_blank">ADPList</a>, and <a href="https://underdogdevs.org" target="_blank">Underdog Devs</a>.`
 	}, {
 		role: "Sustainability Ambassador",
 		description: `Yousef volunteered as Welcome Team member and later Sustainability Ambassador for <a href="https://mycauseuk.com/" target="_blank">My Cause UK</a> to raise money for <a href="https://www.thecalmzone.net/" target="_blank">CALM</a>.`
