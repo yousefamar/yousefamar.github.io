@@ -232,7 +232,23 @@ let experience = [
 		role: "Co-founder / CTO",
 		organisation: "Krew Live Ltd",
 		period: "Apr 2020 – Present",
-		description: `<a href="https://krew.live" target="_blank">Krew</a> combines community and fitness. We have classes for any device and AI-powered leaderboards if your device has a camera! Easily share highlights and invite your friends to join you in hundreds of live and on-demand classes. We've been featured as #1 product of the day and week on <a href="https://www.producthunt.com/posts/krew" target="_blank">ProductHunt</a> and we raised a total of $1.8MM at an 8-figure valuation in less than a year by our <a href="https://www.businessinsider.com/krew-pitch-deck-fitness-peloton-seed-round-2021-9" target="_blank">seed round</a>.`
+		//description: `<a href="https://krew.live" target="_blank">Krew</a> combines community and fitness. We have classes for any device and AI-powered leaderboards if your device has a camera! Easily share highlights and invite your friends to join you in hundreds of live and on-demand classes. We've been featured as #1 product of the day and week on <a href="https://www.producthunt.com/posts/krew" target="_blank">ProductHunt</a> and we raised a total of $1.8MM at an 8-figure valuation in less than a year by our <a href="https://www.businessinsider.com/krew-pitch-deck-fitness-peloton-seed-round-2021-9" target="_blank">seed round</a>.`
+		description: `<a href="https://krew.build" target="_blank">Krew</a> is an AI studio specialising in AI-related strategy and implementation. We have build deep tech products across healthcare, fitness, bizops for desktop and mobile usage. Our world-class team has been featured on publications such as <a href="https://www.businessinsider.com/krew-pitch-deck-fitness-peloton-seed-round-2021-9" target="_blank">Business Insider</a> and our producs were ranked #1 product of the day and week on <a href="https://www.producthunt.com/posts/krew" target="_blank">ProductHunt</a>.`
+	}, {
+		role: "Fractional CTO",
+		organisation: "Cura Systems Ltd",
+		period: "Jul 2020 – Present",
+		description: `AI secretary for clinicians, deployed in a week to two top private practices (London Clinic, Cleveland Clinic)`
+	}, {
+		role: "Fractional CTO",
+		organisation: "Support Muslim Business Forum Ltd",
+		period: "Jul 2022 – Present",
+		description: `A large UK-based business network, setting up a LinkedIn-like platform with 200+ active users`
+	}, {
+		role: "Fractional CTO",
+		organisation: "Sawa Global Ltd",
+		period: "Nov 2021 – Present",
+		description: `Non-profit mosque app, built the app used by 180+ mosques across the UK and their communities`
 	}, {
 		role: "Entrepreneur (LD14)",
 		organisation: "Entrepreneur First",
@@ -261,7 +277,7 @@ let experience = [
 	<li>First Aid</li>
 </ul>`
 	}, {
-		role: "Research Intern",
+		role: "Researcher",
 		organisation: "Nokia Bell Labs Stuttgart",
 		period: "May 2017 – Aug 2017",
 		description: "Research in distributed function scheduling and dynamic load balancing for minimising latency in the context of serverless computing."
@@ -276,7 +292,7 @@ let experience = [
 	<li>2x Digital Media and Social Networks (graphs, network analysis, web APIs)</li>
 </ul>`
 	}, {
-		role: "Research Intern",
+		role: "Researcher",
 		organisation: "University of Oxford",
 		period: "Sept 2015 – Sept 2016",
 		description: `Research in robotics, computer vision, machine learning, and A.I. &ndash; among other areas with <a href="http://www.robots.ox.ac.uk/~tvg/" target="_blank">Torr Vision Group</a> under <a href="http://www.robots.ox.ac.uk/~phst/" target="_blank">Professor Philip Torr</a> at the Department of Engineering Science.
