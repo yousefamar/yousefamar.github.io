@@ -234,7 +234,15 @@ let experience = [
 		organisation: "krew.build",
 		period: "Apr 2020 – Present",
 		//description: `<a href="https://krew.live" target="_blank">Krew</a> combines community and fitness. We have classes for any device and AI-powered leaderboards if your device has a camera! Easily share highlights and invite your friends to join you in hundreds of live and on-demand classes. We've been featured as #1 product of the day and week on <a href="https://www.producthunt.com/posts/krew" target="_blank">ProductHunt</a> and we raised a total of $1.8MM at an 8-figure valuation in less than a year by our <a href="https://www.businessinsider.com/krew-pitch-deck-fitness-peloton-seed-round-2021-9" target="_blank">seed round</a>.`
-		description: `<a href="https://krew.build" target="_blank">Krew</a> is an AI studio specialising in AI-related strategy and implementation. We have built deep tech products across healthcare, fitness, bizops for desktop and mobile usage. Our world-class team has been featured on publications such as <a href="https://www.businessinsider.com/krew-pitch-deck-fitness-peloton-seed-round-2021-9" target="_blank">Business Insider</a> and our products were ranked #1 product of the day and week on <a href="https://www.producthunt.com/posts/krew" target="_blank">ProductHunt</a>.`
+		description: `<a href="https://krew.build" target="_blank">Krew</a> is an AI studio specialising in AI-related strategy and implementation. We have built deep tech products across healthcare, fitness, bizops for desktop and mobile usage. Our world-class team has been featured on publications such as <a href="https://www.businessinsider.com/krew-pitch-deck-fitness-peloton-seed-round-2021-9" target="_blank">Business Insider</a> and our products were ranked #1 product of the day and week on <a href="https://www.producthunt.com/posts/krew" target="_blank">ProductHunt</a>.
+<h6>Highlights</h6>
+<ul>
+	<li>Designed and implemented complicated machine learning pipelines with real-time inference (<30ms) and client device constraints</li>
+	<li>Full-stack web and hybrid mobile development, built our B2B and consumer products from scratch, efficiently scalable to millions of users</li>
+	<li>Lead 24 engineers of every level, trained and mentored them, managed tight sprints at one week cycles</li>
+	<li>Built reliable CI/CD pipelines across dozens of projects, automated internal operations and testing, increased developer productivity 6-fold</li>
+	<li>Scraped thousands of high-value leads, automated cold outreach, analytics, and monitoring</li>
+</ul>`
 	}, {
 		role: "Fractional CTO",
 		organisation: "Cura Systems Ltd",
@@ -251,10 +259,10 @@ let experience = [
 		period: "Nov 2021 – Present",
 		description: `Non-profit mosque app, built the app used by 180+ mosques across the UK and their communities`
 	}, {
-		role: "Entrepreneur (LD14)",
+		role: "Entrepreneur in Residence (LD14)",
 		organisation: "Entrepreneur First",
 		period: "Apr 2020 – Sept 2020",
-		description: `Member of the 14th London cohort of world's leading talent investor and deep tech startup accelerator <a href="https://www.joinef.com/" target="_blank">Entrepreneur First</a> where we founded Krew <a href="https://krew.live/" target="_blank">Krew</a>, became <a href="https://www.producthunt.com/posts/krew" target="_blank">&#35;1 product of the day and week</a> on Product Hunt, and secured pre-seed funding at a million USD valuation.`
+		description: `Member of the 14th London cohort of world's leading talent investor and deep tech startup accelerator <a href="https://www.joinef.com/" target="_blank">Entrepreneur First</a> where we founded <a href="https://krew.live/" target="_blank">Krew</a> and raised $1.8MM in pre-seed funding.`
 	}, {
 		role: "Founder",
 		organisation: "Grandtutors",
@@ -296,7 +304,7 @@ let experience = [
 		role: "Researcher",
 		organisation: "University of Oxford",
 		period: "Sept 2015 – Sept 2016",
-		description: `Research in robotics, computer vision, machine learning, and A.I. &ndash; among other areas with <a href="http://www.robots.ox.ac.uk/~tvg/" target="_blank">Torr Vision Group</a> under <a href="http://www.robots.ox.ac.uk/~phst/" target="_blank">Professor Philip Torr</a> at the Department of Engineering Science.
+		description: `Research in robotics, computer vision, machine learning, and AI with <a href="http://www.robots.ox.ac.uk/~tvg/" target="_blank">Torr Vision Group</a> under <a href="http://www.robots.ox.ac.uk/~phst/" target="_blank">Professor Philip Torr</a> at the Department of Engineering Science.
 <h6>Publications</h6>
 <ul>
 	<li><a href="res/papers/ondra2015iros.pdf" target="_blank">Incremental Dense Multi-modal 3D Scene Reconstruction</a></li>
@@ -312,10 +320,10 @@ let experience = [
 		period: "Nov 2011 – Nov 2011",
 		description: "Teaching and supervision of a group of sixth form students considering higher education."
 	}, {
-		role: "Shop Floor Worker",
+		role: "Factory Technician",
 		organisation: "Aquila Aviation by Excellence AG",
 		period: "May 2008 – Sept 2008",
-		description: "Construction and assembly of fiber composite plane parts. Extensive experience in sweeping the factory after hours and dealing with occupational injuries."
+		description: "Construction and assembly of fiber composite plane parts. Trained in handling toxic resins and installing electronics into small aircraft."
 	}
 ];
 
