@@ -231,7 +231,7 @@ let experience = [
 	{
 		role: "Consultant / Fractional CTO",
 		organisation: "Freelance",
-		period: "Apr 2020 – Present",
+		period: "Jul 2023 – Present",
 		description: `Freelance AI consulting (strategy and implementation) across various sectors (e.g. healthcare and finance) and fractional CTO work for startups (hiring, leadership, architecture, implementation, devops).`
 	}, {
 		role: "Co-founder / CTO",
