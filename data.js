@@ -253,7 +253,7 @@ let experience = [
 <ul>
 	<li>Built and deployed an AI pipeline that captures, transcribes, and transforms medical consultations into pro formas and clinic letters</li>
 	<li>100% conversion from demo to subscription, with several clinicians offering angel investment unsolicited</li>
-	<li>Tested and iterated with the clicians directly, built tools to allow them to customise the app</li>
+	<li>Tested and iterated with the clinicians directly, built tools to allow them to customise the app</li>
 	<li>Integrated with electronic health record systems that support HL7 FHIR standards, cut integration time by 6 months</li>
 </ul>`
 	}, {
@@ -273,7 +273,7 @@ let experience = [
 		role: "Fractional CTO",
 		organisation: "Sawa Global Ltd",
 		period: "Nov 2021 – May 2024",
-		description: `Non-profit mosque app, built the app used by 200+ mosques across the UK and their communities.
+		description: `Mosque management app used by 200+ mosques across the UK and their communities.
 <ul>
 	<li>Built an AI pipeline to scan prayer time sheets (OCR) and transform these into accurate, standardised schedules using LLMs and imperative rules</li>
 	<li>Set up the financial infrastruture for accepting donations over Stripe, Square, and custom providers</li>
