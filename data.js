@@ -229,12 +229,15 @@ let awards = [
 
 let experience = [
 	{
-		role: "Co-founder / CTO",
-		//organisation: "Krew Live Ltd",
-		organisation: "krew.build",
+		role: "Consultant / Fractional CTO",
+		organisation: "Freelance",
 		period: "Apr 2020 – Present",
-		//description: `<a href="https://krew.live" target="_blank">Krew</a> combines community and fitness. We have classes for any device and AI-powered leaderboards if your device has a camera! Easily share highlights and invite your friends to join you in hundreds of live and on-demand classes. We've been featured as #1 product of the day and week on <a href="https://www.producthunt.com/posts/krew" target="_blank">ProductHunt</a> and we raised a total of $1.8MM at an 8-figure valuation in less than a year by our <a href="https://www.businessinsider.com/krew-pitch-deck-fitness-peloton-seed-round-2021-9" target="_blank">seed round</a>.`
-		description: `<a href="https://krew.build" target="_blank">Krew</a> is an AI studio specialising in AI-related strategy and implementation. We have built deep tech products across healthcare, fitness, bizops for desktop and mobile usage. Our world-class team has been featured on publications such as <a href="https://www.businessinsider.com/krew-pitch-deck-fitness-peloton-seed-round-2021-9" target="_blank">Business Insider</a> and our products were ranked #1 product of the day and week on <a href="https://www.producthunt.com/posts/krew" target="_blank">ProductHunt</a>.
+		description: `Freelance AI consulting (strategy and implementation) across various sectors (e.g. healthcare and finance) and fractional CTO work for startups (hiring, leadership, architecture, implementation, devops).`
+	}, {
+		role: "Co-founder / CTO",
+		organisation: "Krew Live Ltd",
+		period: "Apr 2020 – March 2024",
+		description: `Consumer fitness <a href="https://krew.studio" target="_blank">marketplace</a> turned <a href="https://krew.live" target="_blank">platform</a> with an AI coach that eventually made a hard pivot into a <a href="https://krew.build" target="_blank">deal copilot</a> for private equity funds. Featured on publications such as <a href="https://www.businessinsider.com/krew-pitch-deck-fitness-peloton-seed-round-2021-9" target="_blank">Business Insider</a> and our products were ranked #1 product of the day and week on <a href="https://www.producthunt.com/posts/krew" target="_blank">ProductHunt</a>.
 <ul>
 	<li>Designed and implemented complicated machine learning pipelines with real-time inference (<30ms) and client device constraints</li>
 	<li>Full-stack web and hybrid mobile development, built our B2B and consumer products from scratch, efficiently scalable to millions of users</li>
@@ -245,7 +248,7 @@ let experience = [
 	}, {
 		role: "Fractional CTO",
 		organisation: "Cura Systems Ltd",
-		period: "Jul 2023 – Present",
+		period: "Jul 2023 – May 2024",
 		description: `AI secretary for clinicians implemented and launched in a week at two top practices (London Clinic, Cleveland Clinic).
 <ul>
 	<li>Built and deployed an AI pipeline that captures, transcribes, and transforms medical consultations into pro formas and clinic letters</li>
@@ -256,10 +259,10 @@ let experience = [
 	}, {
 		role: "Fractional CTO",
 		organisation: "Support Muslim Business Forum Ltd",
-		period: "Jul 2022 – Present",
+		period: "Jul 2022 – Jan 2024",
 		description: `Leading tech team at a large UK-based business network.
 <ul>
-	<li>Set up a LinkedIn-like platform with 200+ active users</li>
+	<li>Set up a LinkedIn-like platform with 2000+ active users</li>
 	<li>Automated CRM (Hubspot) and integrated with existing infrastructure decimating ops hours</li>
 	<li>Set up the infrastructure (including i18n) to allow expansion into Turkey and Saudi Arabia</li>
 	<li>Scraped and processed 10k+ businesses to launch world's largest Muslim business directory</li>
@@ -269,8 +272,8 @@ let experience = [
 	}, {
 		role: "Fractional CTO",
 		organisation: "Sawa Global Ltd",
-		period: "Nov 2021 – Present",
-		description: `Non-profit mosque app, built the app used by 180+ mosques across the UK and their communities.
+		period: "Nov 2021 – May 2024",
+		description: `Non-profit mosque app, built the app used by 200+ mosques across the UK and their communities.
 <ul>
 	<li>Built an AI pipeline to scan prayer time sheets (OCR) and transform these into accurate, standardised schedules using LLMs and imperative rules</li>
 	<li>Set up the financial infrastruture for accepting donations over Stripe, Square, and custom providers</li>
