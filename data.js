@@ -229,10 +229,10 @@ let awards = [
 
 let experience = [
 	{
-		role: "Consultant / Fractional CTO",
-		organisation: "Freelance",
-		period: "Jul 2023 – Present",
-		description: `Freelance AI consulting (strategy and implementation) across various sectors (e.g. healthcare and finance) and fractional CTO work for startups (hiring, leadership, architecture, implementation, devops).`
+		role: "Co-founder / CTO",
+		organisation: "Artanis Ltd",
+		period: "April 2024 – Present",
+		description: `Helping startups that don't have an in-house AI team build reliable AI systems. We cover the full project lifecycle, from high-level strategy to low-level implementation, across the entire stack. We cost 80% less than hiring an agency, as we've built internal tools to speed up ML system development.`
 	}, {
 		role: "Co-founder / CTO",
 		organisation: "Krew Live Ltd",
